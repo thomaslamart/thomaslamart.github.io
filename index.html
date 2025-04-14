@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thomas Lamart</title>
+    <link
+      rel="shortcut icon"
+      href="assets/favicon_ThomasLAMART.ico"
+      type="image/svg+xml"
+    />
+    <link rel="stylesheet" href="home_page/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="header__nav">
+        <div class="header__nav__logo">
+          <a href="index.html" class="header__nav__logo__link">
+            <img src="assets/favicon_ThomasLAMART.ico" alt="Logo" class="header__nav__logo__svg" />
+            </a>
+          <h3 class="header__nav__logo__title">-------</h3>
+        </div>
+        <div class="header__nav__langage">
+          <p class="header__nav__langage__fr">🇫🇷</p>
+          <p class="header__nav__langage__gb">🇬🇧</p>
+        </div>
+      </nav>
+    </header>
+    <section class="section__thomaslamart">
+      <div>
+        <p>THOMAS LAMART</p>
+      </div>
+    </section>
+    <main class="main">
+      <div class="main__PP">
+        <img
+          src="assets/PP_Circle_ThomasLAMART.png"
+          alt="Photo de Thomas Lamart"
+          class="main__PP__png"
+        />
+      </div>
+      <div class="main__presentation">
+        <p class="main__presentation__business">
+          Product Manager | Product Owner | Chef de projet digital
+        </p>
+        <p class="main__presentation__text">
+          <br />Bonjour et Bienvenue sur mon site. <br /><br />
+          Conçu sur Figma et développé en HTML5 et CSS, ce site est hébergé sur GitHub et publié via GitHub Pages.
+          En optant pour une approche statique, j'ai privilégié la rapidité et la simplicité, vous permettant d'accéder directement aux informations essentielles sans détour.
+        </p>
+      </div>
+      <div class="main__CV">
+        <a href="experience.html">
+          <button class="main__CV__button">Voir mon CV</button>
+        </a>
+      </div>
+    </main>
+
+   <footer class="footer">
+      <div class="footer__nav">
+        <section class="contact">
+
+      <div class="contact__email">
+  <p>
+    <span 
+      class="copy-text" 
+      onclick="copyToClipboard(this, 'thomaslamart@yahoo.fr')" 
+      style="cursor: pointer; text-decoration: none;">
+      thomaslamart@yahoo.fr
+      <span class="tooltip">Copier</span>
+    </span>
+  </p>
+</div>
+
+          <div class="contact__phone">
+            <p>
+              <span 
+                class="copy-text" 
+                onclick="copyToClipboard(this, '+33618045000')" 
+                style="cursor: pointer; text-decoration: none;">
+                +33 6 18 04 50 00
+                <span class="tooltip">Copier</span>
+              </span>
+            </p>
+          </div>
+          
+          <style>
+            .copy-text {
+              position: relative;
+              display: inline-block;
+              color: black; /* Couleur par défaut */
+              transition: color 0.3s ease;
+            }
+          
+            .copy-text.copied {
+              color: white; /* Couleur après clic */
+            }
+          
+            .tooltip {
+              visibility: hidden;
+              opacity: 0;
+              position: absolute;
+              top: 15px; /* Position au-dessus du numéro */
+              left: 50%;
+              transform: translateX(-50%);
+              background-color: rgb(0, 0, 0);
+              color: rgb(255, 255, 255);
+              padding: 5px 10px;
+              border-radius: 5px;
+              font-size: 12px;
+              white-space: nowrap;
+              transition: opacity 0.3s ease, visibility 0.3s ease;
+              z-index: 10;
+            }
+          
+            .copy-text:hover .tooltip {
+              visibility: visible;
+              opacity: 1;
+            }
+          </style>
+          
+          <script>
+            function copyToClipboard(element, text) {
+              navigator.clipboard.writeText(text)
+                .then(() => {
+                  // Ajouter la classe "copied" pour changer la couleur
+                  element.classList.add('copied');
+          
+                  // Retirer la classe après 1 seconde
+                  setTimeout(() => {
+                    element.classList.remove('copied');
+                  }, 500);
+                })
+                .catch(err => {
+                  console.error('Erreur lors de la copie : ', err);
+                });
+            }
+          </script>
+
+        </section>
+      <div class="footer__social">
+
+        <div class="footer__github">
+          <a href="https://github.com/thomaslamart" target="_blank" rel="noopener noreferrer">
+            <img src="assets/Github.png" alt="Logo LinkedIn" class="footer__github__logo" />
+          </a>
+        </div>
+
+        <div class="footer__linkedin">
+          <a href="https://www.linkedin.com/in/thomaslamart/" target="_blank" rel="noopener noreferrer">
+            <img src="assets/linkedin.png" alt="Logo LinkedIn" class="footer__linkedin__logo" />
+          </a>
+        </div>
+
+      </div>
+
+        <div class="footer__div__mention">
+          <p class="footer__div__mention__droits">
+            © 2025 Thomas Lamart. Tous droits réservés.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

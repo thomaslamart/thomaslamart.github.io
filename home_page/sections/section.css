@@ -1,0 +1,11 @@
+.section__thomaslamart {
+    width: 100%;
+    height: auto;
+    font-size: 8.8vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 100;
+    font-family: var(--unbounded-font);
+    margin-bottom: 0.5em;
+}

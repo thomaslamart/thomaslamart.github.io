@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Unbounded&display=swap');
+@import url('../global.css');
+@import url('./sections/e_main.css');
+@import url('./sections/e_header.css');
+@import url('./sections/e_footer.css');
+
+
+:root { 
+
+  --unbounded-font: 'Unbounded', sans-serif;
+  --montserrat-font: 'Montserrat', sans-serif;
+
+  --white-color: 255,255,255; 
+  --black-color: 0,0,0;
+
+  --headline-font-size: 128px;
+  --headline-font-weight: 400px;
+
+  --body-font-size: 16px;
+  --footer-font-size: 12px;
+  --header-font-size: 14px;
+  --header-langage-font-size: 14px;
+}
+

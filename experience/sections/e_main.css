@@ -1,0 +1,185 @@
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Si nécessaire */
+    gap:2em;
+}
+
+.div__pp__position{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0px;
+    gap:40px;
+    font-family: var(--montserrat-font);
+    font-size: var(--footer-font-size);
+    color: var(--black-color);
+}
+
+.pp__thomaslamart{
+    width: 80%;
+    max-width: 15em;
+    min-width: 8em;
+    border-radius: 50%;
+    border: 2px solid #000;
+}
+
+.pp__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 80%;
+    font-family: var(--montserrat-font);
+    font-size: var(--body-font-size);
+}
+
+
+/* Section HK */
+
+.div__hk {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 0px 70px 0px;
+    gap:40px;
+    font-family: var(--montserrat-font);
+    font-size: var(--body-font-size);
+    color: var(--black-color);
+
+    border-radius: 100px;
+    border: 1px solid #000;
+}
+
+.div__hk__logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 50px;
+}
+
+.div__hk__logo__image{
+    width: 100%;
+    max-width: 15em;
+    min-width: 8em;
+    border-radius: 100px;
+}
+
+
+
+
+
+.div__hk__title {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 90%;
+    font-family: var(--montserrat-font);
+    font-size: var(--body-font-size);
+}
+
+.div__hk__title__text {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: var(--montserrat-font);
+    font-size: var(--body-font-size);
+}
+
+.div__hk__experience {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 90%;
+    height: auto;
+    font-family: var(--montserrat-font);
+    font-size: var(--body-font-size);
+}
+
+.div__hk__experience__text {
+    display: flex;
+    font-family: var(--montserrat-font);
+    font-size: var(--body-font-size);
+    line-height: 1.5;
+}
+
+/* Section Arturin */
+
+.div__arturin {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 0px 70px 0px;
+    gap:40px;
+    font-family: var(--montserrat-font);
+    font-size: var(--body-font-size);
+    color: var(--black-color);
+
+    border-radius: 100px;
+    border: 1px solid #000;
+}
+
+.div__arturin__logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 50px;
+}
+
+.div__arturin__logo__image{
+    width: 100%;
+    padding-top: 1em;
+    max-width: 15em;
+    min-width: 8em;
+}
+
+
+
+
+
+.div__arturin__title {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 90%;
+    font-family: var(--montserrat-font);
+    font-size: var(--body-font-size);
+}
+
+.div__arturin__title__text {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: var(--montserrat-font);
+    font-size: var(--body-font-size);
+}
+
+.div__arturin__experience {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 90%;
+    height: auto;
+    font-family: var(--montserrat-font);
+    font-size: var(--body-font-size);
+}
+
+.div__arturin__experience__text {
+    display: flex;
+    font-family: var(--montserrat-font);
+    font-size: var(--body-font-size);
+    line-height: 1.5;
+}
+

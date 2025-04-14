@@ -1,0 +1,113 @@
+/* général  */
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 35px;
+    padding: 20px 0;
+    margin-top: 2em;
+}
+
+.footer__nav {
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 35px;
+    gap: 10px;
+    padding: 0px 20px;
+    max-width: 1120px;
+    border-top: 1px solid rgb(var(--black-color), 1);
+}
+
+
+/* contact  */
+
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--montserrat-font);
+    font-size: var(--header-font-size);
+    color: var(--black-color);
+    margin-right: auto;
+    padding: 10px; /* Supprimez les marges si elles désaxent */
+}
+
+.contact__email a {
+    display: flex;
+    text-decoration: none; /* Supprime le soulignement */
+    color: inherit; /* Utilise la couleur du parent */
+  }
+
+.contact__phone a {
+    display: flex;
+    text-decoration: none; /* Supprime le soulignement */
+    color: inherit; /* Utilise la couleur du parent */
+  }
+
+  .footer__social {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    margin:auto;
+    position:absolute;
+}
+
+.footer__social img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    display: block;
+}
+
+
+.footer__div__mention{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--montserrat-font);
+    font-size: var(--footer-font-size);
+    color: var(--black-color);
+    margin-left: auto;
+}
+.footer__div__mention__droits{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--montserrat-font);
+    font-size: var(--footer-font-size);
+    color: var(--black-color);
+    padding: 10px;
+}
+
+/* Responsive design pour mobile */
+@media (max-width: 768px) {
+    .footer__nav {
+        flex-direction: column; /* Change la direction en colonne */
+        align-items: center; /* Centre les éléments */
+        gap: 8px; /* Ajoute un espacement entre les éléments */
+        border-top: none;
+        
+    }
+
+    .contact {
+        margin-right: 0; /* Supprime la marge à droite */
+        padding-top: 10px;
+        margin-top: 10px;
+        border-top: 1px solid rgb(var(--black-color), 1); /* Ajoute la bordure au-dessus */
+    }
+
+    .footer__social {
+        position: static; /* Supprime la position absolue */
+        margin: 0; /* Réinitialise les marges */
+    }
+
+    .footer__div__mention {
+        margin-left: 0; /* Supprime la marge à gauche */
+    }
+}

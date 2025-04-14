@@ -53,7 +53,7 @@ main {
     color: var(--black-color);
 
     border-radius: 100px;
-    border: 1px solid #000;
+    border: 2px solid #000;
 }
 
 .div__hk__logo{
@@ -126,7 +126,7 @@ main {
     color: var(--black-color);
 
     border-radius: 100px;
-    border: 1px solid #000;
+    border: 2px solid #000;
 }
 
 .div__arturin__logo{

@@ -1,3 +1,14 @@
+.section {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: var(--unbounded-font);
+    padding-bottom: 1em;
+}
+
 .section__thomaslamart {
     width: 100%;
     height: auto;

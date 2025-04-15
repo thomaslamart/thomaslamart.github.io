@@ -65,8 +65,8 @@
   background-color: rgba(var(--white-color),0.2);
   border-radius: 20px;
   padding: 5px 10px;
-  border: 2px solid rgb(var(--black-color),1);
-  font-family: var(--unbounded-font);
+  border: 1px solid rgb(var(--black-color),1);
+  font-family: var(--montserrat-font);
   color: rgba(var(--black-color),1);
   cursor:pointer;
   transition: all 300ms;
@@ -74,9 +74,9 @@
 }
 
 .main__CV__button:hover {
-    border: 2px solid rgb(var(--black-color),0.5);
+    border: 1px solid rgb(var(--black-color),0.5);
     color: rgba(var(--black-color),0.5);
-    font-family: var(--unbounded-font);  
+    font-family: var(--montserrat-font);  
     cursor:pointer;
     transition: all 300ms;
     padding: 5px 10px;

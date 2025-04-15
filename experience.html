@@ -28,7 +28,6 @@
   <main>
 
     <div class="div__pp__position">
-      <img src="assets/PP_Circle_ThomasLAMART.png" alt="Photo de Thomas Lamart" class="pp__thomaslamart" />
       <p class="pp__title">Product Manager | Product Owner | Chef de projet digital</p>
     </div>
 
@@ -36,22 +35,24 @@
 
     <div class="div__hk" onclick="toggleExperienceHK()">
 
-  <!-- Div où l'utilisateur peut cliquer -->
-      <div class="div__hk__logo">
-        <img src="assets/Heinken_logo.jpg" alt="Logo HK" class="div__hk__logo__image" />
+      <!-- Div où l'utilisateur peut cliquer -->
+      <div class="div__hk__clicable__component">
+        <div class="div__hk__logo">
+          <img src="assets/Heinken_logo.png" alt="Logo HK" class="div__hk__logo__image" />
+        </div>
+
+        <div class="div__hk__title">
+          <p class="div__hk__title__text">Product Manager E-commerce</p>
+        </div>
+
+        <div class="arrow">
+          <img class="arrow__img" src="assets/arrow.png" alt="Flèche vers le bas" />
+        </div>
       </div>
 
-      <div class="div__hk__title">
-        <p class="div__hk__title__text">Product Manager E-commerce | France Boissons<br />2 ans et 4 mois</p>
-      </div>
-
-      <div class="arrow">
-        <img class= "arrow__img" src="assets/arrow.png" alt="Flèche vers le bas" />
-      </div>
-
- <!-- Ce qui doit être déroulant -->
+      <!-- Ce qui doit être déroulant -->
       <div class="div__hk__experience hidden">
-        <p class="div__hk__experience__text">Site e-commerce B2B de France Boissons.</p>
+        <p class="div__hk__experience__text">Site e-commerce B2B de France Boissons. - En poste depuis janvier 2023 </p>
 
         <div>
           <p class="div__hk__experience__text__title">🌟 Vision produit et roadmap.</p>
@@ -87,7 +88,7 @@
         </div>
 
 
-        <div> 
+        <div>
           <p class="div__hk__experience__text__title">🔄 Gestion des flux de donn&eacute;es entre ERP, PIM et CMS.
           </p>
           <p class="div__hk__experience__text">Pilotage
@@ -108,47 +109,53 @@
       </div>
     </div>
 
-    <div class="div__arturin">
+    <div class="div__arturin" onclick="toggleExperienceArturin()">
 
-      <div class="div__arturin__logo">
-        <img src="assets/arturin.png" alt="Logo Arturin" class="div__arturin__logo__image" />
+      <div class="div__arturin__clicable__component">
+        <div class="div__arturin__logo">
+          <img src="assets/arturin.png" alt="Logo Arturin" class="div__arturin__logo__image" />
+        </div>
+
+        <div class="div__arturin__title">
+          <p class="div__arturin__title__text">Product Owner & Responsable contenu</p>
+        </div>
+        
+        <div class="arrow">
+          <img class="arrow__img" src="assets/arrow.png" alt="Flèche vers le bas" />
+        </div>
       </div>
 
-      <div class="div__arturin__title">
-        <p class="div__arturin__title__text">Product Owner & Responsable contenu<br />4 ans</p>
-      </div>
-
-      <div class="div__arturin__experience">
-        <p class="div__arturin__experience__text">Agence de marketing digital.</p>
+      <!-- Ce qui doit être déroulant -->
+      <div class="div__arturin__experience hidden">
+        <p class="div__arturin__experience__text">Agence de marketing digital. - En poste pendant 4 ans</p>
 
         <div>
           <p class="div__arturin__experience__text__title">💥 Stratégie produit et évolutions.</p>
-        <p class="div__arturin__experience__text">
-          Recommandations et priorisation des évolutions avec le Product Manager de la partie contenu, suivi des
-          performances (KPIs).</p>
+          <p class="div__arturin__experience__text">
+            Recommandations et priorisation des évolutions avec le Product Manager de la partie contenu, suivi des
+            performances (KPIs).</p>
         </div>
 
         <div>
-        <p class="div__arturin__experience__text__title">📊 Gestion du backlog et cérémonies agiles.</p>
-        <p class="div__arturin__experience__text">
-          Centralisation des demandes, gestion du backlog, animation des cérémonies pour garantir une livraison
-          efficace.  </p>
+          <p class="div__arturin__experience__text__title">📊 Gestion du backlog et cérémonies agiles.</p>
+          <p class="div__arturin__experience__text">
+            Centralisation des demandes, gestion du backlog, animation des cérémonies pour garantir une livraison
+            efficace.</p>
         </div>
         <div>
           <p class="div__arturin__experience__text__title">📝 Création et stratégie de contenu.</p>
-        <p class="div__arturin__experience__text">Définition de la ligne
-          éditoriale pour les secteurs finance-assurance, sport et santé, sélection stratégique du contenu pour
-          maximiser l’engagement organique.  
-        </p>
+          <p class="div__arturin__experience__text">Définition de la ligne
+            éditoriale pour les secteurs finance-assurance, sport et santé, sélection stratégique du contenu pour
+            maximiser l’engagement organique.
+          </p>
+        </div>
+        <div>
+          <p class="div__arturin__experience__text__title">🤝 Support et management.</p>
+          <p class="div__arturin__experience__text">Support technique aux conseillers
+            digitaux, gestion de trois Content Managers et d’une équipe de pigistes externes.
+          </p>
+        </div>
       </div>
-      <div>
-        <p class="div__arturin__experience__text__title">🤝 Support et management.</p>
-        <p class="div__arturin__experience__text">Support technique aux conseillers
-          digitaux, gestion de trois Content Managers et d’une équipe de pigistes externes.
-        </p>
-      </div>
-      </div>
-
     </div>
   </main>
 
@@ -214,25 +221,6 @@
             opacity: 1;
           }
         </style>
-
-        <script>
-          function copyToClipboard(element, text) {
-            navigator.clipboard.writeText(text)
-              .then(() => {
-                // Ajouter la classe "copied" pour changer la couleur
-                element.classList.add('copied');
-
-                // Retirer la classe après 1 seconde
-                setTimeout(() => {
-                  element.classList.remove('copied');
-                }, 500);
-              })
-              .catch(err => {
-                console.error('Erreur lors de la copie : ', err);
-              });
-          }
-        </script>
-
       </section>
       <div class="footer__social">
 

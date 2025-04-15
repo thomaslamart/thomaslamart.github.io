@@ -11,6 +11,7 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 95%;
     padding: 20px 0px;
     gap:40px;
     font-family: var(--montserrat-font);
@@ -18,13 +19,6 @@ main {
     color: var(--black-color);
 }
 
-.pp__thomaslamart{
-    width: 80%;
-    max-width: 15em;
-    min-width: 8em;
-    border-radius: 50%;
-    border: 1px solid #000;
-}
 
 .pp__title {
     display: flex;
@@ -46,8 +40,7 @@ main {
     height: auto;
     align-items: center;
     justify-content: center;
-    padding: 0px 0px 70px 0px;
-    gap:40px;
+    gap:30px;
     font-family: var(--montserrat-font);
     font-size: var(--body-font-size);
     color: var(--black-color);
@@ -60,60 +53,243 @@ main {
     border: 1px solid #000;
 }
 
-.div__hk:hover {
-    background-color: #f0f8f9 /* Change légèrement la couleur de fond */
+@media screen and (max-width: 768px) {
+    .div__hk {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        height: auto;
+        align-items: center;
+        justify-content: center;
+        padding: 0px 0px 20px 0px;
+        gap:30px;
+        font-family: var(--montserrat-font);
+        font-size: var(--body-font-size);
+        color: var(--black-color);
+    
+        cursor: pointer; /* Change le curseur en "main" */
+        transition: box-shadow 0.3s ease, background-color 0.3s ease;
+    
+    
+        border-radius: 40px;
+        border: 1px solid #000;
+    }
+    
 }
 
-.div__hk.active:hover {
-    box-shadow: none; /* Supprime l'ombre */
-    background-color: inherit; /* Rétablit la couleur de fond par défaut */
-    cursor: default; /* Change le curseur en flèche normale */
+
+@media screen and (max-width: 768px) {
+    .div__hk__clicable__component {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        height: auto;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5em;
+    }
+    
 }
+
+
+
+/* Parent de mon container clicable  */
+.div__hk__clicable__component {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 85%;
+    padding: 10px;
+    gap: 1rem;
+  }
 
 .div__hk__logo{
+    flex: 1;
     display: flex;
-    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
 }
 
 .div__hk__logo__image{
     width: 100%;
-    max-width: 15em;
-    min-width: 8em;
+    max-width: 10em;
+    height: auto;
 }
-
-
-
 
 
 .div__hk__title {
+    flex: 2;
     display: flex;
     justify-content: center;
-    flex-direction: column;
     align-items: center;
-    gap: 10px;
-    width: 90%;
-    font-family: var(--montserrat-font);
-    font-size: var(--body-font-size);
+    text-align: center;
+    white-space: nowrap;
+  }
+
+@media screen and (max-width: 768px){
+    .div__hk__title {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    white-space: normal;
+  }
 }
 
 .div__hk__title__text {
-    display: flex;
-    justify-content: center;
-    text-align: center;
     font-family: var(--montserrat-font);
     font-size: var(--body-font-size);
+    padding: 10px;
+
 }
 
-.arrow{
+/* Desktop  */
+
+/* Parent de mon container clicable  */
+.div__arturin__clicable__component {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 85%;
+    padding: 10px;
+    gap: 1rem;
+  }
+
+
+
+/* enfant logo de mon container clicable  */
+.div__arturin__logo {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+
+.div__arturin__logo__image {
+    width: 100%;
+    max-width: 8em;
+    height: auto;
+    padding-left: 17px;
+    padding: 7px 0px 7px 17px;
+  }
+
+
+/* enfant titre de mon container clicable  */
+.div__arturin__title {
+    flex: 2;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+@media screen and (max-width: 768px) {
+    .div__arturin__title {
+        flex: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        white-space: normal;
+      }
+}
+
+
+.div__arturin__title__text {
+    font-family: var(--montserrat-font);
+    font-size: var(--body-font-size);
+    padding: 10px;
+
+}
+
+@media screen and (max-width: 768px) {
+    .div__arturin__title__text {
+        font-family: var(--montserrat-font);
+        font-size: var(--body-font-size);
+        width: 90%;
+        padding: 10px;
+
+    }
+}
+
+/* enfant fleche de mon container clicable  */
+.arrow{
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+    .arrow{
+    justify-content: center;
+}
 }
 
 .arrow__img{
-    width: 6%;
+    width: 10%;
+    height: auto;
 }
+
+/* Mobile  */
+
+@media screen and (max-width: 768px) {
+    .div__arturin__logo__image{
+    width: 100%;
+    padding-top: 1em;
+    max-width: 9em;
+    min-width: 8em;
+}
+}
+
+
+@media screen and (max-width: 768px) {
+    .div__arturin__clicable__component {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        height: auto;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5em;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .div__hk__clicable__component {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        height: auto;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5em;
+    }
+}
+
+/* Fin du container clicable   */
+
+
+
+.div__arturin.active:hover {
+    box-shadow: none; /* Supprime l'ombre */
+    background-color: inherit; /* Rétablit la couleur de fond par défaut */
+    cursor:pointer; /* Change le curseur en flèche normale */
+}
+
+.div__hk.active:hover {
+    box-shadow: none; /* Supprime l'ombre */
+    background-color: inherit; /* Rétablit la couleur de fond par défaut */
+    cursor: pointer; /* Change le curseur en flèche normale */
+}
+
+
+
+
 
 .div__hk__experience {
     display: flex;
@@ -123,11 +299,8 @@ main {
     height: auto;
     font-family: var(--montserrat-font);
     font-size: var(--body-font-size);
+    padding-bottom: 20px;
 }
-
-.hidden {
-    display: none;
-  }
 
 
 .div__hk__experience__text {
@@ -155,52 +328,71 @@ main {
     height: auto;
     align-items: center;
     justify-content: center;
-    padding: 0px 0px 70px 0px;
-    gap:40px;
+    padding: 10;
+    gap: 30px;
     font-family: var(--montserrat-font);
     font-size: var(--body-font-size);
     color: var(--black-color);
+
+    cursor: pointer;
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
 
     border-radius: 40px;
     border: 1px solid #000;
 }
 
-.div__arturin__logo{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 50px;
+@media screen and (max-width: 768px) {
+    .div__arturin {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        height: auto;
+        align-items: center;
+        justify-content: center;
+        padding: 0px 0px 20px 0px;
+        gap: 30px;
+        font-family: var(--montserrat-font);
+        font-size: var(--body-font-size);
+        color: var(--black-color);
+    
+        cursor: pointer;
+        transition: box-shadow 0.3s ease, background-color 0.3s ease;
+    
+        border-radius: 40px;
+        border: 1px solid #000;
+    }
+    
 }
 
-.div__arturin__logo__image{
-    width: 100%;
-    padding-top: 1em;
-    max-width: 15em;
-    min-width: 8em;
+
+
+
+
+
+
+
+.div__arturin.active:hover {
+    box-shadow: none;
+    background-color: inherit;
+    cursor: pointer;
 }
 
-
-
-
-
-.div__arturin__title {
+.div__arturin__experience {
     display: flex;
-    justify-content: center;
     flex-direction: column;
-    align-items: center;
     gap: 10px;
     width: 90%;
+    height: auto;
     font-family: var(--montserrat-font);
     font-size: var(--body-font-size);
+    padding-bottom: 20px;
 }
 
-.div__arturin__title__text {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    font-family: var(--montserrat-font);
-    font-size: var(--body-font-size);
+.hidden {
+    display: none;
 }
+
+
 
 .div__arturin__experience {
     display: flex;
@@ -227,5 +419,9 @@ main {
     line-height: 1.5;
     font-weight: 400;
 }
+
+.hidden {
+    display: none;
+  }
 
 

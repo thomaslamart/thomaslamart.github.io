@@ -13,6 +13,7 @@
 
   --white-color: 255,255,255; 
   --black-color: 0,0,0;
+  --hover-background: rgba(183,215,221,255)
 
   --headline-font-size: 128px;
   --headline-font-weight: 400px;

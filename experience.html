@@ -34,9 +34,9 @@
 
 
 
+    <div class="div__hk" onclick="toggleExperienceHK()">
 
-    <div class="div__hk">
-
+  <!-- Div où l'utilisateur peut cliquer -->
       <div class="div__hk__logo">
         <img src="assets/Heinken_logo.jpg" alt="Logo HK" class="div__hk__logo__image" />
       </div>
@@ -44,7 +44,13 @@
       <div class="div__hk__title">
         <p class="div__hk__title__text">Product Manager E-commerce | France Boissons<br />2 ans et 4 mois</p>
       </div>
-      <div class="div__hk__experience">
+
+      <div class="arrow">
+        <img class= "arrow__img" src="assets/arrow.png" alt="Flèche vers le bas" />
+      </div>
+
+ <!-- Ce qui doit être déroulant -->
+      <div class="div__hk__experience hidden">
         <p class="div__hk__experience__text">Site e-commerce B2B de France Boissons.</p>
 
         <div>
@@ -251,6 +257,7 @@
       </div>
     </div>
   </footer>
+  <script src="experience/experience.js"></script>
 </body>
 
 </html>

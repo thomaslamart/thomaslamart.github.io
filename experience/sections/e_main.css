@@ -52,22 +52,34 @@ main {
     font-size: var(--body-font-size);
     color: var(--black-color);
 
+    cursor: pointer; /* Change le curseur en "main" */
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+
+
     border-radius: 40px;
     border: 1px solid #000;
+}
+
+.div__hk:hover {
+    background-color: #f0f8f9 /* Change légèrement la couleur de fond */
+}
+
+.div__hk.active:hover {
+    box-shadow: none; /* Supprime l'ombre */
+    background-color: inherit; /* Rétablit la couleur de fond par défaut */
+    cursor: default; /* Change le curseur en flèche normale */
 }
 
 .div__hk__logo{
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius: 50px;
 }
 
 .div__hk__logo__image{
     width: 100%;
     max-width: 15em;
     min-width: 8em;
-    border-radius: 100px;
 }
 
 
@@ -93,6 +105,16 @@ main {
     font-size: var(--body-font-size);
 }
 
+.arrow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrow__img{
+    width: 6%;
+}
+
 .div__hk__experience {
     display: flex;
     flex-direction: column;
@@ -102,6 +124,11 @@ main {
     font-family: var(--montserrat-font);
     font-size: var(--body-font-size);
 }
+
+.hidden {
+    display: none;
+  }
+
 
 .div__hk__experience__text {
     display: flex;

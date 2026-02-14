@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="./CSS/style.css">
   <link rel="icon" type="image/png" href="./img/favicon.svg">
   <script src="script.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
@@ -143,7 +144,7 @@
       </div>
     </div>
 
-    <div>
+    <div class="boxcontainer">
       <div class="box" style="max-width:800px; margin-left:auto; margin-right:auto;">
         <p>Hello and welcome to my website.</p>
         <p>&nbsp;</p>
@@ -156,9 +157,10 @@
 
 
   <div style="display: flex; justify-content: center;">
-    <div class="content" style="max-width: 800px;padding: 2em;">
+    <div class="content" style="max-width: 700px;padding: 2em;">
       <h5>What I do?</h5>
-      <table>
+      <div class="table-container">
+      <table class="table is-fullwidth">
         <thead>
           <tr>
             <th>Skills</th>
@@ -198,7 +200,7 @@
                   <div class="modal-background"></div>
                   <div class="modal-content" style="display: flex; justify-content: center; align-items: center;">
                     <p>
-                      <img src="./img/Showme-Roadmap.png" alt="Roadmap"
+                      <img src="./img/Showme-Roadmap.png" alt="Roadmap">
                     </p>
                   </div>
                   <button class="modal-close is-medium" aria-label="close"></button>
@@ -371,6 +373,7 @@
           </tr>
         </tbody>
       </table>
+      </div>
       <script>
         document.addEventListener('DOMContentLoaded', function() {
           var showModalBtns = document.querySelectorAll('.show-modal-btn');

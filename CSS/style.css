@@ -42,6 +42,7 @@ main {
     display: none !important;
 }
 
+
 .intro-page {
   margin-top: 0;
   margin-bottom: 0;
@@ -52,13 +53,17 @@ main {
 
 .experience {
   background: hsl(205, 100%, 97%);
-  padding: 2rem 0;
+  padding: 2em;
 }
 
 #company-tabs {
   margin-top: 0;
   background: hsl(205, 100%, 97%)
   padding-bottom: 1rem;
+}
+
+.boxcontainer {
+  padding: 1em;
 }
 
 /* =========================================================
@@ -68,7 +73,7 @@ main {
 .profile-card-wrapper {
   max-width: 400px;
   margin: 0 auto 2rem;
-  padding: 0 8px;
+  padding: 1em;
   box-sizing: border-box;
   width: 100%;
 }

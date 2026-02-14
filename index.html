@@ -1,169 +1,604 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Thomas Lamart</title>
-    <link
-      rel="shortcut icon"
-      href="assets/favicon_ThomasLAMART.ico"
-      type="image/x-icon"
-    />
-    <link rel="stylesheet" href="home_page/style.css" />
-  </head>
-  <body>
-    <header class="header">
-      <nav class="header__nav">
-        <div class="header__nav__logo">
-          <a href="index.html" class="header__nav__logo__link">
-            <img src="assets/favicon_ThomasLAMART.ico" alt="Logo" class="header__nav__logo__svg" />
-            </a>
-          <h3 class="header__nav__logo__title">-------</h3>
-        </div>
-        <div class="header__nav__langage">
-          <p class="header__nav__langage__fr">&#127467;&#127479;</p>
-          <p class="header__nav__langage__gb">&#127468;&#127463;</p>
-        </div>
-      </nav>
-    </header>
 
-    <section class="section">
-    <div class="section__thomaslamart">
-      <div>
-        <p>THOMAS LAMART</p>
-      </div>
+<head>
+  <meta charset="utf-8">
+  <title>Thomas Lamart</title>
+  <link rel="stylesheet" href="./CSS/style.css">
+  <link rel="icon" type="image/png" href="./img/favicon.svg">
+  <script src="script.js"></script>
+</head>
+
+<body>
+
+  <!--Header : -->
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+
+
+    <div class="navbar-brand">
+
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
     </div>
-    </section>
 
-    <main class="main">
-      <div class="main__PP">
-        <img
-          src="assets/PP_Circle_ThomasLAMART.png"
-          alt="Photo de Thomas Lamart"
-          class="main__PP__png"
-        />
-      </div>
-      <div class="main__presentation">
-        <p class="main__presentation__business">
-          Product Manager | Product Owner | Chef de projet digital
-        </p>
-        <p class="main__presentation__text">
-          <br />Bonjour et Bienvenue sur mon site. <br /><br />
-          Conçu sur Figma et développé en HTML5 et CSS, ce site est hébergé sur GitHub et publié via GitHub Pages.
-          En optant pour une approche statique, j'ai privilégié la rapidité et la simplicité, vous permettant d'accéder directement aux informations essentielles sans détour.
-        </p>
-      </div>
-      <div class="main__CV">
-        <a href="experience.html">
-          <button class="main__CV__button">Voir mon CV</button>
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item" href="/">
+          <h5 class="title is-4">THOMAS LAMART</h5>
         </a>
       </div>
-    </main>
 
-   <footer class="footer">
-      <div class="footer__nav">
-        <section class="contact">
-
-      <div class="contact__email">
-  <p>
-    <span 
-      class="copy-text" 
-      onclick="copyToClipboard(this, 'thomaslamart@yahoo.fr')" 
-      style="cursor: pointer; text-decoration: none;">
-      thomaslamart@yahoo.fr
-      <span class="tooltip">Copier</span>
-    </span>
-  </p>
-</div>
-
-          <div class="contact__phone">
-            <p>
-              <span 
-                class="copy-text" 
-                onclick="copyToClipboard(this, '+33618045000')" 
-                style="cursor: pointer; text-decoration: none;">
-                +33 6 18 04 50 00
-                <span class="tooltip">Copier</span>
-              </span>
-            </p>
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a class="button"
+               href="./img/CV-EN-thomaslamart.pdf"
+               download="CV-EN-thomaslamart.pdf"
+               style="background: hsl(205, 100%, 97%); color: #191919; border: 1px solid #d8eeff;"
+               onmouseover="this.style.background='hsl(205, 100%, 92%)';"
+               onmouseout="this.style.background='hsl(205, 100%, 97%)';">
+              <strong>Download my CV</strong>
+            </a>
           </div>
-          
-          <style>
-            .copy-text {
-              position: relative;
-              display: inline-block;
-              color: black; /* Couleur par défaut */
-              transition: color 0.3s ease;
-            }
-          
-            .copy-text.copied {
-              color: white; /* Couleur après clic */
-            }
-          
-            .tooltip {
-              visibility: hidden;
-              opacity: 0;
-              position: absolute;
-              top: 15px; /* Position au-dessus du numéro */
-              left: 50%;
-              transform: translateX(-50%);
-              background-color: rgb(0, 0, 0);
-              color: rgb(255, 255, 255);
-              padding: 5px 10px;
-              border-radius: 5px;
-              font-size: 12px;
-              white-space: nowrap;
-              transition: opacity 0.3s ease, visibility 0.3s ease;
-              z-index: 10;
-            }
-          
-            .copy-text:hover .tooltip {
-              visibility: visible;
-              opacity: 1;
-            }
-          </style>
-          
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="main-content">
+  
+    <div class="intro-page">
+    <div class="profile-card-wrapper">
+      <div class="card">
+        <div class="card-image">
+          <figure class="image is-4by3">
+            <img src="./img/PP2026.png" alt="Photo de profil" class="profile-picture" />
+
+          </figure>
+        </div>
+        <div class="card-content" style="display: flex; flex-direction: column; align-items: center;">
+          <div class="media-content">
+            <p class="title is-4">Thomas Lamart</p>
+            <a href="https://www.linkedin.com/in/thomaslamart" target="_blank" title="LinkedIn" class="social-link">
+              <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn"
+                class="social-icon">
+            </a>
+            <a href="https://github.com/thomaslamart" target="_blank" title="GitHub" class="social-link">
+              <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub"
+                class="social-icon">
+            </a>
+            <span style="margin: 0 0.4em;">-</span>
+            <!-- Rendez-vous -->
+            <a href="https://calendar.app.google/Xoox3XykxMtF6RHK6" target="_blank" class="social-link" title="Prendre rendez-vous">
+              <!-- iPhone with calendar SVG Icon -->
+              <!-- Icône calendrier claire et universelle -->
+              <svg class="social-icon" viewBox="0 0 24 24" fill="none" aria-label="Prendre rendez-vous" xmlns="http://www.w3.org/2000/svg">
+                <title>Prendre rendez-vous</title>
+                <!-- Calendar outer -->
+                <rect x="3" y="4" width="18" height="16" rx="3" fill="#191919"/>
+                <!-- Calendar header -->
+                <rect x="3" y="4" width="18" height="4" rx="1.5" fill="#E53F3F"/>
+                <!-- Calendar rings -->
+                <rect x="7" y="2" width="2" height="4" rx="1" fill="#fff"/>
+                <rect x="15" y="2" width="2" height="4" rx="1" fill="#fff"/>
+                <!-- Calendar grid (3x2 dots for clarity) -->
+                <circle cx="7.5" cy="10" r="1" fill="#fff"/>
+                <circle cx="12" cy="10" r="1" fill="#fff"/>
+                <circle cx="16.5" cy="10" r="1" fill="#fff"/>
+                <circle cx="7.5" cy="14" r="1" fill="#fff"/>
+                <circle cx="12" cy="14" r="1" fill="#fff"/>
+                <circle cx="16.5" cy="14" r="1" fill="#fff"/>
+              </svg>
+            </a>
+                        <!-- Téléphone -->
+                        <a href="tel:+33618045000" class="social-link" title="Appeler le numéro">
+                          <svg class="social-icon" viewBox="0 0 24 24" fill="#191919" aria-label="Téléphone"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <title>Téléphone</title>
+                            <path
+                              d="M6.6 10.79a15.93 15.93 0 006.61 6.61l2.2-2.19a1 1 0 011.02-.24 12.72 12.72 0 003.97.63 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h4.19a1 1 0 011 1 12.72 12.72 0 00.63 3.97 1 1 0 01-.24 1.02l-2.18 2.2z" />
+                          </svg>
+                        </a>
+            <!-- Adresse-mail -->
+            <a href="#" class="social-link" title="Copier l'adresse mail" id="copy-email-btn">
+              <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/maildotru.svg" alt="E-mail"
+                class="social-icon">
+            </a>
+            <span id="email-copied-popup"
+              style="display:none; position:absolute; background:#4a4a4a; color:#fff; border-radius:4px; padding:2px 8px; font-size:0.8rem; margin-left:8px;">copié
+              !</span>
+          </div>
           <script>
-            function copyToClipboard(element, text) {
-              navigator.clipboard.writeText(text)
-                .then(() => {
-                  // Ajouter la classe "copied" pour changer la couleur
-                  element.classList.add('copied');
-          
-                  // Retirer la classe après 1 seconde
-                  setTimeout(() => {
-                    element.classList.remove('copied');
-                  }, 500);
-                })
-                .catch(err => {
-                  console.error('Erreur lors de la copie : ', err);
-                });
-            }
+            // Copier l'adresse mail dans le presse-papier et afficher le popup "copié dans le presse-papier."
+            document.addEventListener("DOMContentLoaded", function () {
+              var copyBtn = document.getElementById("copy-email-btn");
+              var popup = document.getElementById("email-copied-popup");
+              var email = "thomas.lamart@yahoo.fr";
+
+              copyBtn.addEventListener("click", function (e) {
+                e.preventDefault();
+                if (navigator.clipboard) {
+                  navigator.clipboard.writeText(email);
+                } else {
+                  // fallback pour vieux navigateurs
+                  var textarea = document.createElement("textarea");
+                  textarea.value = email;
+                  document.body.appendChild(textarea);
+                  textarea.select();
+                  document.execCommand("copy");
+                  document.body.removeChild(textarea);
+                }
+                popup.style.display = "inline-block";
+                setTimeout(function () {
+                  popup.style.display = "none";
+                }, 1200);
+              });
+            });
           </script>
-
-        </section>
-      <div class="footer__social">
-
-        <div class="footer__github">
-          <a href="https://github.com/thomaslamart" target="_blank" rel="noopener noreferrer">
-            <img src="assets/Github.png" alt="Logo LinkedIn" class="footer__github__logo" />
-          </a>
-        </div>
-
-        <div class="footer__linkedin">
-          <a href="https://www.linkedin.com/in/thomaslamart/" target="_blank" rel="noopener noreferrer">
-            <img src="assets/linkedin.png" alt="Logo LinkedIn" class="footer__linkedin__logo" />
-          </a>
-        </div>
-
-      </div>
-
-        <div class="footer__div__mention">
-          <p class="footer__div__mention__droits">
-            © 2025 Thomas Lamart. Tous droits réservés.
-          </p>
         </div>
       </div>
-    </footer>
-  </body>
+    </div>
+
+    <div>
+      <div class="box" style="max-width:800px; margin-left:auto; margin-right:auto;">
+        <p>Hello and welcome to my website.</p>
+        <p>&nbsp;</p>
+        <p>Designed in <span class="hover:entity-accent entity-underline inline cursor-pointer align-baseline"><span class="whitespace-normal">Figma</span></span> and developed using <span class="hover:entity-accent entity-underline inline cursor-pointer align-baseline"><span class="whitespace-normal">Cursor</span></span> with HTML5, CSS, and JavaScript, this site is built on the <span class="hover:entity-accent entity-underline inline cursor-pointer align-baseline"><span class="whitespace-normal">Bulma</span></span> framework. It is hosted on <span class="hover:entity-accent entity-underline inline cursor-pointer align-baseline"><span class="whitespace-normal">GitHub</span></span> and deployed via <span class="hover:entity-accent entity-underline inline cursor-pointer align-baseline"><span class="whitespace-normal">GitHub Pages</span></span> and <span class="hover:entity-accent entity-underline inline cursor-pointer align-baseline"><span class="whitespace-normal">Hostinger</span></span>.</p>
+        <p>&nbsp;</p>
+        <p>The static architecture was chosen to ensure optimal performance, fast loading times, and a streamlined user experience.</p>
+      </div>
+    </div>
+  </div>
+
+
+  <div style="display: flex; justify-content: center;">
+    <div class="content" style="max-width: 800px;padding: 2em;">
+      <h5>What I do?</h5>
+      <table>
+        <thead>
+          <tr>
+            <th>Skills</th>
+            <th>Tools</th>
+            <th>Wanna see how it looks?</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Ligne 2 -->
+          <tr>
+            <td style="text-align: center; vertical-align: middle;">Roadmap Strategy</td>
+            <td style="text-align: left; vertical-align: middle;">
+              <span style="display: flex; align-items: center; gap: 6px;">
+                <img src="./img/logo-notion.svg" alt="Notion" style="height: 18px; width: 18px;" />
+                Notion
+              </span>
+              <span style="display: flex; align-items: center; gap: 6px;">
+                <img src="./img/logo-jiraproductdiscovery.svg" alt="Jira Product Discovery" style="height: 18px; width: 18px;" />
+                Jira Product Discovery
+              </span>
+              <span style="display: flex; align-items: center; gap: 6px;">
+                <img src="./img/logo-asana.svg" alt="Asana" style="height: 18px; width: 18px;" />
+                Asana
+              </span>
+              <span style="display: flex; align-items: center; gap: 6px;">
+                <img src="./img/logo-mural.svg" alt="Mural" style="height: 18px; width: 18px;" />
+                Mural
+              </span>
+            </td>
+            <td style="text-align: center; vertical-align: middle;">
+              <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                <button class="button is-info show-modal-btn" data-modal="modal-2" style="background-color: hsl(205, 100%, 92%); color: #222; border: 1px solid #b7e0fa;"
+                  onmouseover="this.style.backgroundColor='hsl(205, 100%, 97%)';"
+                  onmouseout="this.style.backgroundColor='hsl(205, 100%, 92%)';"
+                >Show me</button>
+                <div id="modal-2" class="modal custom-modal">
+                  <div class="modal-background"></div>
+                  <div class="modal-content" style="display: flex; justify-content: center; align-items: center;">
+                    <p>
+                      <img src="./img/Showme-Roadmap.png" alt="Roadmap"
+                    </p>
+                  </div>
+                  <button class="modal-close is-medium" aria-label="close"></button>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <!-- Ligne 3 -->
+          <tr>
+            <td style="text-align: center; vertical-align: middle;">Agile Delivery</td>
+            <td style="text-align: left; vertical-align: middle;">
+              <span style="display: flex; align-items: center; gap: 6px;">
+                <img src="./img/logo-jira.svg" alt="Jira" style="height: 18px; width: 18px;" />
+                Jira
+              </span>
+              <span style="display: flex; align-items: center; gap: 6px;">
+                <img src="./img/logo-asana.svg" alt="Asana" style="height: 18px; width: 18px;" />
+                Asana
+              </span>
+              <span style="display: flex; align-items: center; gap: 6px;">
+                <img src="./img/logo-notion.svg" alt="Notion" style="height: 18px; width: 18px;" />
+                Notion
+              </span>
+            </td>
+            <td style="text-align: center; vertical-align: middle;">
+              <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                <button class="button is-info show-modal-btn" data-modal="modal-3" style="background-color: hsl(205, 100%, 92%); color: #222; border: 1px solid #b7e0fa;"
+                  onmouseover="this.style.backgroundColor='hsl(205, 100%, 97%)';"
+                  onmouseout="this.style.backgroundColor='hsl(205, 100%, 92%)';"
+                >Show me</button>
+                <div id="modal-3" class="modal custom-modal">
+                  <div class="modal-background"></div>
+                  <div class="modal-content" style="display: flex; justify-content: center; align-items: center;">
+                    <p>
+                      <img src="./img/Showme-Backlog.png" alt="Delivery">
+                    </p>
+                  </div>
+                  <button class="modal-close is-medium" aria-label="close"></button>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <!-- Ligne 4 -->
+          <tr>
+            <td style="text-align: center; vertical-align: middle;">Technical documentation</td>
+            <td style="text-align: left; vertical-align: middle;">
+              <span style="display: flex; align-items: center; gap: 6px;">
+                <img src="./img/logo-confluence.svg" alt="Confluence" style="height: 18px; width: 18px;" />
+                Confluence
+              </span>
+              <span style="display: flex; align-items: center; gap: 6px;">
+                <img src="./img/logo-notion.svg" alt="Notion" style="height: 18px; width: 18px;" />
+                Notion
+              </span>
+            </td>
+            <td style="text-align: center; vertical-align: middle;">
+              <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                <button class="button is-info show-modal-btn" data-modal="modal-4" style="background-color: hsl(205, 100%, 92%); color: #222; border: 1px solid #b7e0fa;"
+                  onmouseover="this.style.backgroundColor='hsl(205, 100%, 97%)';"
+                  onmouseout="this.style.backgroundColor='hsl(205, 100%, 92%)';"
+                >Show me</button>
+                <div id="modal-4" class="modal custom-modal">
+                  <div class="modal-background"></div>
+                  <div class="modal-content" style="display: flex; justify-content: center; align-items: center;">
+                    <p>
+                      <img src="./img/Showme-Documentation.png" alt="Documentation">
+                    </p>
+                  </div>
+                  <button class="modal-close is-medium" aria-label="close"></button>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <!-- Ligne 5 -->
+          <tr>
+            <td style="text-align: center; vertical-align: middle;">UX Wireframing</td>
+            <td style="text-align: left; vertical-align: middle;">
+              <span style="display: flex; align-items: center; gap: 6px;">
+                <img src="./img/logo-excalidraw.svg" alt="Excalidraw" style="height: 18px; width: 18px;" />
+                Excalidraw
+              </span>
+              <span style="display: flex; align-items: center; gap: 6px;">
+                <img src="./img/logo-figma.svg" alt="Figma" style="height: 18px; width: 18px;" />
+                Figma
+              </span>
+            </td>
+            <td style="text-align: center; vertical-align: middle;">
+              <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                <button class="button is-info show-modal-btn" data-modal="modal-5" style="background-color: hsl(205, 100%, 92%); color: #222; border: 1px solid #b7e0fa;"
+                  onmouseover="this.style.backgroundColor='hsl(205, 100%, 97%)';"
+                  onmouseout="this.style.backgroundColor='hsl(205, 100%, 92%)';"
+                >Show me</button>
+                <div id="modal-5" class="modal custom-modal">
+                  <div class="modal-background"></div>
+                  <div class="modal-content" style="display: flex; justify-content: center; align-items: center;">
+                    <p>
+                      <img src="./img/Showme-Figma-design.png" alt="Roadmap">
+                    </p>
+                  </div>
+                  <button class="modal-close is-medium" aria-label="close"></button>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <!-- Ligne 6 -->
+          <tr>
+            <td style="text-align: center; vertical-align: middle;">Data Analytics</td>
+            <td style="text-align: left; vertical-align: middle;">
+              <span style="display: flex; align-items: center; gap: 6px;">
+                <img src="./img/logo-newrelic.svg" alt="New Relic" style="height: 18px; width: 18px;" />
+                New Relic
+              </span>
+              <span style="display: flex; align-items: center; gap: 6px;">
+                <img src="./img/logo-Contentsquare.svg" alt="Contentsquare" style="height: 18px; width: 18px;" />
+                Contentsquare
+              </span>
+              <span style="display: flex; align-items: center; gap: 6px;">
+                <img src="./img/logo-powerBI.svg" alt="Power BI" style="height: 18px; width: 18px;" />
+                Power BI
+              </span>
+            </td>
+            <td style="text-align: center; vertical-align: middle;">
+              <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                <button class="button is-info show-modal-btn" data-modal="modal-6" style="background-color: hsl(205, 100%, 92%); color: #222; border: 1px solid #b7e0fa;"
+                  onmouseover="this.style.backgroundColor='hsl(205, 100%, 97%)';"
+                  onmouseout="this.style.backgroundColor='hsl(205, 100%, 92%)';"
+                >Show me</button>
+                <div id="modal-6" class="modal custom-modal">
+                  <div class="modal-background"></div>
+                  <div class="modal-content" style="display: flex; justify-content: center; align-items: center;">
+                    <p>
+                      <img src="./img/Showme-TrackingCS.png" alt="Tracking">
+                    </p>
+                  </div>
+                  <button class="modal-close is-medium" aria-label="close"></button>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <!-- Ligne 7 -->
+          <tr>
+            <td style="text-align: center; vertical-align: middle;">API Testing</td>
+            <td style="text-align: left; vertical-align: middle;">
+              <span style="display: flex; align-items: center; gap: 6px;">
+                <img src="./img/logo-postman.svg" alt="Postman" style="height: 18px; width: 18px;" />
+                Postman
+              </span>
+              <span style="display: flex; align-items: center; gap: 6px;">
+                <img src="./img/logo-swagger.svg" alt="Swagger" style="height: 18px; width: 18px;" />
+                Swagger
+              </span>
+            </td>
+            <td style="text-align: center; vertical-align: middle;">
+              <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                <button class="button is-info show-modal-btn" data-modal="modal-7" style="background-color: hsl(205, 100%, 92%); color: #222; border: 1px solid #b7e0fa;"
+                  onmouseover="this.style.backgroundColor='hsl(205, 100%, 97%)';"
+                  onmouseout="this.style.backgroundColor='hsl(205, 100%, 92%)';"
+                >Show me</button>
+                <div id="modal-7" class="modal custom-modal">
+                  <div class="modal-background"></div>
+                  <div class="modal-content" style="display: flex; justify-content: center; align-items: center;">
+                    <p>
+                      <img src="./img/Showme-Postman.png" alt="API Testing">
+                    </p>
+                  </div>
+                  <button class="modal-close is-medium" aria-label="close"></button>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          var showModalBtns = document.querySelectorAll('.show-modal-btn');
+          showModalBtns.forEach(function(btn) {
+            var modalId = btn.getAttribute('data-modal');
+            var modal = document.getElementById(modalId);
+            var closeModalBtns = modal.querySelectorAll('.modal-background, .modal-close');
+
+            btn.addEventListener('click', function() {
+              modal.classList.add('is-active');
+            });
+
+            closeModalBtns.forEach(function(closeBtn) {
+              closeBtn.addEventListener('click', function() {
+                modal.classList.remove('is-active');
+              });
+            });
+          });
+        });
+      </script>
+    </div>
+  </div>
+
+    <div class="experience">
+      <div class="tabs is-centered" id="company-tabs">
+        <ul>
+          <li class="is-active"><a href="#" data-company="Heineken">Heineken</a></li>
+          <li><a href="#" data-company="Artur'in">Artur'in</a></li>
+          <li><a href="#" data-company="Rent Electric">Rent Electric</a></li>
+          <li><a href="#" data-company="Aigle Azur">Aigle Azur</a></li>
+          <li><a href="#" data-company="Nicolas">Nicolas</a></li>
+        </ul>
+      </div>
+      <div class="content" id="company-content" style="max-width:800px; margin-left:auto; margin-right:auto;">
+
+
+        <!-- Default content: Heineken -->
+<h4>Heineken | Product Manager</h4>
+<p style="font-size:1rem; color:#767676; margin-top:0.25em; margin-bottom:0.75em;">Paris 2023 - 2026</p>
+
+<h5>B2B e-commerce platform (France Boissons)</h5>
+<ul>
+  <li>Product vision and roadmap.</li>
+  <li>Prepared migration to Dynamics 365.</li>
+  <li>Built product strategy and roadmap.</li>
+  <li>Prioritized epics to maximize user value.</li>
+</ul>
+<p><strong>→ Grew digital revenue share from 62% to 80% via e-commerce.</strong></p>
+
+<h5>Data &amp; API Optimization</h5>
+<ul>
+  <li>Oversaw data integration (products, customers, pricing, inventory, orders, etc.) using SAP, Akeneo, Boomi,
+    Hybris, and SQL, with import scripts as support.</li>
+</ul>
+<p><strong>→ Reduced manual processes through automation of data flows.</strong></p>
+
+<h5>Design Thinking</h5>
+<ul>
+  <li>Redesigned the onboarding journey: gathered user requirements, designed solutions, conducted testing, and
+    implemented continuous improvements.</li>
+</ul>
+<p><strong>→ +23% increase in first orders via e-commerce, thanks to an improved onboarding journey.</strong></p>
+
+<h5>Product Delivery &amp; Dev Team Performance</h5>
+<ul>
+  <li>Managed a team of 12 international developers.</li>
+  <li>Defined scope, allocated tasks, and drove execution.</li>
+  <li>Configured and optimized Jira board and tracked team velocity.</li>
+</ul>
+<p><strong>→ Achieved a 36% reduction in critical production bugs (P1) since January 2025.</strong></p>
+
+<h5>KPI Definition</h5>
+<ul>
+  <li>Tracked key metrics via New Relic, ContentSquare, and Power BI.</li>
+</ul>
+<p><strong>→ Delivered dashboards used by both the hosting team and global HQ.</strong></p>
+
+<h5>Collaboration with Stakeholders</h5>
+<ul>
+  <li>Regular interactions with sales, logistics, pricing, and other teams.</li>
+</ul>
+<p><strong>→ Achieved a 17% reduction in order rework.</strong></p>
+</div>
+<script>
+// Activer/désactiver l'onglet sélectionné et changer le contenu affiché
+document.addEventListener("DOMContentLoaded", function () {
+  var tabs = document.querySelectorAll("#company-tabs ul li");
+  var contentDiv = document.getElementById("company-content");
+
+  // Contenus associés à chaque entreprise
+  var companyContent = {
+    "Heineken": `
+<h4>Heineken | Product Manager</h4>
+<p style="font-size:1rem; color:#767676; margin-top:0.25em; margin-bottom:0.75em;">Paris 2023 - 2026</p>
+<h5>B2B e-commerce platform (France Boissons)</h5>
+      <ul>
+        <li>Product vision and roadmap.</li>
+        <li>Prepared migration to Dynamics 365.</li>
+        <li>Built product strategy and roadmap.</li>
+        <li>Prioritized epics to maximize user value.</li>
+      </ul>
+      <p><strong>→ Grew digital revenue share from 62% to 80% via e-commerce.</strong></p>
+
+      <h5>Data &amp; API Optimization</h5>
+      <ul>
+        <li>Oversaw data integration (products, customers, pricing, inventory, orders, etc.) using SAP, Akeneo, Boomi, Hybris, and SQL, with import scripts as support.</li>
+      </ul>
+      <p><strong>→ Reduced manual processes through automation of data flows.</strong></p>
+
+      <h5>Design Thinking</h5>
+      <ul>
+        <li>Redesigned the onboarding journey: gathered user requirements, designed solutions, conducted testing, and implemented continuous improvements.</li>
+      </ul>
+      <p><strong>→ +23% increase in first orders via e-commerce, thanks to an improved onboarding journey.</strong></p>
+
+      <h5>Product Delivery &amp; Dev Team Performance</h5>
+      <ul>
+        <li>Managed a team of 12 international developers.</li>
+        <li>Defined scope, allocated tasks, and drove execution.</li>
+        <li>Configured and optimized Jira board and tracked team velocity.</li>
+      </ul>
+      <p><strong>→ Achieved a 36% reduction in critical production bugs (P1) since January 2025.</strong></p>
+
+      <h5>KPI Definition</h5>
+      <ul>
+        <li>Tracked key metrics via New Relic, ContentSquare, and Power BI.</li>
+      </ul>
+      <p><strong>→ Delivered dashboards used by both the hosting team and global HQ.</strong></p>
+
+      <h5>Collaboration with Stakeholders</h5>
+      <ul>
+        <li>Regular interactions with sales, logistics, pricing, and other teams.</li>
+      </ul>
+      <p><strong>→ Achieved a 17% reduction in order rework.</strong></p>
+    `,
+    "Artur'in": `
+      <h4>Artur’In | Product &amp; Content Manager</h4>
+      <p style="font-size:1rem; color:#767676; margin-top:0.25em; margin-bottom:0.75em;">Paris 2018 - 2022</p>
+
+      <h5>Digital Marketing SaaS</h5>
+
+      <h4>Product strategy and roadmap</h4>
+      <ul>
+        <li>Defined product strategy and roadmap evolution with the Product Manager for the content squad.</li>
+        <li>Recommended and prioritized product improvements.</li>
+        <li>Monitored KPIs to track product performance.</li>
+      </ul>
+
+      <h4>Agile Backlog &amp; Ceremonies</h4>
+      <ul>
+        <li>Centralized business requests and managed the product backlog.</li>
+        <li>Led agile ceremonies to ensure effective delivery.</li>
+      </ul>
+
+      <h4>Data &amp; AI</h4>
+      <ul>
+        <li>Collaborated with Data Scientists on the training and improvement of machine learning models to optimize content ranking and relevance.</li>
+        <li>Worked with a Data Analyst to build dashboards and automated alert systems guiding the Content team’s production priorities.</li>
+      </ul>
+
+      <h4>Team Management, Content Creation &amp; Strategy</h4>
+      <ul>
+        <li>Provided technical support to CSMs.</li>
+        <li>Managed three Content Managers and a team of external writers.</li>
+        <li>Collaborated with an international development team.</li>
+        <li>Defined editorial strategy for finance, insurance, sports, and health sectors.</li>
+        <li>Optimized content selection to maximize organic engagement.</li>
+      </ul>
+    `,
+    "Rent Electric": `
+      <h4>Rent Electric Europe | Business Developer</h4>
+      <p style="font-size:1rem; color:#767676; margin-top:0.25em; margin-bottom:0.75em;">June 2016 - Sept. 2016</p>
+      <h5>Sale and rental of electric vehicles</h5>
+      <ul>
+        <li>Development and acquisition of new partnerships (campsites and bike rental stores).</li>
+        <li>Produced advertising brochures and flyers.</li>
+        <li>Managed point-of-sale operations.</li>
+        <li>Handled sales, rentals, and customer relations in English and Spanish.</li>
+      </ul>
+    `,
+    "Aigle Azur": `
+      <h4>Aigle Azur | Sales &amp; Marketing Assistant</h4>
+      <p style="font-size:1rem; color:#767676; margin-top:0.25em; margin-bottom:0.75em;">April 2015 - June 2015</p>
+      <ul>
+        <li>Conducted on-board and on-ground product benchmarking.</li>
+        <li>Managed community management activities.</li>
+        <li>Performed telephone canvassing of travel agencies to promote new destinations.</li>
+      </ul>
+    `,
+    "Nicolas": `
+      <h4>Nicolas | Manager Sales Assistant</h4>
+      <p style="font-size:1rem; color:#767676; margin-top:0.25em; margin-bottom:0.75em;">Lille Dec. 2013 - Jan. 2014</p>
+      <ul>
+        <li>Managed stock to ensure product availability.</li>
+        <li>Handled merchandising to optimize in-store product visibility.</li>
+        <li>Performed B2C sales and customer advice.</li>
+      </ul>
+    `
+  };
+
+          tabs.forEach(function (tab) {
+            tab.addEventListener("click", function (e) {
+              e.preventDefault();
+              tabs.forEach(function (t) {
+                t.classList.remove("is-active");
+              });
+              tab.classList.add("is-active");
+              var company = tab.querySelector("a").getAttribute("data-company");
+              contentDiv.innerHTML = companyContent[company] || "<p>Aucune information disponible.</p>";
+            });
+          });
+        });
+      </script>
+      </script>
+    </div>
+
+
+
+  </main>
+
+</body>
+
+<footer class="footer">
+  <div class="content has-text-centered">
+    <p>
+      ©2026 <strong>Monsieur Thomas Lamart</strong>. Tous droits réservés.
+    </p>
+  </div>
+</footer>
+
 </html>

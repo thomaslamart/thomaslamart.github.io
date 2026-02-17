@@ -1,43 +1,134 @@
-@import "https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css";
 
-/* =========================================================
-   Layout global
-   ========================================================= */
+/* ===================================================================
+   Global Layout
+   =================================================================== */
 
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
+
+
 
 main {
   padding: 0;
 }
 
-/* =========================================================
-   Navbar
-   ========================================================= */
+/* ===================================================================
+   Navbar & Navigation
+   =================================================================== */
 
-.navbar {
-  background: #fff;
-  margin-bottom: 0;
+.custom-navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
   top: 0;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  height: 2.25rem;
   z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
-.navbar-item h5.title {
-  font-family: 'Unbounded', sans-serif;
-  letter-spacing: 3px;
+.custom-navbar-brand {
+  position: absolute;
+  left: 1rem;
 }
 
-.navbar .button {
-  background: hsl(205, 100%, 97%);
-  color: #191919;
-  border: 1px solid #d8eeff;
+.custom-navbar-center {
+  flex: 1;
+  text-align: center;
 }
 
-.navbar .button:hover {
-  background: hsl(205, 100%, 92%);
+.custom-navbar h6.title {
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 5px;
+  text-align: center;
+  margin: 0;
 }
+
+.burger {
+  background: none;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  display: none;
+}
+
+.burger-line {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background: #111;
+  margin: 3px 0;
+  border-radius: 1px;
+  transition: transform 0.18s ease, opacity 0.18s ease;
+}
+
+@media (max-width: 1023px) {
+  .burger {
+    display: block;
+  }
+
+  /* Positionner le bouton burger à droite sur mobile */
+  .custom-navbar-brand {
+    left: auto;
+    right: 1rem;
+  }
+
+  /* Réduire l'espacement des lettres du titre sur mobile */
+  .custom-navbar h6.title {
+    letter-spacing: 2px;
+  }
+}
+
+/* Mobile overlay (page blanche plein écran) */
+.mobile-overlay {
+  display: none;
+}
+.mobile-overlay.is-active {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #fff;
+  z-index: 2000;
+}
+
+/* Optional small close hint in top-right of overlay */
+.mobile-overlay .overlay-close-hint {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1rem;
+  color: #444;
+}
+
+/* Close button (small cross) inside overlay */
+.overlay-close {
+    position: absolute;
+    top: -0.30rem;
+    right: 1.3rem;
+    background: transparent;
+    border: none;
+    font-size: 2.6rem;
+    /* line-height: 1; */
+    cursor: pointer;
+    color: #222;
+}
+
+/* Burger active state: simple animation (optional) */
+.burger.is-active .burger-line:nth-child(1) {
+  transform: translateY(5px) rotate(45deg);
+}
+.burger.is-active .burger-line:nth-child(2) {
+  opacity: 0;
+}
+.burger.is-active .burger-line:nth-child(3) {
+  transform: translateY(-5px) rotate(-45deg);
+}
+
 
 /* =========================================================
    Main content
@@ -47,12 +138,55 @@ main {
   gap: 13rem;
 }
 
+.hero-body {
+  background-image: url('../img/background-portfolio-ThomasLAMART.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Fixer la largeur de la carte sur desktop */
+@media (min-width: 1024px) {
+    .custom-profile-card {
+        width: 400px;
+        margin: 0 auto;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    }
+}
+
+/* Style de l'indicateur de scroll */
+.scroll-indicator {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: #b5b5b5;
+    font-size: 0.8rem;
+    animation: fadeInOut 2s infinite;
+}
+
+.scroll-indicator .arrow {
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid #b5b5b5;
+    border-bottom: 2px solid #b5b5b5;
+    transform: rotate(45deg);
+    margin: 10px auto;
+}
+
+@keyframes fadeInOut {
+    0%, 100% { opacity: 0.3; transform: translate(-50%, 0); }
+    50% { opacity: 1; transform: translate(-50%, 10px); }
+}
+
 .intro-page {
   margin-top: 0;
   margin-bottom: 0;
   padding-top: 1rem;
   padding-bottom: 2rem;
-  background: hsl(205, 100%, 97%);
 }
 
 .boxcontainer {
@@ -102,6 +236,39 @@ main {
 /* =========================================================
    Skills section
    ========================================================= */
+
+
+.skills-container {
+    padding: 0; /* On enlève le padding de la box pour que les lignes touchent les bords */
+    overflow: hidden;
+}
+
+.icon-small {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+}
+
+.tag.is-white.shadow-tiny {
+    border: 1px solid #eee;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    font-size: 0.8rem;
+    height: 2.2em;
+}
+
+.uppercase {
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Modal styling */
+.modal-content {
+    max-width: 90%;
+    width: 1000px;
+}
+
+/* Fin En test */
+
 
 .content {
   padding: 2em;
@@ -159,18 +326,73 @@ main {
   height: auto;
 }
 
+/* Style des cartes pour un effet "Bento" moderne */
+.custom-box {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Force la boîte à prendre toute la hauteur de la colonne */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #f0f0f0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+}
+
+/* On s'assure que le contenu à l'intérieur s'étire aussi */
+.custom-box .media, 
+.custom-box .media-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.custom-box .content {
+    flex-grow: 1; /* Pousse le contenu pour remplir l'espace vide */
+}
+
+.custom-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    border-color: #3273dc;
+}
+
 /* =========================================================
    Experience section
    ========================================================= */
+/* Style des sous-sections */
+.card-job {
+    padding-left: 15px;
+    border-left: 3px solid #eee;
+    transition: border-color 0.3s ease;
+}
+
+.card-job:hover {
+    border-left-color: #3273dc;
+}
+
+/* Style des encadrés de résultats (Impact) */
+.result-tag {
+    font-size: 0.85rem;
+    border-radius: 6px;
+    margin-left: -10px;
+    border: 1px dashed rgba(0,0,0,0.1);
+}
+
+/* Séparateur discret */
+.border-top-light {
+    border-top: 1px solid #f0f0f0;
+}
+
+/* Icônes (si tu utilises FontAwesome) */
+.title.is-6 i {
+    color: #3273dc;
+    width: 20px;
+}
 
 .experience {
-  background: hsl(205, 100%, 97%);
-  padding: 2em;
+  padding: 0 2em 2em 2em;
 }
 
 #company-tabs {
   margin-top: 0;
-  background: hsl(205, 100%, 97%);
   padding-bottom: 1rem;
 }
 
@@ -178,16 +400,6 @@ main {
   max-width: 800px;
   margin: 0 auto;
   min-height: 600px;
-}
-
-/* =========================================================
-   Modal and navbar interactions
-   ========================================================= */
-
-@media (min-width: 769px) {
-  html.is-clipped .navbar {
-    display: none;
-  }
 }
 
 /* =========================================================
@@ -200,23 +412,31 @@ main {
   background: #4a4a4a;
   color: #fff;
   border-radius: 4px;
-  padding: 2px 8px;
+  padding: 4px 8px;
   font-size: 0.8rem;
   margin-left: 8px;
+}
+
+/* separator between social icons */
+.separator {
+  position: relative;
+  top: -6px;
+  margin: 0 0.4em;
+  display: inline-block;
 }
 
 /* =========================================================
    Responsive (Mobile)
    ========================================================= */
 
-@media (max-width: 768px) {
+@media (max-width: 1023px) {
   .main-content {
     gap: 2rem;
   }
 
   .profile-card-wrapper {
     max-width: 100%;
-    padding: 0.5em;
+    padding: 0;
   }
 
   .box, #company-content {
@@ -234,7 +454,7 @@ main {
   }
 
   .experience {
-    padding: 1em;
+    padding: 0;
   }
 
   .table-container {
@@ -298,7 +518,27 @@ main {
   }
 
   /* Mobile navbar not sticky */
-  .navbar {
-    position: static;
-  }
+  /* Removed */
+}
+
+/* ===================================================================
+   Utility classes
+   =================================================================== */
+
+.h-100 { height: 100%; }
+.border-top { border-top: 1px solid #f0f0f0; }
+.border-bottom-radius { border-bottom: 1px solid #eee; border-radius: 6px 6px 0 0; }
+.border-tag { border: 1px solid #eee !important; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
+.shadow-smooth { box-shadow: 0 8px 20px rgba(0,0,0,0.06); }
+.icon-small { width: 16px; height: 16px; vertical-align: middle; object-fit: contain; }
+.skill-row { transition: background 0.3s; }
+.skill-row:hover { background-color: #fcfcfc; }
+
+/* Expertise section background */
+.expertise-background {
+    background-color: hsl(205, 100%, 97%);
+}
+
+.footer {
+    background-color:hsl(205, 100%, 93%);
 }

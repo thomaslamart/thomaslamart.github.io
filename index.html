@@ -4,579 +4,1011 @@
 <head>
   <meta charset="utf-8">
   <title>Thomas Lamart</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap">
   <link rel="stylesheet" href="./CSS/style.css">
   <link rel="icon" type="image/png" href="./img/favicon.svg">
-  <script src="script.js"></script>
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+    content="Technical Product Manager
+Specialized in Data Interfaces & Product Experience, Bridging the gap between complex backend architectures and seamless digital experiences.">
+  <meta property="og:title" content="Thomas Lamart | Product Manager">
+  <meta property="og:description"
+    content="Bridging the gap between complex backend architectures and seamless digital experiences.">
+  <meta property="og:image" content="./img/PP2026.png">
+  <meta property="og:url" content="https://thomaslamart.fr">
 </head>
 
 <body>
 
-  <!--Header : -->
-  <nav class="navbar" role="navigation" aria-label="main navigation">
+  <nav class="custom-navbar">
+  <div class="custom-navbar-brand">
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">
+      <span class="burger-line" aria-hidden="true"></span>
+      <span class="burger-line" aria-hidden="true"></span>
+      <span class="burger-line" aria-hidden="true"></span>
+    </button>
+  </div>
+  <div class="custom-navbar-center">
+    <a href="/">
+      <h6 class="title is-4">THOMAS LAMART</h6>
+    </a>
+  </div>
+  </nav>
+
+  <!-- Fullscreen mobile overlay (page blanche) -->
+  <div id="mobile-overlay" class="mobile-overlay" aria-hidden="true">
+    <button id="overlay-close" class="overlay-close" aria-label="Close overlay">×</button>
+  </div>
+
+  <main class="main-content">
+
+    <section id="hero" class="hero is-fullheight-with-navbar">
+      <div class="hero-body">
+        <div class="container is-justify-content-center is-align-items-center">
+
+          <div class="intro-page">
+            <div class="profile-card-wrapper">
+              <div class="card custom-profile-card">
+                <div class="card-image">
+                  <figure class="image is-4by3">
+                    <img src="./img/PP2026.png" alt="Photo de profil" class="profile-picture" />
+                  </figure>
+                </div>
+                <div class="card-content has-text-centered">
+                  <div class="media-content">
+                    <p class="title is-4">Thomas Lamart</p>
+                    <p class="subtitle is-6">Product Manager</p>
+
+                    <div class="social-links-container">
+                      <a href="https://www.linkedin.com/in/thomaslamart" target="_blank" title="LinkedIn"
+                        class="social-link">
+                        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg"
+                          alt="LinkedIn" class="social-icon">
+                      </a>
+                      <a href="https://github.com/thomaslamart" target="_blank" title="GitHub" class="social-link">
+                        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub"
+                          class="social-icon">
+                      </a>
+                      <span style="position: relative; top: -6px; margin: 0 0.4em;">-</span>
+
+                      <a href="https://calendar.app.google/Xoox3XykxMtF6RHK6" target="_blank" class="social-link"
+                        title="Schedule a meeting">
+                        <svg class="social-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect x="3" y="4" width="18" height="16" rx="3" fill="#191919" />
+                          <rect x="3" y="4" width="18" height="4" rx="1.5" fill="#E53F3F" />
+                          <rect x="7" y="2" width="2" height="4" rx="1" fill="#fff" />
+                          <rect x="15" y="2" width="2" height="4" rx="1" fill="#fff" />
+                          <circle cx="7.5" cy="10" r="1" fill="#fff" />
+                          <circle cx="12" cy="10" r="1" fill="#fff" />
+                          <circle cx="16.5" cy="10" r="1" fill="#fff" />
+                          <circle cx="7.5" cy="14" r="1" fill="#fff" />
+                          <circle cx="12" cy="14" r="1" fill="#fff" />
+                          <circle cx="16.5" cy="14" r="1" fill="#fff" />
+                        </svg>
+                      </a>
+
+                      <a href="tel:+33618045000" class="social-link" title="Let's talk">
+                        <svg class="social-icon" viewBox="0 0 24 24" fill="#191919" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M6.6 10.79a15.93 15.93 0 006.61 6.61l2.2-2.19a1 1 0 011.02-.24 12.72 12.72 0 003.97.63 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h4.19a1 1 0 011 1 12.72 12.72 0 00.63 3.97 1 1 0 01-.24 1.02l-2.18 2.2z" />
+                        </svg>
+                      </a>
+
+                      <a href="#" class="social-link" title="Copy email" id="copy-email-btn">
+                        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/maildotru.svg"
+                          alt="E-mail" class="social-icon">
+                      </a>
+                      <span id="email-copied-popup"
+                        style="display:none; position: absolute; font-size: 0.7rem; background: #eee; padding: 2px 5px; border-radius: 4px;">copied!</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="scroll-indicator is-hidden-touch">
+            <p>Scroll to explore</p>
+            <div class="arrow"></div>
+          </div>
+
+        </div>
+      </div>
+    </section>
 
 
-    <div class="navbar-brand">
+    <section id="about" class="section">
+      <div class="container">
+        <div class="block">
+          <h1 class="title is-2 mb-2 custom-gradient-text">
+            Technical Product Manager
+          </h1>
+          <p class="subtitle is-4 has-text-weight-light">
+            Specialized in <span class="has-text-link has-text-weight-semibold">Data Interfaces & Product
+              Experience</span>
+          </p>
+          <p class="is-size-5 has-text-grey-darker is-italic">
+            "Bridging the gap between complex backend architectures and seamless digital experiences."
+          </p>
+        </div>
 
-      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </a>
-    </div>
+        <div class="columns is-multiline mt-6">
 
-    <div id="navbarBasicExample" class="navbar-menu">
-      <div class="navbar-start">
-        <a class="navbar-item" href="/">
-          <h5 class="title is-4">THOMAS LAMART</h5>
-        </a>
+          <div class="column is-6">
+            <div class="box custom-box h-100">
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <p>
+                      <strong class="is-size-5">Architecture & Data Flow</strong><br>
+                      <small class="has-text-link uppercase has-text-weight-bold">ERP • PIM • MIDDLEWARE</small><br>
+                      <span class="is-size-6">Driving interoperability between E-commerce front-ends and back-office
+                        systems (<strong>Middleware, PIM, SAP ERP</strong>) while ensuring data integrity.</span>
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="column is-6">
+            <div class="box custom-box h-100">
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <p>
+                      <strong class="is-size-5">User Experience & Design Thinking</strong><br>
+                      <small class="has-text-link uppercase has-text-weight-bold">Problem Solving • User Journey •
+                        Figma</small><br>
+                      <span class="is-size-6">Transforming complex business requirements into intuitive interfaces
+                        through <strong>Design Thinking</strong> and high-fidelity wireframing.</span>
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="column is-6">
+            <div class="box custom-box h-100">
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <p>
+                      <strong class="is-size-5">Dual Technical/Agile Expertise</strong><br>
+                      <small class="has-text-link uppercase has-text-weight-bold">Technical Specs • User Stories •
+                        QA</small><br>
+                      <span class="is-size-6">Translating business needs into technical specifications for <strong>SAP
+                          teams</strong> and actionable User Stories for <strong>international squads</strong>.</span>
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="column is-6">
+            <div class="box custom-box h-100">
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <p>
+                      <strong class="is-size-5">Cross-Functional Leadership</strong><br>
+                      <small class="has-text-link uppercase has-text-weight-bold">Stakeholders • Change Mgmt •
+                        Communication</small><br>
+                      <span class="is-size-6">Guiding Supply Chain, Pricing, Sales Admin teams etc through
+                        <strong>digital transformation</strong> to align legacy workflows with product goals.</span>
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <section id="expertise" class="section expertise-background">
+      <div class="container">
+        <h2 class="title is-4 has-text-centered mb-6">Product Expertise & Methods</h2>
+
+        <div class="columns is-desktop is-variable is-3">
+
+          <div class="column is-4">
+            <div class="box shadow-smooth p-0 is-flex is-flex-direction-column h-100">
+              <div class="has-background-link-light p-5 border-bottom-radius">
+                <h3 class="title is-5 has-text-link mb-2">Discovery</h3>
+                <p class="subtitle is-7">Understanding problems and identifying opportunities.</p>
+              </div>
+
+              <div class="skill-row py-4 px-5">
+                <p class="has-text-weight-bold is-size-6 mb-2">User Research</p>
+                <p class="is-size-7 has-text-grey mb-2">Understanding user needs through behavior analysis and feedback
+                  collection.</p>
+                <div class="tags">
+                  <span class="tag is-white border-tag"><img src="./img/logo-hotjar.svg" alt="Hotjar"
+                      class="mr-2 icon-small"> Hotjar</span>
+                  <span class="tag is-white border-tag"><img src="./img/logo-jiraproductdiscovery.svg"
+                      alt="ProductDiscovery" class="mr-2 icon-small"> ProductDiscovery</span>
+                  <span class="tag is-white border-tag">User Interviews</span>
+                  <span class="tag is-white border-tag">User Feedback</span>
+                  <span class="tag is-white border-tag">Sales Feedback</span>
+                </div>
+                <button class="button has-text-white has-background-link-light is-rounded is-small show-modal-btn"
+                  data-modal="modal-discoverybacklog">Show me</button>
+              </div>
+
+              <div class="skill-row py-4 px-5 border-top">
+                <p class="has-text-weight-bold is-size-6 mb-2">Data Analysis</p>
+                <p class="is-size-7 has-text-grey mb-2">Performance monitoring, user behavior tracking, and KPI
+                  analysis.</p>
+                <div class="tags">
+                  <span class="tag is-white border-tag"><img src="./img/logo-contentsquare.svg" alt="Contentsquare"
+                      class="mr-2 icon-small"> Contentsquare</span>
+                  <span class="tag is-white border-tag"><img src="./img/logo-newrelic.svg" alt="New Relic"
+                      class="mr-2 icon-small"> New Relic</span>
+                  <span class="tag is-white border-tag"><img src="./img/logo-powerbi.svg" alt="Power BI"
+                      class="mr-2 icon-small"> Power BI</span>
+                </div>
+                <button class="button has-text-white has-background-link-light is-rounded is-small show-modal-btn"
+                  data-modal="modal-contentsquare">Show me</button>
+              </div>
+
+              <div class="skill-row py-4 px-5 border-top">
+                <p class="has-text-weight-bold is-size-6 mb-2">Market Research</p>
+                <p class="is-size-7 has-text-grey mb-2">Analysis of direct, indirect, and inspirational competitors.</p>
+                <div class="tags">
+                  <span class="tag is-white border-tag"><img src="./img/logo-baymard.svg" alt="Baymard"
+                      class="mr-2 icon-small"> Baymard</span>
+                  <span class="tag is-white border-tag">Benchmarking</span>
+                  <span class="tag is-white border-tag">Market Trends</span>
+                </div>
+              </div>
+
+              <div class="skill-row py-4 px-5 border-top">
+                <p class="has-text-weight-bold is-size-6 mb-2">Design</p>
+                <p class="is-size-7 has-text-grey mb-2">Prototypes, Wireframes, design systems.</p>
+                <div class="tags">
+                  <span class="tag is-white border-tag"><img src="./img/logo-excalidraw.svg" alt="Excalidraw"
+                      class="mr-2 icon-small"> Excalidraw</span>
+                  <span class="tag is-white border-tag"><img src="./img/logo-figma.svg" alt="Figma"
+                      class="mr-2 icon-small"> Figma</span>
+                  <span class="tag is-white border-tag"><img src="./img/logo-baymard.svg" alt="Baymard"
+                      class="mr-2 icon-small"> Baymard</span>
+                </div>
+                <button class="button has-text-white has-background-link-light is-rounded is-small show-modal-btn"
+                  data-modal="modal-figma-design">Show me</button>
+              </div>
+
+              <div class="skill-row py-4 px-5 border-top" style="flex-grow: 1;">
+                <p class="has-text-weight-bold is-size-6 mb-2">Roadmap Strategy</p>
+                <p class="is-size-7 has-text-grey mb-2">Long-term vision planning, prioritization, and strategic
+                  alignment.</p>
+                <div class="tags">
+                  <span class="tag is-white border-tag"><img src="./img/logo-notion.svg" alt="Notion"
+                      class="mr-2 icon-small"> Notion</span>
+                  <span class="tag is-white border-tag"><img src="./img/logo-jiraproductdiscovery.svg" alt="JPD"
+                      class="mr-2 icon-small"> JPD</span>
+                  <span class="tag is-white border-tag"><img src="./img/logo-asana.svg" alt="Asana"
+                      class="mr-2 icon-small"> Asana</span>
+                  <span class="tag is-white border-tag"><img src="./img/logo-mural.svg" alt="Mural"
+                      class="mr-2 icon-small"> Mural</span>
+                </div>
+                <button class="button has-text-white has-background-link-light is-rounded is-small show-modal-btn"
+                  data-modal="modal-roadmap">Show me</button>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="column is-4">
+            <div class="box shadow-smooth p-0 is-flex is-flex-direction-column h-100">
+              <div class="has-background-primary-light p-5 border-bottom-radius">
+                <h3 class="title is-5 has-text-primary mb-2">Delivery</h3>
+                <p class="subtitle is-7">Designing, iterating, and measuring success.</p>
+              </div>
+
+              <div class="skill-row py-4 px-5">
+                <p class="has-text-weight-bold is-size-6 mb-2">Product Documentation</p>
+                <p class="is-size-7 has-text-grey mb-2">Technical documentation, technical specs, requirements.</p>
+                <div class="tags">
+                  <span class="tag is-white border-tag"><img src="./img/logo-confluence.svg" alt="Confluence"
+                      class="mr-2 icon-small"> Confluence</span>
+                  <span class="tag is-white border-tag"><img src="./img/logo-notion.svg" alt="Notion"
+                      class="mr-2 icon-small"> Notion</span>
+                  <span class="tag is-white border-tag"><img src="./img/logo-swagger.svg" alt="Swagger"
+                      class="mr-2 icon-small"> Swagger</span>
+                </div>
+                <button class="button has-text-primary has-background-primary-light is-rounded is-small show-modal-btn"
+                  data-modal="modal-docs">Show me</button>
+              </div>
+
+              <div class="skill-row py-4 px-5 border-top">
+                <p class="has-text-weight-bold is-size-6 mb-2">Agile & Backlog</p>
+                <p class="is-size-7 has-text-grey mb-2">Sprint planning, refinement, and MVP iterations.</p>
+                <div class="tags">
+                  <span class="tag is-white border-tag"><img src="./img/logo-jira.svg" alt="Jira"
+                      class="mr-2 icon-small"> Jira</span>
+                  <span class="tag is-white border-tag"><img src="./img/logo-asana.svg" alt="Asana"
+                      class="mr-2 icon-small"> Asana</span>
+                  <span class="tag is-white border-tag"><img src="./img/logo-notion.svg" alt="Notion"
+                      class="mr-2 icon-small"> Notion</span>
+                </div>
+                <button class="button has-text-primary has-background-primary-light is-rounded is-small show-modal-btn"
+                  data-modal="modal-backlog">Show me</button>
+              </div>
+
+              <div class="skill-row py-4 px-5 border-top">
+                <p class="has-text-weight-bold is-size-6 mb-2">Testing</p>
+                <p class="is-size-7 has-text-grey mb-2">Validation, acceptance criteria definition, and A/B testing.</p>
+                <div class="tags">
+                  <span class="tag is-white border-tag"><img src="./img/logo-abtasty.svg" alt="AB Tasty"
+                      class="mr-2 icon-small"> AB Tasty</span>
+                  <span class="tag is-white border-tag">Acceptance Criteria</span>
+                  <span class="tag is-white border-tag"><img src="./img/logo-postman.svg" alt="Postman"
+                      class="mr-2 icon-small"> Postman</span>
+                  <span class="tag is-white border-tag"><img src="./img/logo-swagger.svg" alt="Swagger"
+                      class="mr-2 icon-small"> Swagger</span>
+                </div>
+                <button class="button has-text-primary has-background-primary-light is-rounded is-small show-modal-btn"
+                  data-modal="modal-postman">Show me</button>
+              </div>
+
+              <div class="skill-row py-4 px-5 border-top" style="flex-grow: 1;">
+                <p class="has-text-weight-bold is-size-6 mb-2">Measuring Success</p>
+                <p class="is-size-7 has-text-grey mb-2">Post-release KPI tracking, alerting, and solutions.</p>
+                <div class="tags">
+                  <span class="tag is-white border-tag"><img src="./img/logo-contentsquare.svg" alt="Contentsquare"
+                      class="mr-2 icon-small"> Contentsquare</span>
+                  <span class="tag is-white border-tag"><img src="./img/logo-newrelic.svg" alt="New Relic"
+                      class="mr-2 icon-small"> New Relic</span>
+                  <span class="tag is-white border-tag"><img src="./img/logo-powerbi.svg" alt="Power BI"
+                      class="mr-2 icon-small"> Power BI</span>
+                </div>
+                <button class="button has-text-primary has-background-primary-light is-rounded is-small show-modal-btn"
+                  data-modal="modal-data">Show me</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="column is-4">
+            <div class="box shadow-smooth p-0 is-flex is-flex-direction-column h-100">
+              <div class="has-background-info-light p-5 border-bottom-radius">
+                <h3 class="title is-5 has-text-info mb-2">Technical Leadership & Ops</h3>
+                <p class="subtitle is-7">Systems mastery & technical mediation.</p>
+              </div>
+
+              <div class="skill-row py-4 px-5">
+                <p class="has-text-weight-bold is-size-6 mb-2">SAP ECC Mastery</p>
+                <p class="is-size-7 has-text-grey mb-2">Deep dive into SAP transactions, IDOC monitoring and ERP
+                  structures.</p>
+                <div class="tags">
+                  <span class="tag is-white border-tag">SAP ECC</span>
+                  <span class="tag is-white border-tag">IDOCs</span>
+                  <span class="tag is-white border-tag">Data Mapping</span>
+                </div>
+              </div>
+
+              <div class="skill-row py-4 px-5 border-top">
+                <p class="has-text-weight-bold is-size-6 mb-2">Database & SQL</p>
+                <p class="is-size-7 has-text-grey mb-2">Direct SQL querying in Hybris environments for troubleshooting.
+                </p>
+                <div class="tags">
+                  <span class="tag is-white border-tag">SQL Queries</span>
+                  <span class="tag is-white border-tag">Hybris DB</span>
+                </div>
+                <button class="button has-text-info has-background-info-light is-rounded is-small show-modal-btn"
+                  data-modal="modal-sql">Show me</button>
+              </div>
+
+              <div class="skill-row py-4 px-5 border-top">
+                <p class="has-text-weight-bold is-size-6 mb-2">Technical Mediation</p>
+                <p class="is-size-7 has-text-grey mb-2">Adapting technical discourse for stakeholders and uniting
+                  engineers around a vision.</p>
+                <div class="tags">
+                  <span class="tag is-white border-tag">Bridge Tech/Biz</span>
+                  <span class="tag is-white border-tag">Eng. Leadership</span>
+                </div>
+              </div>
+
+              <div class="skill-row py-4 px-5 border-top" style="flex-grow: 1;">
+                <p class="has-text-weight-bold is-size-6 mb-2">Product Operations</p>
+                <p class="is-size-7 has-text-grey mb-2">Optimizing interoperability and technical workflows.</p>
+                <div class="tags">
+                  <span class="tag is-white border-tag">Interoperability</span>
+                  <span class="tag is-white border-tag">Middleware</span>
+                  <span class="tag is-white border-tag">Flow Design</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+
       </div>
 
-      <div class="navbar-end">
-        <div class="navbar-item">
-          <div class="buttons">
-            <a class="button"
-               href="./img/CV_EN_ThomasLAMART.pdf"
-               download="CV_EN_ThomasLAMART.pdf">
+
+
+    </section>
+
+    <div id="modal-postman" class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-content">
+        <p class="image"><img src="./img/Showme-Postman.png" alt="Postman Example"></p>
+      </div><button class="modal-close is-large" aria-label="close"></button>
+    </div>
+    <div id="modal-data" class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-content">
+        <p class="image"><img src="./img/Showme-TrackingCS.png" alt="Data Analysis Dashboard"></p>
+      </div><button class="modal-close is-large" aria-label="close"></button>
+    </div>
+    <div id="modal-roadmap" class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-content">
+        <p class="image"><img src="./img/Showme-Roadmap.png" alt="Product Roadmap Strategy"></p>
+      </div><button class="modal-close is-large" aria-label="close"></button>
+    </div>
+    <div id="modal-docs" class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-content">
+        <p class="image"><img src="./img/Showme-Documentation.png" alt="Technical Documentation Example"></p>
+      </div><button class="modal-close is-large" aria-label="close"></button>
+    </div>
+    <div id="modal-contentsquare" class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-content">
+        <p class="image"><img src="./img/Showme-ContentSquare.png" alt="UX Design Example"></p>
+      </div><button class="modal-close is-large" aria-label="close"></button>
+    </div>
+    <div id="modal-backlog" class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-content">
+        <p class="image"><img src="./img/Showme-Backlog.png" alt="Product Backlog Example"></p>
+      </div><button class="modal-close is-large" aria-label="close"></button>
+    </div>
+    <div id="modal-figma-design" class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-content">
+        <p class="image"><img src="./img/Showme-Figma-design.png" alt="Figma Design Example"></p>
+      </div><button class="modal-close is-large" aria-label="close"></button>
+    </div>
+    <div id="modal-discoverybacklog" class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-content">
+        <p class="image"><img src="./img/Showme-DiscoveryBacklog.png" alt="Discovery Backlog Example"></p>
+      </div><button class="modal-close is-large" aria-label="close"></button>
+    </div>
+    <div id="modal-sql" class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-content">
+        <p class="image"><img src="./img/Showme-impex.png" alt="SQL Query Example"></p>
+      </div><button class="modal-close is-large" aria-label="close"></button>
+    </div>
+
+
+
+    <!--Section EXPERIENCE (modal handling already declared above; duplicate removed) -->
+
+
+    <section id="experience" class="section">
+      <div class="container">
+        <h2 class="title is-4 has-text-centered mb-6">My Professional Experiences</h2>
+        <div class="experience">
+          <div class="tabs is-centered" id="company-tabs">
+            <ul>
+              <li class="is-active"><a href="#" data-company="Heineken">Heineken</a></li>
+              <li><a href="#" data-company="Artur'in">Artur'in</a></li>
+              <li><a href="#" data-company="RE Europe">RE Europe</a></li>
+              <li><a href="#" data-company="Aigle Azur">Aigle Azur</a></li>
+              <li><a href="#" data-company="Nicolas">Nicolas</a></li>
+            </ul>
+          </div>
+          <div class="content" id="company-content">
+
+
+            <!-- Default content: Heineken -->
+            <div class="box experience-box shadow-smooth">
+              <div
+                class="is-flex is-flex-direction-column-mobile is-justify-content-space-between is-align-items-start-mobile is-align-items-center-tablet mb-5">
+
+                <div class="mb-3-mobile">
+                  <h3 class="title is-4 mb-1">Product Manager</h3>
+                  <p class="subtitle is-5 has-text-link has-text-weight-bold">Heineken</p>
+                  <span class="tag is-light is-medium is-rounded">Paris | 2023 - 2026</span>
+                </div>
+              </div>
+
+              <p class="subtitle is-6 is-italic mb-5">B2B e-commerce platform transformation & ecosystem orchestration
+                on France Boissons Website.</p>
+
+              <div class="columns mb-5">
+                <div class="column is-6">
+                  <div class="content card-job">
+                    <h6 class="title is-6 mb-2">Product Vision & Roadmap</h6>
+                    <ul>
+                      <li>Migration to Dynamics 365, strategy & roadmap definition.</li>
+                    </ul>
+                    <div class="notification is-success is-light p-2 mt-2 result-tag">
+                      <strong>Impact:</strong> Digital revenue grew from 62% to 80%.
+                    </div>
+                  </div>
+                </div>
+                <div class="column is-6">
+                  <div class="content card-job">
+                    <h6 class="title is-6 mb-2">Product Experience (Design Thinking)</h6>
+                    <ul>
+                      <li>Redesigned onboarding journey & continuous improvements.</li>
+                    </ul>
+                    <div class="notification is-primary is-light p-2 mt-2 result-tag">
+                      <strong>Impact:</strong> +23% first orders via e-commerce.
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="columns">
+                <div class="column is-6">
+                  <div class="content card-job">
+                    <h6 class="title is-6 mb-2">Data & API Optimization</h6>
+                    <ul>
+                      <li>Oversaw data integration (SAP, Akeneo, Boomi, Hybris, SQL).</li>
+                    </ul>
+                    <div class="notification is-info is-light p-2 mt-2 result-tag">
+                      <strong>Impact:</strong> Reduced manual processes via automation.
+                    </div>
+                  </div>
+                </div>
+                <div class="column is-6">
+                  <div class="content card-job">
+                    <h6 class="title is-6 mb-2">Product Delivery & Leadership</h6>
+                    <ul>
+                      <li>Managed 12 international devs (Agile, Jira, Velocity).</li>
+                    </ul>
+                    <div class="notification is-warning is-light p-2 mt-2 result-tag">
+                      <strong>Impact:</strong> -36% critical production bugs (P1).
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="columns is-mobile is-multiline border-top-light pt-4 mt-4">
+                <div class="column is-6-tablet is-12-mobile">
+                  <p class="is-size-7"><strong>KPIs:</strong> New Relic, ContentSquare, Power BI.</p>
+                </div>
+                <div class="column is-6-tablet is-12-mobile has-text-right-tablet">
+                  <p class="is-size-7"><strong>Stakeholders:</strong> Sales, Logistics, Pricing, HQ.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <script>
+          // Activer/désactiver l'onglet sélectionné et changer le contenu affiché
+          document.addEventListener("DOMContentLoaded", function () {
+            var tabs = document.querySelectorAll("#company-tabs ul li");
+            var contentDiv = document.getElementById("company-content");
+
+            // Contenus associés à chaque entreprise
+            var companyContent = {
+              "Heineken": `
+  <div class="box experience-box shadow-smooth">
+<div class="is-flex is-flex-direction-column-mobile is-justify-content-space-between is-align-items-start-mobile is-align-items-center-tablet mb-5">
+    <div class="mb-3-mobile">
+      <h3 class="title is-4 mb-1">Product Manager</h3>
+      <p class="subtitle is-5 has-text-link has-text-weight-bold">Heineken</p>
+      <span class="tag is-light is-medium is-rounded">Paris | 2023 - 2026</span>
+    </div>
+  </div>
+
+  <p class="subtitle is-6 is-italic mb-5">B2B e-commerce platform transformation & ecosystem orchestration on France Boissons Website.</p>
+
+  <div class="columns mb-5">
+    <div class="column is-6">
+      <div class="content card-job">
+        <h6 class="title is-6 mb-2">Product Vision & Roadmap</h6>
+        <ul>
+          <li>Migration to Dynamics 365, strategy & roadmap definition.</li>
+        </ul>
+        <div class="notification is-success is-light p-2 mt-2 result-tag">
+          <strong>Impact:</strong> Digital revenue grew from 62% to 80%.
+        </div>
+      </div>
+    </div>
+    <div class="column is-6">
+      <div class="content card-job">
+        <h6 class="title is-6 mb-2">Product Experience (Design Thinking)</h6>
+        <ul>
+          <li>Redesigned onboarding journey & continuous improvements.</li>
+        </ul>
+        <div class="notification is-primary is-light p-2 mt-2 result-tag">
+          <strong>Impact:</strong> +23% first orders via e-commerce.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="columns">
+    <div class="column is-6">
+      <div class="content card-job">
+        <h6 class="title is-6 mb-2">Data & API Optimization</h6>
+        <ul>
+          <li>Oversaw data integration (SAP, Akeneo, Boomi, Hybris, SQL).</li>
+        </ul>
+        <div class="notification is-info is-light p-2 mt-2 result-tag">
+          <strong>Impact:</strong> Reduced manual processes via automation.
+        </div>
+      </div>
+    </div>
+    <div class="column is-6">
+      <div class="content card-job">
+        <h6 class="title is-6 mb-2">Product Delivery & Leadership</h6>
+        <ul>
+          <li>Managed 12 international devs (Agile, Jira, Velocity).</li>
+        </ul>
+        <div class="notification is-warning is-light p-2 mt-2 result-tag">
+          <strong>Impact:</strong> -36% critical production bugs (P1).
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="columns is-mobile is-multiline border-top-light pt-4 mt-4">
+    <div class="column is-6-tablet is-12-mobile">
+      <p class="is-size-7"><strong>KPIs:</strong> New Relic, ContentSquare, Power BI.</p>
+    </div>
+    <div class="column is-6-tablet is-12-mobile has-text-right-tablet">
+      <p class="is-size-7"><strong>Stakeholders:</strong> Sales, Logistics, Pricing, HQ.</p>
+    </div>
+  </div>
+</div>
+`,
+              "Artur'in": `
+<div class="box experience-box shadow-smooth">
+  <div class="is-flex is-flex-direction-column-mobile is-justify-content-space-between is-align-items-start-mobile is-align-items-center-tablet mb-5">
+    
+    <div class="mb-2-mobile">
+      <h3 class="title is-4 mb-1">Product & Content Manager</h3>
+      <p class="subtitle is-5 has-text-link has-text-weight-bold">Artur'in</p>
+      <span class="tag is-light is-medium is-rounded">Paris | 2018 - 2022</span>
+    </div>
+  </div>
+
+  <p class="subtitle is-6 is-italic mb-5">Digital Marketing SaaS for local businesses.</p>
+
+  <div class="columns mb-5">
+    <div class="column is-6">
+      <div class="content card-job">
+        <h6 class="title is-6 mb-2">Product Strategy & Roadmap</h6>
+        <ul>
+          <li>Defined strategy and roadmap evolution for the content squad.</li>
+          <li>Prioritized improvements and monitored performance KPIs.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="column is-6">
+      <div class="content card-job">
+        <h6 class="title is-6 mb-2">Agile Backlog & Ceremonies</h6>
+        <ul>
+          <li>Centralized business requests and managed the product backlog.</li>
+          <li>Led agile ceremonies to ensure effective squad delivery.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="columns">
+    <div class="column is-6">
+      <div class="content card-job">
+        <h6 class="title is-6 mb-2">Data & AI Optimization</h6>
+        <ul>
+          <li>Collaborated with Data Scientists on ML models for content ranking.</li>
+          <li>Built automated dashboards & alert systems with Data Analysts.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="column is-6">
+      <div class="content card-job">
+        <h6 class="title is-6 mb-2">Team Leadership & Editorial</h6>
+        <ul>
+          <li>Managed 3 Content Managers + a network of external writers.</li>
+          <li>Defined editorial strategy for Finance, Insurance, and Health.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="columns is-mobile is-multiline border-top-light pt-4 mt-4">
+    <div class="column is-12">
+      <p class="is-size-7">
+        <strong>Collaboration:</strong> Tech Support for CSMs, International Dev Team, Data Science & Analytics squads.
+      </p>
+    </div>
+  </div>
+</div>
+    `,
+              "RE Europe": `
+<div class="box experience-box shadow-smooth">
+  <div class="is-flex is-flex-direction-column-mobile is-justify-content-space-between is-align-items-start-mobile is-align-items-center-tablet mb-5">
+    
+    <div class="mb-2-mobile">
+      <h3 class="title is-4 mb-1">Business Developer</h3>
+      <p class="subtitle is-5 has-text-link has-text-weight-bold">Rent Electric Europe</p>
+      <span class="tag is-light is-medium is-rounded">June 2016 - Sept. 2016</span>
+    </div>
+  </div>
+
+  <p class="subtitle is-6 is-italic mb-5">Sale and rental of electric vehicles (B2B & B2C).</p>
+
+  <div class="columns">
+    <div class="column is-6">
+      <div class="content card-job">
+        <h6 class="title is-6 mb-2">Partnerships & Sales</h6>
+        <ul>
+          <li>Developed and acquired new B2B partnerships (campsites, bike rental stores).</li>
+          <li>Managed daily sales, rentals, and customer relations.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="column is-6">
+      <div class="content card-job">
+        <h6 class="title is-6 mb-2">Marketing & Ops</h6>
+        <ul>
+          <li>Produced advertising brochures and flyers.</li>
+          <li>Managed point-of-sale operations and international customer service.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="columns is-mobile is-multiline border-top-light pt-4 mt-4">
+    <div class="column is-12">
+      <p class="is-size-7">
+        <strong>Languages:</strong> English & Spanish (International customer relations).
+      </p>
+    </div>
+  </div>
+</div>`,
+              "Aigle Azur": `
+    
+ <div class="box experience-box shadow-smooth">
+  <div class="is-flex is-flex-direction-column-mobile is-justify-content-space-between is-align-items-start-mobile is-align-items-center-tablet mb-5">
+    <div class="mb-3-mobile">
+      <h3 class="title is-4 mb-1">Sales & Marketing Assistant</h3>
+      <p class="subtitle is-5 has-text-link has-text-weight-bold">Airline Company</p>
+      <span class="tag is-light is-medium is-rounded">April 2015 - June 2015</span>
+    </div>
+  </div>
+
+  <p class="subtitle is-6 is-italic mb-5">Strategic support for commercial development and brand awareness.</p>
+
+  <div class="columns">
+    <div class="column is-6">
+      <div class="content card-job">
+        <h6 class="title is-6 mb-2">Market Intelligence</h6>
+        <ul>
+          <li>Conducted on-board and on-ground product benchmarking to analyze competition.</li>
+          <li>Monitored industry trends to support product positioning.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="column is-6">
+      <div class="content card-job">
+        <h6 class="title is-6 mb-2">Communication & Sales</h6>
+        <ul>
+          <li>Managed community management activities and social media presence.</li>
+          <li>Performed telephone canvassing of travel agencies to promote new destinations.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="columns is-mobile is-multiline border-top-light pt-4 mt-4">
+    <div class="column is-12">
+      <p class="is-size-7">
+        <strong>Keywords:</strong> Benchmarking, Community Management, B2B Canvassing, Aviation Industry.
+      </p>
+    </div>
+  </div>
+</div>
+    `,
+              "Nicolas": `   
+  <div class="box experience-box shadow-smooth">
+  <div class="is-flex is-flex-direction-column-mobile is-justify-content-space-between is-align-items-start-mobile is-align-items-center-tablet mb-5">
+    <div class="mb-3-mobile">
+      <h3 class="title is-4 mb-1">Manager Sales Assistant</h3>
+      <p class="subtitle is-5 has-text-link has-text-weight-bold">Wine Retail Chain</p>
+      <span class="tag is-light is-medium is-rounded">Lille | Dec. 2013 - Jan. 2014</span>
+    </div>
+  </div>
+
+  <p class="subtitle is-6 is-italic mb-5">In-store operations and customer advisory in a fast-paced retail environment.</p>
+
+  <div class="columns">
+    <div class="column is-6">
+      <div class="content card-job">
+        <h6 class="title is-6 mb-2">Operations & Logistics</h6>
+        <ul>
+          <li>Managed stock levels to ensure consistent product availability.</li>
+          <li>Handled merchandising to optimize in-store product visibility and flow.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="column is-6">
+      <div class="content card-job">
+        <h6 class="title is-6 mb-2">Sales & Customer Advice</h6>
+        <ul>
+          <li>Performed B2C sales and provided expert product recommendations.</li>
+          <li>Ensured high-quality customer service during peak holiday season.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="columns is-mobile is-multiline border-top-light pt-4 mt-4">
+    <div class="column is-12">
+      <p class="is-size-7">
+        <strong>Keywords:</strong> Inventory Management, Merchandising, B2C Sales, Retail Operations.
+      </p>
+    </div>
+  </div>
+</div>
+    `
+            };
+
+            tabs.forEach(function (tab) {
+              tab.addEventListener("click", function (e) {
+                e.preventDefault();
+                tabs.forEach(function (t) {
+                  t.classList.remove("is-active");
+                });
+                tab.classList.add("is-active");
+                var company = tab.querySelector("a").getAttribute("data-company");
+                contentDiv.innerHTML = companyContent[company] || "<p>Aucune information disponible.</p>";
+              });
+            });
+          });
+        </script>
+
+        <section class="section">
+          <div class="container has-text-centered">
+            <a class="button has-text-white has-background-link-light is-medium" href="./img/CV_EN_ThomasLAMART.pdf"
+              target="_blank" rel="noopener noreferrer">
               <strong>Download my CV</strong>
             </a>
           </div>
-        </div>
-      </div>
-    </div>
-  </nav>
-
-  <main class="main-content">
-  
-    <div class="intro-page">
-    <div class="profile-card-wrapper">
-      <div class="card">
-        <div class="card-image">
-          <figure class="image is-4by3">
-            <img src="./img/PP2026.png" alt="Photo de profil" class="profile-picture" />
-
-          </figure>
-        </div>
-        <div class="card-content">
-          <div class="media-content">
-            <p class="title is-4">Thomas Lamart</p>
-            <a href="https://www.linkedin.com/in/thomaslamart" target="_blank" title="LinkedIn" class="social-link">
-              <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn"
-                class="social-icon">
-            </a>
-            <a href="https://github.com/thomaslamart" target="_blank" title="GitHub" class="social-link">
-              <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub"
-                class="social-icon">
-            </a>
-            <span style="position: relative; top: -6px; right: 4px; margin: 0 0.4em;">-</span>
-            <!-- Rendez-vous -->
-            <a href="https://calendar.app.google/Xoox3XykxMtF6RHK6" target="_blank" class="social-link" title="Prendre rendez-vous">
-              <!-- iPhone with calendar SVG Icon -->
-              <!-- Icône calendrier claire et universelle -->
-              <svg class="social-icon" viewBox="0 0 24 24" fill="none" aria-label="Prendre rendez-vous" xmlns="http://www.w3.org/2000/svg">
-                <title>Prendre rendez-vous</title>
-                <!-- Calendar outer -->
-                <rect x="3" y="4" width="18" height="16" rx="3" fill="#191919"/>
-                <!-- Calendar header -->
-                <rect x="3" y="4" width="18" height="4" rx="1.5" fill="#E53F3F"/>
-                <!-- Calendar rings -->
-                <rect x="7" y="2" width="2" height="4" rx="1" fill="#fff"/>
-                <rect x="15" y="2" width="2" height="4" rx="1" fill="#fff"/>
-                <!-- Calendar grid (3x2 dots for clarity) -->
-                <circle cx="7.5" cy="10" r="1" fill="#fff"/>
-                <circle cx="12" cy="10" r="1" fill="#fff"/>
-                <circle cx="16.5" cy="10" r="1" fill="#fff"/>
-                <circle cx="7.5" cy="14" r="1" fill="#fff"/>
-                <circle cx="12" cy="14" r="1" fill="#fff"/>
-                <circle cx="16.5" cy="14" r="1" fill="#fff"/>
-              </svg>
-            </a>
-                        <!-- Téléphone -->
-                        <a href="tel:+33618045000" class="social-link" title="Appeler le numéro">
-                          <svg class="social-icon" viewBox="0 0 24 24" fill="#191919" aria-label="Téléphone"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <title>Téléphone</title>
-                            <path
-                              d="M6.6 10.79a15.93 15.93 0 006.61 6.61l2.2-2.19a1 1 0 011.02-.24 12.72 12.72 0 003.97.63 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h4.19a1 1 0 011 1 12.72 12.72 0 00.63 3.97 1 1 0 01-.24 1.02l-2.18 2.2z" />
-                          </svg>
-                        </a>
-            <!-- Adresse-mail -->
-            <a href="#" class="social-link" title="Copier l'adresse mail" id="copy-email-btn">
-              <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/maildotru.svg" alt="E-mail"
-                class="social-icon">
-            </a>
-            <span id="email-copied-popup">copié !</span>
-          </div>
-          <script>
-            // Copier l'adresse mail dans le presse-papier et afficher le popup "copié dans le presse-papier."
-            document.addEventListener("DOMContentLoaded", function () {
-              var copyBtn = document.getElementById("copy-email-btn");
-              var popup = document.getElementById("email-copied-popup");
-              var email = "thomas.lamart@yahoo.fr";
-
-              copyBtn.addEventListener("click", function (e) {
-                e.preventDefault();
-                if (navigator.clipboard) {
-                  navigator.clipboard.writeText(email);
-                } else {
-                  // fallback pour vieux navigateurs
-                  var textarea = document.createElement("textarea");
-                  textarea.value = email;
-                  document.body.appendChild(textarea);
-                  textarea.select();
-                  document.execCommand("copy");
-                  document.body.removeChild(textarea);
-                }
-                popup.style.display = "inline-block";
-                setTimeout(function () {
-                  popup.style.display = "none";
-                }, 1200);
-              });
-            });
-          </script>
-        </div>
-      </div>
-    </div>
-
-    <div class="boxcontainer">
-      <div class="box">
-        <p>Hello and welcome to my website.</p>
-        <p>&nbsp;</p>
-        <p>Designed in <span class="hover:entity-accent entity-underline inline cursor-pointer align-baseline"><span class="whitespace-normal">Figma</span></span> and developed using <span class="hover:entity-accent entity-underline inline cursor-pointer align-baseline"><span class="whitespace-normal">Cursor</span></span> with HTML5, CSS, and JavaScript, this site is built on the <span class="hover:entity-accent entity-underline inline cursor-pointer align-baseline"><span class="whitespace-normal">Bulma</span></span> framework. It is hosted on <span class="hover:entity-accent entity-underline inline cursor-pointer align-baseline"><span class="whitespace-normal">GitHub</span></span> and deployed via <span class="hover:entity-accent entity-underline inline cursor-pointer align-baseline"><span class="whitespace-normal">GitHub Pages</span></span> and <span class="hover:entity-accent entity-underline inline cursor-pointer align-baseline"><span class="whitespace-normal">Hostinger</span></span>.</p>
-        <p>&nbsp;</p>
-        <p>The static architecture was chosen to ensure optimal performance, fast loading times, and a streamlined user experience.</p>
-      </div>
-    </div>
-  </div>
-
-
-  <div style="display: flex; justify-content: center;">
-    <div class="content">
-      <h5>What I do?</h5>
-      <div class="table-container">
-      <table class="table is-fullwidth">
-        <thead>
-          <tr>
-            <th>Skills</th>
-            <th>Tools</th>
-            <th>Wanna see how it looks?</th>
-          </tr>
-        </thead>
-        <tbody>
-          <!-- Ligne 2 -->
-          <tr>
-            <td>Roadmap Strategy</td>
-            <td>
-              <span class="tool-item">
-                <img src="./img/logo-notion.svg" alt="Notion" />
-                Notion
-              </span>
-              <span class="tool-item">
-                <img src="./img/logo-jiraproductdiscovery.svg" alt="Jira Product Discovery" />
-                Jira Product Discovery
-              </span>
-              <span class="tool-item">
-                <img src="./img/logo-asana.svg" alt="Asana" />
-                Asana
-              </span>
-              <span class="tool-item">
-                <img src="./img/logo-mural.svg" alt="Mural" />
-                Mural
-              </span>
-            </td>
-            <td>
-              <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                <button class="button is-info show-modal-btn" data-modal="modal-2">Show me</button>
-                <div id="modal-2" class="modal custom-modal">
-                  <div class="modal-background"></div>
-                  <div class="modal-content">
-                    <p>
-                      <img src="./img/Showme-Roadmap.png" alt="Roadmap">
-                    </p>
-                  </div>
-                  <button class="modal-close is-medium" aria-label="close"></button>
-                </div>
-              </div>
-            </td>
-          </tr>
-          <!-- Ligne 3 -->
-          <tr>
-            <td>Agile Delivery</td>
-            <td>
-              <span class="tool-item">
-                <img src="./img/logo-jira.svg" alt="Jira" />
-                Jira
-              </span>
-              <span class="tool-item">
-                <img src="./img/logo-asana.svg" alt="Asana" />
-                Asana
-              </span>
-              <span class="tool-item">
-                <img src="./img/logo-notion.svg" alt="Notion" />
-                Notion
-              </span>
-            </td>
-            <td>
-              <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                <button class="button is-info show-modal-btn" data-modal="modal-3">Show me</button>
-                <div id="modal-3" class="modal custom-modal">
-                  <div class="modal-background"></div>
-                  <div class="modal-content">
-                    <p>
-                      <img src="./img/Showme-Backlog.png" alt="Delivery">
-                    </p>
-                  </div>
-                  <button class="modal-close is-medium" aria-label="close"></button>
-                </div>
-              </div>
-            </td>
-          </tr>
-          <!-- Ligne 4 -->
-          <tr>
-            <td>Technical documentation</td>
-            <td>
-              <span class="tool-item">
-                <img src="./img/logo-confluence.svg" alt="Confluence" />
-                Confluence
-              </span>
-              <span class="tool-item">
-                <img src="./img/logo-notion.svg" alt="Notion" />
-                Notion
-              </span>
-            </td>
-            <td>
-              <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                <button class="button is-info show-modal-btn" data-modal="modal-4">Show me</button>
-                <div id="modal-4" class="modal custom-modal">
-                  <div class="modal-background"></div>
-                  <div class="modal-content">
-                    <p>
-                      <img src="./img/Showme-Documentation.png" alt="Documentation">
-                    </p>
-                  </div>
-                  <button class="modal-close is-medium" aria-label="close"></button>
-                </div>
-              </div>
-            </td>
-          </tr>
-          <!-- Ligne 5 -->
-          <tr>
-            <td>UX Wireframing</td>
-            <td>
-              <span class="tool-item">
-                <img src="./img/logo-excalidraw.svg" alt="Excalidraw" />
-                Excalidraw
-              </span>
-              <span class="tool-item">
-                <img src="./img/logo-figma.svg" alt="Figma" />
-                Figma
-              </span>
-            </td>
-            <td>
-              <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                <button class="button is-info show-modal-btn" data-modal="modal-5">Show me</button>
-                <div id="modal-5" class="modal custom-modal">
-                  <div class="modal-background"></div>
-                  <div class="modal-content">
-                    <p>
-                      <img src="./img/Showme-Figma-design.png" alt="Roadmap">
-                    </p>
-                  </div>
-                  <button class="modal-close is-medium" aria-label="close"></button>
-                </div>
-              </div>
-            </td>
-          </tr>
-          <!-- Ligne 6 -->
-          <tr>
-            <td>Data Analytics</td>
-            <td>
-              <span class="tool-item">
-                <img src="./img/logo-newrelic.svg" alt="New Relic" />
-                New Relic
-              </span>
-              <span class="tool-item">
-                <img src="./img/logo-Contentsquare.svg" alt="Contentsquare" />
-                Contentsquare
-              </span>
-              <span class="tool-item">
-                <img src="./img/logo-powerBI.svg" alt="Power BI" />
-                Power BI
-              </span>
-            </td>
-            <td>
-              <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                <button class="button is-info show-modal-btn" data-modal="modal-6">Show me</button>
-                <div id="modal-6" class="modal custom-modal">
-                  <div class="modal-background"></div>
-                  <div class="modal-content">
-                    <p>
-                      <img src="./img/Showme-TrackingCS.png" alt="Tracking">
-                    </p>
-                  </div>
-                  <button class="modal-close is-medium" aria-label="close"></button>
-                </div>
-              </div>
-            </td>
-          </tr>
-          <!-- Ligne 7 -->
-          <tr>
-            <td>API Testing</td>
-            <td>
-              <span class="tool-item">
-                <img src="./img/logo-postman.svg" alt="Postman" />
-                Postman
-              </span>
-              <span class="tool-item">
-                <img src="./img/logo-swagger.svg" alt="Swagger" />
-                Swagger
-              </span>
-            </td>
-            <td>
-              <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                <button class="button is-info show-modal-btn" data-modal="modal-7">Show me</button>
-                <div id="modal-7" class="modal custom-modal">
-                  <div class="modal-background"></div>
-                  <div class="modal-content">
-                    <p>
-                      <img src="./img/Showme-Postman.png" alt="API Testing">
-                    </p>
-                  </div>
-                  <button class="modal-close is-medium" aria-label="close"></button>
-                </div>
-              </div>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      </div>
-      <script>
-        document.addEventListener('DOMContentLoaded', function() {
-          var showModalBtns = document.querySelectorAll('.show-modal-btn');
-          showModalBtns.forEach(function(btn) {
-            var modalId = btn.getAttribute('data-modal');
-            var modal = document.getElementById(modalId);
-            var closeModalBtns = modal.querySelectorAll('.modal-background, .modal-close');
-
-            btn.addEventListener('click', function() {
-              modal.classList.add('is-active');
-            });
-
-            closeModalBtns.forEach(function(closeBtn) {
-              closeBtn.addEventListener('click', function() {
-                modal.classList.remove('is-active');
-              });
-            });
-          });
-        });
-      </script>
-    </div>
-  </div>
-
-    <div class="experience">
-      <div class="tabs is-centered" id="company-tabs">
-        <ul>
-          <li class="is-active"><a href="#" data-company="Heineken">Heineken</a></li>
-          <li><a href="#" data-company="Artur'in">Artur'in</a></li>
-          <li><a href="#" data-company="Rent Electric">Rent Electric</a></li>
-          <li><a href="#" data-company="Aigle Azur">Aigle Azur</a></li>
-          <li><a href="#" data-company="Nicolas">Nicolas</a></li>
-        </ul>
-      </div>
-      <div class="content" id="company-content">
-
-
-        <!-- Default content: Heineken -->
-<h4>Heineken | Product Manager</h4>
-<p style="font-size:1rem; color:#767676; margin-top:0.25em; margin-bottom:0.75em;">Paris 2023 - 2026</p>
-
-<h5>B2B e-commerce platform (France Boissons)</h5>
-<ul>
-  <li>Product vision and roadmap.</li>
-  <li>Prepared migration to Dynamics 365.</li>
-  <li>Built product strategy and roadmap.</li>
-  <li>Prioritized epics to maximize user value.</li>
-</ul>
-<p><strong>→ Grew digital revenue share from 62% to 80% via e-commerce.</strong></p>
-
-<h5>Data &amp; API Optimization</h5>
-<ul>
-  <li>Oversaw data integration (products, customers, pricing, inventory, orders, etc.) using SAP, Akeneo, Boomi,
-    Hybris, and SQL, with import scripts as support.</li>
-</ul>
-<p><strong>→ Reduced manual processes through automation of data flows.</strong></p>
-
-<h5>Design Thinking</h5>
-<ul>
-  <li>Redesigned the onboarding journey: gathered user requirements, designed solutions, conducted testing, and
-    implemented continuous improvements.</li>
-</ul>
-<p><strong>→ +23% increase in first orders via e-commerce, thanks to an improved onboarding journey.</strong></p>
-
-<h5>Product Delivery &amp; Dev Team Performance</h5>
-<ul>
-  <li>Managed a team of 12 international developers.</li>
-  <li>Defined scope, allocated tasks, and drove execution.</li>
-  <li>Configured and optimized Jira board and tracked team velocity.</li>
-</ul>
-<p><strong>→ Achieved a 36% reduction in critical production bugs (P1) since January 2025.</strong></p>
-
-<h5>KPI Definition</h5>
-<ul>
-  <li>Tracked key metrics via New Relic, ContentSquare, and Power BI.</li>
-</ul>
-<p><strong>→ Delivered dashboards used by both the hosting team and global HQ.</strong></p>
-
-<h5>Collaboration with Stakeholders</h5>
-<ul>
-  <li>Regular interactions with sales, logistics, pricing, and other teams.</li>
-</ul>
-<p><strong>→ Achieved a 17% reduction in order rework.</strong></p>
-</div>
-<script>
-// Activer/désactiver l'onglet sélectionné et changer le contenu affiché
-document.addEventListener("DOMContentLoaded", function () {
-  var tabs = document.querySelectorAll("#company-tabs ul li");
-  var contentDiv = document.getElementById("company-content");
-
-  // Contenus associés à chaque entreprise
-  var companyContent = {
-    "Heineken": `
-<h4>Heineken | Product Manager</h4>
-<p style="font-size:1rem; color:#767676; margin-top:0.25em; margin-bottom:0.75em;">Paris 2023 - 2026</p>
-<h5>B2B e-commerce platform (France Boissons)</h5>
-      <ul>
-        <li>Product vision and roadmap.</li>
-        <li>Prepared migration to Dynamics 365.</li>
-        <li>Built product strategy and roadmap.</li>
-        <li>Prioritized epics to maximize user value.</li>
-      </ul>
-      <p><strong>→ Grew digital revenue share from 62% to 80% via e-commerce.</strong></p>
-
-      <h5>Data &amp; API Optimization</h5>
-      <ul>
-        <li>Oversaw data integration (products, customers, pricing, inventory, orders, etc.) using SAP, Akeneo, Boomi, Hybris, and SQL, with import scripts as support.</li>
-      </ul>
-      <p><strong>→ Reduced manual processes through automation of data flows.</strong></p>
-
-      <h5>Design Thinking</h5>
-      <ul>
-        <li>Redesigned the onboarding journey: gathered user requirements, designed solutions, conducted testing, and implemented continuous improvements.</li>
-      </ul>
-      <p><strong>→ +23% increase in first orders via e-commerce, thanks to an improved onboarding journey.</strong></p>
-
-      <h5>Product Delivery &amp; Dev Team Performance</h5>
-      <ul>
-        <li>Managed a team of 12 international developers.</li>
-        <li>Defined scope, allocated tasks, and drove execution.</li>
-        <li>Configured and optimized Jira board and tracked team velocity.</li>
-      </ul>
-      <p><strong>→ Achieved a 36% reduction in critical production bugs (P1) since January 2025.</strong></p>
-
-      <h5>KPI Definition</h5>
-      <ul>
-        <li>Tracked key metrics via New Relic, ContentSquare, and Power BI.</li>
-      </ul>
-      <p><strong>→ Delivered dashboards used by both the hosting team and global HQ.</strong></p>
-
-      <h5>Collaboration with Stakeholders</h5>
-      <ul>
-        <li>Regular interactions with sales, logistics, pricing, and other teams.</li>
-      </ul>
-      <p><strong>→ Achieved a 17% reduction in order rework.</strong></p>
-    `,
-    "Artur'in": `
-      <h4>Artur’In | Product &amp; Content Manager</h4>
-      <p style="font-size:1rem; color:#767676; margin-top:0.25em; margin-bottom:0.75em;">Paris 2018 - 2022</p>
-
-      <h5>Digital Marketing SaaS</h5>
-
-      <h4>Product strategy and roadmap</h4>
-      <ul>
-        <li>Defined product strategy and roadmap evolution with the Product Manager for the content squad.</li>
-        <li>Recommended and prioritized product improvements.</li>
-        <li>Monitored KPIs to track product performance.</li>
-      </ul>
-
-      <h4>Agile Backlog &amp; Ceremonies</h4>
-      <ul>
-        <li>Centralized business requests and managed the product backlog.</li>
-        <li>Led agile ceremonies to ensure effective delivery.</li>
-      </ul>
-
-      <h4>Data &amp; AI</h4>
-      <ul>
-        <li>Collaborated with Data Scientists on the training and improvement of machine learning models to optimize content ranking and relevance.</li>
-        <li>Worked with a Data Analyst to build dashboards and automated alert systems guiding the Content team’s production priorities.</li>
-      </ul>
-
-      <h4>Team Management, Content Creation &amp; Strategy</h4>
-      <ul>
-        <li>Provided technical support to CSMs.</li>
-        <li>Managed three Content Managers and a team of external writers.</li>
-        <li>Collaborated with an international development team.</li>
-        <li>Defined editorial strategy for finance, insurance, sports, and health sectors.</li>
-        <li>Optimized content selection to maximize organic engagement.</li>
-      </ul>
-    `,
-    "Rent Electric": `
-      <h4>Rent Electric Europe | Business Developer</h4>
-      <p style="font-size:1rem; color:#767676; margin-top:0.25em; margin-bottom:0.75em;">June 2016 - Sept. 2016</p>
-      <h5>Sale and rental of electric vehicles</h5>
-      <ul>
-        <li>Development and acquisition of new partnerships (campsites and bike rental stores).</li>
-        <li>Produced advertising brochures and flyers.</li>
-        <li>Managed point-of-sale operations.</li>
-        <li>Handled sales, rentals, and customer relations in English and Spanish.</li>
-      </ul>
-    `,
-    "Aigle Azur": `
-      <h4>Aigle Azur | Sales &amp; Marketing Assistant</h4>
-      <p style="font-size:1rem; color:#767676; margin-top:0.25em; margin-bottom:0.75em;">April 2015 - June 2015</p>
-      <ul>
-        <li>Conducted on-board and on-ground product benchmarking.</li>
-        <li>Managed community management activities.</li>
-        <li>Performed telephone canvassing of travel agencies to promote new destinations.</li>
-      </ul>
-    `,
-    "Nicolas": `
-      <h4>Nicolas | Manager Sales Assistant</h4>
-      <p style="font-size:1rem; color:#767676; margin-top:0.25em; margin-bottom:0.75em;">Lille Dec. 2013 - Jan. 2014</p>
-      <ul>
-        <li>Managed stock to ensure product availability.</li>
-        <li>Handled merchandising to optimize in-store product visibility.</li>
-        <li>Performed B2C sales and customer advice.</li>
-      </ul>
-    `
-  };
-
-          tabs.forEach(function (tab) {
-            tab.addEventListener("click", function (e) {
-              e.preventDefault();
-              tabs.forEach(function (t) {
-                t.classList.remove("is-active");
-              });
-              tab.classList.add("is-active");
-              var company = tab.querySelector("a").getAttribute("data-company");
-              contentDiv.innerHTML = companyContent[company] || "<p>Aucune information disponible.</p>";
-            });
-          });
-        });
-      </script>
-    </div>
-
-
+        </section>
 
   </main>
 
+
+
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+        ©2026 <strong>Monsieur Thomas Lamart</strong>. Tous droits réservés.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const burger = document.getElementById('burger');
+      const overlay = document.getElementById('mobile-overlay');
+      const overlayClose = document.getElementById('overlay-close');
+
+      if (!burger || !overlay) return;
+
+      function openOverlay() {
+        overlay.classList.add('is-active');
+        burger.classList.add('is-active');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeOverlay() {
+        overlay.classList.remove('is-active');
+        burger.classList.remove('is-active');
+        document.body.style.overflow = '';
+      }
+
+      burger.addEventListener('click', function (e) {
+        e.stopPropagation();
+        if (overlay.classList.contains('is-active')) {
+          closeOverlay();
+        } else {
+          openOverlay();
+        }
+      });
+
+      if (overlayClose) {
+        overlayClose.addEventListener('click', function (e) {
+          e.stopPropagation();
+          closeOverlay();
+        });
+      }
+
+      // Close when tapping the overlay
+      overlay.addEventListener('click', function () {
+        closeOverlay();
+      });
+    });
+  </script>
+
+  <script>
+    // --- 2. GESTION DE LA COPIE D'EMAIL ---
+    const copyBtn = document.getElementById("copy-email-btn");
+    const popup = document.getElementById("email-copied-popup");
+    const email = "thomas.lamart@yahoo.fr";
+
+    if (copyBtn) {
+      copyBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(email).then(() => {
+            showPopup();
+          });
+        } else {
+          // Fallback pour les anciens navigateurs
+          const textarea = document.createElement("textarea");
+          textarea.value = email;
+          document.body.appendChild(textarea);
+          textarea.select();
+          document.execCommand("copy");
+          document.body.removeChild(textarea);
+          showPopup();
+        }
+      });
+    }
+
+    function showPopup() {
+      if (popup) {
+        popup.style.display = "inline-block";
+        setTimeout(() => {
+          popup.style.display = "none";
+        }, 1500);
+      }
+    };
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const openButtons = document.querySelectorAll('.show-modal-btn');
+      const closeElements = document.querySelectorAll('.modal-close, .modal-background');
+
+      openButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const modalId = btn.getAttribute('data-modal');
+          const target = document.getElementById(modalId);
+          if (target) {
+            target.classList.add('is-active');
+            document.documentElement.classList.add('is-clipped');
+          }
+        });
+      });
+
+      closeElements.forEach(el => {
+        el.addEventListener('click', () => {
+          const activeModal = el.closest('.modal');
+          if (activeModal) {
+            activeModal.classList.remove('is-active');
+            document.documentElement.classList.remove('is-clipped');
+          }
+        });
+      });
+    });
+  </script>
+
 </body>
 
-<footer class="footer">
-  <div class="content has-text-centered">
-    <p>
-      ©2026 <strong>Monsieur Thomas Lamart</strong>. Tous droits réservés.
-    </p>
-  </div>
-</footer>
 </html>

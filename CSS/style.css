@@ -1,3 +1,7 @@
+html, body {
+  background: #fff !important;
+  color: #111 !important;
+}
 
 html {
   color-scheme: light;

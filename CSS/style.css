@@ -1,3 +1,13 @@
+@media (prefers-color-scheme: dark) {
+  * {
+    background: #fff !important;
+    color: #111 !important;
+    border-color: #eee !important;
+    box-shadow: none !important;
+  }
+  a, a:visited { color: #1a0dab !important; }
+  img, video { filter: none !important; }
+}
 html {
   color-scheme: light;
 @media (prefers-color-scheme: dark) {

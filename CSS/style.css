@@ -1,5 +1,12 @@
 html {
   color-scheme: light;
+@media (prefers-color-scheme: dark) {
+  html, body, main, .custom-navbar, .mobile-overlay, .main-content, .box, .profile-card-wrapper, .card-content, .content, .footer {
+    background: #fff !important;
+    color: #111 !important;
+  }
+  a, a:visited { color: #1a0dab !important; }
+}
 }
 
 /* ===================================================================

@@ -115,16 +115,26 @@ main {
 
 .mobile-overlay.is-active {
   display: block;
-  position: fixed;
-  inset: 0;
+  /* Utilise fixed pour rester au-dessus même si on scrolle */
+  position: fixed; 
+  
+  /* On force les 4 coins à 0 */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  /* Unités dynamiques pour mobile */
   width: 100vw;
-  min-width: 100vw;
-  height: 100vh;
-  min-height: 100vh;
-  background: #fff;
-  z-index: 2000;
-  overflow: auto;
-  touch-action: none;
+  height: 100dvh; 
+  
+  background-color: #ffffff;
+  /* On s'assure qu'il est au-dessus de TOUT */
+  z-index: 9999; 
+  
+  /* Permet le scroll interne si le menu est long */
+  overflow-y: auto; 
+  -webkit-overflow-scrolling: touch;
 }
 
 /* Optional small close hint in top-right of overlay */
@@ -176,11 +186,8 @@ main {
 
 .index-page .hero-body {
     /* Affiche l'image joliment sur toutes résolutions */
-    background-image: url('../img/background-portfolio-ThomasLAMART.jpg');
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    min-height: 100vh;
+    background-color: #d3f3ff;
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='1' viewBox='0 0 40 1' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h20v1H0z' fill='%23ffffff' fill-opacity='1' fill-rule='evenodd'/%3E%3C/svg%3E");
 }
 
 @media (max-width: 1023px) {
@@ -225,8 +232,8 @@ main {
 .scroll-indicator .arrow {
     width: 10px;
     height: 10px;
-    border-right: 2px solid #ffffff;
-    border-bottom: 2px solid #ffffff;
+    border-right: 2px solid #000000;
+    border-bottom: 2px solid #000000;
     transform: rotate(45deg);
     margin: 10px auto;
 }

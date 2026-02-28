@@ -26,7 +26,7 @@ Specialized in Data Interfaces & Product Experience, Bridging the gap between co
 
 
 
-  <nav class="custom-navbar" style="position: relative;">
+  <nav class="custom-navbar" style="position: sticky;">
     <div class="custom-navbar-center"
       style="position: absolute; left: 0; right: 0; top: 0; height: 100%; display: flex; align-items: center; justify-content: center; z-index: 2; pointer-events: none;">
       <span style="pointer-events:auto;">
@@ -238,7 +238,7 @@ Specialized in Data Interfaces & Product Experience, Bridging the gap between co
             </div>
           </div>
 
-          <div class="scroll-indicator is-hidden-touch has-text-white">
+          <div class="scroll-indicator is-hidden-touch has-text-black">
             <p>Scroll to explore</p>
             <div class="arrow"></div>
           </div>
@@ -354,9 +354,9 @@ Specialized in Data Interfaces & Product Experience, Bridging the gap between co
       <div class="container">
         <h2 class="title is-4 has-text-centered mb-6 has-text-black">Product Expertise & Methods</h2>
 
-        <div class="columns is-desktop is-variable is-3">
+        <div class="columns is-tablet is-variable is-3 is-multiline">
 
-          <div class="column is-4">
+          <div class="column is-4-tablet">
             <div class="box shadow-smooth p-0 is-flex is-flex-direction-column h-100">
               <div class="has-background-link-light p-5 border-bottom-radius">
                 <h3 class="title is-5 has-text-link mb-2">Discovery</h3>
@@ -443,7 +443,7 @@ Specialized in Data Interfaces & Product Experience, Bridging the gap between co
           </div>
 
 
-          <div class="column is-4">
+          <div class="column is-4-tablet">
             <div class="box shadow-smooth p-0 is-flex is-flex-direction-column h-100">
               <div class="has-background-primary-light p-5 border-bottom-radius">
                 <h3 class="title is-5 has-text-primary mb-2">Delivery</h3>
@@ -513,7 +513,7 @@ Specialized in Data Interfaces & Product Experience, Bridging the gap between co
             </div>
           </div>
 
-          <div class="column is-4">
+          <div class="column is-4-tablet">
             <div class="box shadow-smooth p-0 is-flex is-flex-direction-column h-100">
               <div class="has-background-info-light p-5 border-bottom-radius">
                 <h3 class="title is-5 has-text-info mb-2">Technical Leadership & Ops</h3>
@@ -521,13 +521,12 @@ Specialized in Data Interfaces & Product Experience, Bridging the gap between co
               </div>
 
               <div class="skill-row py-4 px-5 has-background-white">
-                <p class="has-text-weight-bold has-text-black mb-2">SAP ECC Mastery</p>
-                <p class="is-size-7 has-text-grey mb-2">Deep dive into SAP transactions, IDOC monitoring and ERP
-                  structures.</p>
+                <p class="has-text-weight-bold has-text-black mb-2">SAP Power User & Data Ops</p>
+                <p class="is-size-7 has-text-grey mb-2">Deep mastery of standard/custom transactions across modules. Expert in complex table joins and XML flow monitoring.</p>
                 <div class="tags">
-                  <span class="tag is-white border-tag">SAP ECC</span>
-                  <span class="tag is-white border-tag">IDOCs</span>
-                  <span class="tag is-white border-tag">Data Mapping</span>
+                  <span class="tag is-white border-tag">Advanced Transactions</span>
+                  <span class="tag is-white border-tag">Table Joins</span>
+                  <span class="tag is-white border-tag">Data Architecture</span>
                 </div>
                 <button class="button has-text-info has-background-info-light is-rounded is-small show-modal-btn"
                   data-modal="modal-sap">Show me</button>
@@ -642,122 +641,47 @@ Specialized in Data Interfaces & Product Experience, Bridging the gap between co
 
     <!--Section EXPERIENCE -->
 
-
     <section id="experience" class="section">
       <div class="container">
         <h2 class="title is-4 has-text-centered mb-6 has-text-black">My Professional Experiences</h2>
         <div class="experience">
           <div class="tabs is-centered" id="company-tabs">
-            <ul class="has-text-grey-darker">
-              <li class="is-active"><a href="#" data-company="Heineken">Heineken</a></li>
-              <li><a href="#" data-company="Artur'in">Artur'in</a></li>
-              <li><a href="#" data-company="RE Europe">RE Europe</a></li>
-              <li><a href="#" data-company="Aigle Azur">Aigle Azur</a></li>
-              <li><a href="#" data-company="Nicolas">Nicolas</a></li>
+            <ul class="has-text-grey-darker" id="company-tabs-list">
+              <!-- Les tabs seront injectées dynamiquement avec JS pour garantir le même ordre et synchronisation avec le swipe -->
             </ul>
           </div>
-          <div class="content" id="company-content" ontouchstart="" style="touch-action: pan-x;">
-
-
-            <!-- Default content: Heineken -->
-            <div class="box experience-box shadow-smooth has-background-white">
-              <div
-                class="is-flex is-flex-direction-column-mobile is-justify-content-space-between is-align-items-start-mobile is-align-items-center-tablet mb-5">
-
-                <div class="mb-3-mobile">
-                  <h3 class="title is-4 mb-1 has-text-black">Product Manager</h3>
-                  <p class="subtitle is-5 has-text-link has-text-weight-bold has-text-grey-dark">Heineken</p>
-                  <span class="tag is-light is-medium is-rounded has-text-grey">Paris | 2023 - 2026</span>
-                </div>
-              </div>
-
-              <p class="subtitle is-6 is-italic mb-5 has-text-grey-dark">B2B e-commerce platform transformation & ecosystem
-                orchestration
-                on France Boissons Website.</p>
-
-              <div class="columns mb-5">
-                <div class="column is-6">
-                  <div class="content card-job">
-                    <h6 class="title is-6 mb-2 has-text-grey-darker">Product Vision & Roadmap</h6>
-                    <ul class="has-text-grey-darker">
-                      <li>Migration to Dynamics 365, strategy & roadmap definition.</li>
-                    </ul>
-                    <div class="notification is-success is-light p-2 mt-2 result-tag">
-                      <strong class="has-text-black">Impact:</strong> Digital revenue grew from 62% to 80%.
-                    </div>
-                  </div>
-                </div>
-                <div class="column is-6">
-                  <div class="content card-job">
-                    <h6 class="title is-6 mb-2 has-text-grey-darker">Product Experience (Design Thinking)</h6>
-                    <ul class="has-text-grey-darker">
-                      <li>Redesigned onboarding journey & continuous improvements.</li>
-                    </ul>
-                    <div class="notification is-primary is-light p-2 mt-2 result-tag">
-                      <strong class="has-text-black">Impact:</strong> +23% first orders via e-commerce.
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="columns">
-                <div class="column is-6">
-                  <div class="content card-job">
-                    <h6 class="title is-6 mb-2 has-text-grey-darker">Data & API Optimization</h6>
-                    <ul class="has-text-grey-darker">
-                      <li>Oversaw data integration (SAP, Akeneo, Boomi, Hybris, SQL).</li>
-                    </ul>
-                    <div class="notification is-info is-light p-2 mt-2 result-tag">
-                      <strong class="has-text-black">Impact:</strong> Reduced manual processes via automation.
-                    </div>
-                  </div>
-                </div>
-                <div class="column is-6">
-                  <div class="content card-job">
-                    <h6 class="title is-6 mb-2 has-text-grey-darker">Product Delivery & Leadership</h6>
-                    <ul class="has-text-grey-darker">
-                      <li>Managed 12 international devs (Agile, Jira, Velocity).</li>
-                    </ul>
-                    <div class="notification is-warning is-light p-2 mt-2 result-tag">
-                      <strong class="has-text-black">Impact:</strong> -36% critical production bugs (P1).
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="columns is-mobile is-multiline border-top-light pt-4 mt-4">
-                <div class="column is-6-tablet is-12-mobile">
-                  <p class="is-size-7"><strong class="has-text-black">KPIs:</strong> New Relic, ContentSquare, Power BI.
-                  </p>
-                </div>
-                <div class="column is-6-tablet is-12-mobile has-text-right-tablet">
-                  <p class="is-size-7"><strong class="has-text-black">Stakeholders:</strong> Sales, Logistics, Pricing,
-                    HQ.</p>
-                </div>
-              </div>
-            </div>
-
+          <!-- Allow pan-x *and* pan-y: so swipe vertical ET horizontal ! -->
+          <div class="content" id="company-content" ontouchstart="" style="touch-action: pan-x pan-y;">
+            <!-- Content will be dynamically injected -->
           </div>
         </div>
         <script>
-          // Activer/désactiver l'onglet sélectionné et changer le contenu affiché
           document.addEventListener("DOMContentLoaded", function () {
-            var tabs = document.querySelectorAll("#company-tabs ul li");
-            var contentDiv = document.getElementById("company-content");
-
-            // Liste ordonnée des entreprises et mapping nom <-> index
-            var companies = [
-              "Heineken",
-              "Artur'in",
-              "RE Europe",
-              "Aigle Azur",
-              "Nicolas"
+            const companies = [
+              {
+                name: "Heineken",
+                label: "Heineken",
+              },
+              {
+                name: "Artur'in",
+                label: "Artur'in",
+              },
+              {
+                name: "RE Europe",
+                label: "RE Europe",
+              },
+              {
+                name: "Aigle Azur",
+                label: "Aigle Azur",
+              },
+              {
+                name: "Nicolas",
+                label: "Nicolas",
+              }
             ];
 
-            // Contenus associés à chaque entreprise
-            var companyContent = {
-              "Heineken": `
-  <div class="box experience-box shadow-smooth has-background-white">
+            const companyContent = {
+              "Heineken": `<div class="box experience-box shadow-smooth has-background-white">
 <div class="is-flex is-flex-direction-column-mobile is-justify-content-space-between is-align-items-start-mobile is-align-items-center-tablet mb-5">
     <div class="mb-3-mobile">
       <h3 class="title is-4 mb-1 has-text-black">Product Manager</h3>
@@ -826,10 +750,8 @@ Specialized in Data Interfaces & Product Experience, Bridging the gap between co
       <p class="is-size-7"><strong class="has-text-black">Stakeholders:</strong> Sales, Logistics, Pricing, HQ.</p>
     </div>
   </div>
-</div>
-`,
-              "Artur'in": `
-<div class="box experience-box shadow-smooth has-background-white">
+</div>`,
+              "Artur'in": `<div class="box experience-box shadow-smooth has-background-white">
   <div class="is-flex is-flex-direction-column-mobile is-justify-content-space-between is-align-items-start-mobile is-align-items-center-tablet mb-5">
     
     <div class="mb-2-mobile">
@@ -890,10 +812,8 @@ Specialized in Data Interfaces & Product Experience, Bridging the gap between co
       </p>
     </div>
   </div>
-</div>
-    `,
-              "RE Europe": `
-<div class="box experience-box shadow-smooth has-background-white">
+</div>`,
+              "RE Europe": `<div class="box experience-box shadow-smooth has-background-white">
   <div class="is-flex is-flex-direction-column-mobile is-justify-content-space-between is-align-items-start-mobile is-align-items-center-tablet mb-5">
     
     <div class="mb-2-mobile">
@@ -1024,84 +944,109 @@ Specialized in Data Interfaces & Product Experience, Bridging the gap between co
     `
             };
 
-            // Change the current experience (update tab + content)
-            function setCurrentExperience(companyName) {
-              // Set active tab
-              tabs.forEach(function (t) {
-                t.classList.remove("is-active");
-                var a = t.querySelector("a");
-                if(a && a.getAttribute("data-company") === companyName){
-                  t.classList.add("is-active");
-                }
+            // Génère dynamiquement les tabs pour suivre l'ordre de companies[]
+            function renderTabs(activeCompanyName) {
+              const tabsList = document.getElementById("company-tabs-list");
+              tabsList.innerHTML = '';
+              companies.forEach(company => {
+                const li = document.createElement('li');
+                if (company.name === activeCompanyName) li.classList.add('is-active');
+                const a = document.createElement('a');
+                a.href = "#";
+                a.setAttribute('data-company', company.name);
+                a.textContent = company.label;
+                li.appendChild(a);
+                tabsList.appendChild(li);
               });
-              // Update content
-              contentDiv.innerHTML = companyContent[companyName] || "<p>Aucune information disponible.</p>";
             }
 
-            // Click tab: change content
-            tabs.forEach(function (tab) {
-              tab.addEventListener("click", function (e) {
-                e.preventDefault();
-                var company = tab.querySelector("a").getAttribute("data-company");
-                setCurrentExperience(company);
-              });
-            });
+            // Affiche le contenu et sélectionne la bonne tab
+            function setCurrentExperience(companyName) {
+              renderTabs(companyName); // Mets à jour les tabs
+              const contentDiv = document.getElementById("company-content");
+              contentDiv.innerHTML = companyContent[companyName] || "<p>Aucune information disponible.</p>";
+              // Réattache les events click sur les tabs nouvellement générées
+              attachTabEvents();
+            }
 
-            // --- SWIPE DETECTION LOGIC ---
-            // Basiquement: detect le swipe gauche/droite avec les events
-            var touchStartX = null;
-            var touchStartY = null;
-            var MIN_DIST = 50; // px
+            // Gère les clicks sur les tabs
+            function attachTabEvents() {
+              const tabs = document.querySelectorAll("#company-tabs-list li");
+              tabs.forEach(tab => {
+                tab.addEventListener("click", function (e) {
+                  e.preventDefault();
+                  const company = tab.querySelector("a").getAttribute("data-company");
+                  setCurrentExperience(company);
+                });
+              });
+            }
+
+            // ----- SWIPE Logic -----
+            let touchStartX = null;
+            let touchStartY = null;
+            let touchMoved = false;
+            const MIN_DIST = 50;
 
             function getCurrentCompany() {
-              // Find the currently active tab
-              let active = document.querySelector("#company-tabs ul li.is-active a");
-              return active ? active.getAttribute("data-company") : companies[0];
+              let active = document.querySelector("#company-tabs-list li.is-active a");
+              return active ? active.getAttribute("data-company") : companies[0].name;
             }
 
             function goToRelativeCompany(direction) {
-              // direction: +1 -> next; -1 -> previous
-              var currentCompany = getCurrentCompany();
-              var idx = companies.indexOf(currentCompany);
-              if(idx === -1) idx = 0;
-              var newIdx = idx + direction;
-              if(newIdx < 0) newIdx = companies.length - 1;
-              if(newIdx >= companies.length) newIdx = 0;
-              setCurrentExperience(companies[newIdx]);
+              const currentCompany = getCurrentCompany();
+              let idx = companies.findIndex(c => c.name === currentCompany);
+              if (idx === -1) idx = 0;
+              let newIdx = idx + direction;
+              if (newIdx < 0) newIdx = companies.length - 1;
+              if (newIdx >= companies.length) newIdx = 0;
+              setCurrentExperience(companies[newIdx].name);
+
+              // Après swipe, scroll horizontal vers tab si overflow!
+              setTimeout(() => {
+                const tabsList = document.getElementById("company-tabs-list");
+                const newActiveA = tabsList.querySelector('li.is-active a');
+                if (newActiveA) {
+                  // Scroll le container pour que la tab soit bien visible (pour les tabs qui overflow)
+                  newActiveA.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+                }
+              }, 10);
             }
 
-            contentDiv.addEventListener('touchstart', function(e){
-              if(!e.touches || e.touches.length !== 1) return;
+            const contentDiv = document.getElementById("company-content");
+            contentDiv.addEventListener('touchstart', function (e) {
+              if (!e.touches || e.touches.length !== 1) return;
+              touchMoved = false;
               touchStartX = e.touches[0].clientX;
               touchStartY = e.touches[0].clientY;
             });
 
-            contentDiv.addEventListener('touchend', function(e){
-              if(touchStartX === null) return;
-              var touch = e.changedTouches[0];
-              var deltaX = touch.clientX - touchStartX;
-              var deltaY = touch.clientY - touchStartY;
-              // Horizontal swipe only if mostly horizontal
+            contentDiv.addEventListener('touchmove', function (e) {
+              touchMoved = true;
+              // Do not preventDefault: laisser scroll natif vertical/horizontal
+            });
+
+            contentDiv.addEventListener('touchend', function (e) {
+              if (touchStartX === null) return;
+              const touch = e.changedTouches[0];
+              const deltaX = touch.clientX - touchStartX;
+              const deltaY = touch.clientY - touchStartY;
               if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > MIN_DIST) {
-                if(deltaX < 0) {
-                  // Swipe gauche = suivant
+                if (deltaX < 0) {
                   goToRelativeCompany(+1);
                 } else {
-                  // Swipe droite = précédent
                   goToRelativeCompany(-1);
                 }
+                e.preventDefault && e.preventDefault();
               }
               touchStartX = null;
               touchStartY = null;
-            });
+              touchMoved = false;
+            }, { passive: false });
 
-            // Focus for keyboard navigation
-            contentDiv.addEventListener('focus', function(){
-              // nothing, just needed for tab index
-            });
+            // Initialisation
+            // 1 - Render les tabs + content sur la première compagnie
+            setCurrentExperience(companies[0].name);
 
-            // On load, set correct initial experience
-            setCurrentExperience(getCurrentCompany());
           });
         </script>
 

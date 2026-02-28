@@ -60,27 +60,33 @@ Specialized in Data Interfaces & Product Experience, Bridging the gap between co
     </div>
   </nav>
 
-  <!-- Mobile overlay additions: -->
-  <div id="mobile-overlay" class="mobile-overlay" aria-hidden="true" style="display: none;">
-    <div
-      style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; width: 100%;">
-      <button id="overlay-close" class="overlay-close" aria-label="Close overlay"
-        style="position: absolute; top: 0.1em; right: 0.5em; z-index: 1050; background: none; border: none; font-size: 2.2em; color: #222; line-height: 1; cursor: pointer; font-weight: bold;">
-        <svg width="32" height="32" viewBox="0 0 32 32" style="display:block;" xmlns="http://www.w3.org/2000/svg"
-          focusable="false" aria-hidden="true">
-          <line x1="8" y1="8" x2="24" y2="24" stroke="#222" stroke-width="2" stroke-linecap="round" />
-          <line x1="24" y1="8" x2="8" y2="24" stroke="#222" stroke-width="2" stroke-linecap="round" />
-        </svg>
-      </button>
-      <div id="custom-navbar-mobile-links"
-        style="display: flex; flex-direction: column; align-items: center; width: 100%;">
-        <a href="aboutme.html" class="navbar-link is-arrowless"
-          style="margin: 0.4em 0 0.1em 0; font-size: 1.15em; color: #222; font-weight: 600;">About me</a>
-        <a href="mywebsite.html" class="navbar-link is-arrowless"
-          style="margin: 0.1em 0 0.2em 0; font-size: 1.15em; color: #222; font-weight: 600;">About my website</a>
+    <!-- Mobile overlay additions: -->
+    <div id="mobile-overlay" class="mobile-overlay" aria-hidden="true" style="display: none;">
+      <div
+        style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; width: 100%;">
+        <button id="overlay-close" class="overlay-close" aria-label="Close overlay"
+          style="position: absolute; top: 0.1em; right: 0.5em; z-index: 1050; background: none; border: none; font-size: 2.2em; color: #222; line-height: 1; cursor: pointer; font-weight: bold;">
+          <svg width="32" height="32" viewBox="0 0 32 32" style="display:block;" xmlns="http://www.w3.org/2000/svg"
+            focusable="false" aria-hidden="true">
+            <line x1="8" y1="8" x2="24" y2="24" stroke="#222" stroke-width="2" stroke-linecap="round" />
+            <line x1="24" y1="8" x2="8" y2="24" stroke="#222" stroke-width="2" stroke-linecap="round" />
+          </svg>
+        </button>
+        <div id="custom-navbar-mobile-links"
+          style="display: flex; flex-direction: column; align-items: center; width: 100%;">
+          <!-- Home button on mobile -->
+          <a href="index.html" class="navbar-link is-arrowless"
+            style="margin: 0.7em 0 0.3em 0; font-size: 1.15em; color: #222; font-weight: 600; display: flex; align-items: center;">
+          
+            Home
+          </a>
+          <a href="aboutme.html" class="navbar-link is-arrowless"
+            style="margin: 0.1em 0 0.1em 0; font-size: 1.15em; color: #222; font-weight: 600;">About me</a>
+          <a href="mywebsite.html" class="navbar-link is-arrowless"
+            style="margin: 0.1em 0 0.2em 0; font-size: 1.15em; color: #222; font-weight: 600;">About my website</a>
+        </div>
       </div>
     </div>
-  </div>
   <style>
     /* Remove Bulma nav arrow for all .navbar-link in this navbar, fallback if is-arrowless missed */
     .custom-navbar .navbar-link:not(.is-arrowless)::after {
@@ -379,7 +385,7 @@ Specialized in Data Interfaces & Product Experience, Bridging the gap between co
                 <p class="is-size-7 has-text-grey mb-2">Performance monitoring, user behavior tracking, and KPI
                   analysis.</p>
                 <div class="tags">
-                  <span class="tag is-white border-tag"><img src="./img/logo-contentsquare.svg" alt="contentsquare"
+                  <span class="tag is-white border-tag"><img src="./img/logo-contentsquare.png" alt="contentsquare"
                       class="mr-2 icon-small"> Contentsquare</span>
                   <span class="tag is-white border-tag"><img src="./img/logo-newrelic.svg" alt="New Relic"
                       class="mr-2 icon-small"> New Relic</span>

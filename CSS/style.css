@@ -170,14 +170,28 @@ main {
 }
 
 .index-page .hero-body {
-    /* On cible l'ID pour être sûr de gagner la priorité CSS */
+    /* Affiche l'image joliment sur toutes résolutions */
     background-image: url('../img/background-portfolio-ThomasLAMART.jpg');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    
-    /* Optionnel : fixe l'image pour un effet de profondeur */
-    background-attachment: fixed; 
+    min-height: 100vh;
+}
+
+@media (max-width: 1023px) {
+    .index-page .hero-body {
+        /* Sur mobile, évite le "zoom" brutal de l'image due au background-attachment: fixed */
+        background-attachment: scroll;
+        /* Optionnel : permet à l'image de mieux couvrir l'écran, ajuste le centrage si besoin */
+        background-position: center top;
+    }
+}
+
+@media (min-width: 1024px) {
+    .index-page .hero-body {
+        /* Sur desktop, on peut garder l'effet "fixed" pour la profondeur */
+        background-attachment: fixed;
+    }
 }
 
 /* Fixer la largeur de la carte sur desktop */

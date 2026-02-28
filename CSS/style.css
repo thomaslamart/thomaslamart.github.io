@@ -185,9 +185,18 @@ body.mobile-overlay-open {
 .index-page .hero-body {
     top: 0;
     left: 0;
-    width: 100vw;
-    height: calc(100vh - 2.25rem);
-    min-height: calc(100vh - 2.25rem);
+    /* ⚠️ Sur iOS Safari, 100vw et 100vh sont souvent mal gérés à cause de la barre d'adresse dynamique.
+       Utiliser width: 100vw va parfois dépasser l'écran et provoquer du scroll horizontal imprévu.
+       Utiliser 100% ou simplement max-width: 100% garantie souvent une meilleure compatibilité. */
+    width: 100%;
+    /* Pour les hauteurs en "plein écran", il faut utiliser des variables qui tiennent compte de l'environnement mobile :
+       Voir https://css-tricks.com/the-trick-to-viewport-units-on-mobile/
+       Utilisons la variable moderne svh si supportée, avec un fallback */
+    min-height: calc(100svh - 2.25rem);
+    height: calc(100svh - 2.25rem);
+    /* Fallback pour vieux navigateurs qui ne supportent pas svh */
+    /* height: calc(100vh - 2.25rem);
+       min-height: calc(100vh - 2.25rem); */
     background-color: #d3f3ff;
     background-image: url("data:image/svg+xml,%3Csvg width='40' height='1' viewBox='0 0 40 1' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h20v1H0z' fill='%23ffffff' fill-opacity='1' fill-rule='evenodd'/%3E%3C/svg%3E");
     background-repeat: repeat;

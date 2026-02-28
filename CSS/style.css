@@ -178,30 +178,25 @@ body.mobile-overlay-open {
   gap: 13rem;
 }
 
+/* 1. On modifie le comportement global du Fullheight pour Bulma */
 .hero.is-fullheight {
-    min-height: calc(100vh - 2.25rem) !important;
+  /* On privilégie svh sans !important pour laisser les autres classes respirer */
+  min-height: calc(100dvh - 2.25rem);
+  height: calc(100dvh - 2.25rem);
 }
 
 .index-page .hero-body {
-  top: 0;
-  left: 0;
+  /* Supprime top: 0 et left: 0, ils ne servent à rien ici sauf si tu es en position: absolute */
   width: 100%;
-  /* On utilise svh pour la hauteur réelle visible */
-  min-height: calc(100svh - 2.25rem);
-  height: calc(100svh - 2.25rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   
-  /* Fallback pour les vieux navigateurs qui ne connaissent pas svh */
-  @supports not (height: 100svh) {
-      min-height: calc(100vh - 2.25rem);
-      height: calc(100vh - 2.25rem);
-  }
-
   background-color: #d3f3ff;
   background-image: url("data:image/svg+xml,%3Csvg width='40' height='1' viewBox='0 0 40 1' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h20v1H0z' fill='%23ffffff' fill-opacity='1' fill-rule='evenodd'/%3E%3C/svg%3E");
   background-repeat: repeat;
   background-position: center center;
-  overflow-x: hidden;
-  z-index: 0;
+  overflow: hidden; /* Changé de overflow-x à overflow pour éviter tout scroll interne */
 }
 
 @media (max-width: 1023px) {

@@ -27,31 +27,45 @@ main {
 
 .custom-navbar {
   display: flex;
-  justify-content: center;
   align-items: center;
   position: sticky;
   top: 0;
   background: #fff;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-  height: 2.25rem;
+  height: 2.25rem; /* Augmenté légèrement pour que le titre respire */
   z-index: 1000;
 }
 
-.custom-navbar-brand {
+/* Le conteneur du titre : il occupe toute la largeur mais laisse passer les clics */
+.custom-navbar-center {
   position: absolute;
-  left: 1rem;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  pointer-events: none; /* REND LA ZONE TRANSPARENTE AU CLIC */
 }
 
-.custom-navbar-center {
-  flex: 1;
-  text-align: center;
+/* Le lien lui-même : on réactive le clic uniquement ici */
+.logo-link {
+  pointer-events: auto; /* SEUL LE TEXTE REVIENT CLIQUABLE */
+  text-decoration: none;
+  display: inline-block;
 }
 
 .custom-navbar h6.title {
   font-family: 'Montserrat', sans-serif;
   letter-spacing: 5px;
-  text-align: center;
-  margin: 0;
+  margin: 0 !important;
+  color: #111;
+}
+
+/* --- BURGER --- */
+.custom-navbar-brand {
+  position: absolute;
+  z-index: 20; /* Passe au-dessus de la zone de titre */
 }
 
 .burger {
@@ -59,7 +73,7 @@ main {
   border: none;
   padding: 8px;
   cursor: pointer;
-  display: none;
+  display: none; /* Caché sur desktop */
 }
 
 .burger-line {
@@ -69,23 +83,28 @@ main {
   background: #111;
   margin: 3px 0;
   border-radius: 1px;
-  transition: transform 0.18s ease, opacity 0.18s ease;
 }
 
+/* --- RESPONSIVE --- */
 @media (max-width: 1023px) {
   .burger {
     display: block;
   }
 
-  /* Positionner le bouton burger à droite sur mobile */
   .custom-navbar-brand {
+    right: 1rem; /* Burger à droite sur mobile */
     left: auto;
-    right: 1rem;
   }
 
-  /* Réduire l'espacement des lettres du titre sur mobile */
   .custom-navbar h6.title {
     letter-spacing: 2px;
+    display: none; /* Comme tu l'as demandé tout à l'heure pour mobile */
+  }
+}
+
+@media (min-width: 1024px) {
+  .custom-navbar-brand {
+    left: 1rem; /* Optionnel : si tu as un menu ou logo à gauche sur desktop */
   }
 }
 
@@ -146,11 +165,19 @@ main {
   gap: 13rem;
 }
 
-.hero-body {
-  background-image: url('../img/background-portfolio-ThomasLAMART.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+.hero.is-fullheight {
+    min-height: calc(100vh - 2.25rem) !important;
+}
+
+.index-page .hero-body {
+    /* On cible l'ID pour être sûr de gagner la priorité CSS */
+    background-image: url('../img/background-portfolio-ThomasLAMART.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    
+    /* Optionnel : fixe l'image pour un effet de profondeur */
+    background-attachment: fixed; 
 }
 
 /* Fixer la largeur de la carte sur desktop */
@@ -179,8 +206,8 @@ main {
 .scroll-indicator .arrow {
     width: 10px;
     height: 10px;
-    border-right: 2px solid #b5b5b5;
-    border-bottom: 2px solid #b5b5b5;
+    border-right: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
     transform: rotate(45deg);
     margin: 10px auto;
 }
@@ -372,6 +399,7 @@ main {
     transition: border-color 0.3s ease;
 }
 
+
 .card-job:hover {
     border-left-color: #3273dc;
 }
@@ -529,6 +557,8 @@ main {
   /* Removed */
 }
 
+
+
 /* ===================================================================
    Utility classes
    =================================================================== */
@@ -537,7 +567,15 @@ main {
 .border-top { border-top: 1px solid #f0f0f0; }
 .border-bottom-radius { border-bottom: 1px solid #eee; border-radius: 6px 6px 0 0; }
 .border-tag { border: 1px solid #eee !important; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
-.shadow-smooth { box-shadow: 0 8px 20px rgba(0,0,0,0.06); }
+.shadow-smooth { 
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #f0f0f0; }
+.shadow-smooth:hover { 
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+  }
+
 .icon-small { width: 16px; height: 16px; vertical-align: middle; object-fit: contain; }
 .skill-row { transition: background 0.3s; }
 .skill-row:hover { background-color: #fcfcfc; }
@@ -550,3 +588,195 @@ main {
 .footer {
     background-color:hsl(205, 100%, 93%);
 }
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   PAGE ABOUT - DESIGN TYPOGRAPHIQUE
+   ========================================================================== */
+
+/* On cible précisément les paragraphes dans about-content */
+.about-content p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 300 !important; /* Le !important ici garantit que Bulma ne l'écrase pas */
+  line-height: 1.8;
+  color: #1a1a1a;
+  margin-bottom: 1.5rem;
+}
+
+/* On s'assure que SEULS les strong sont en gras */
+.about-content p strong {
+  font-weight: 600 !important;
+  color: #000;
+}
+
+/* Pour le texte discret */
+.about-content p.is-muted {
+  font-size: 0.9rem;
+  color: #888;
+  font-weight: 300 !important;
+}
+
+/* --- BOUTON BACK (PRESET BULMA CUSTOM) --- */
+
+/* On personnalise le bouton .is-light pour qu'il soit plus "Figma" */
+.button.is-light.is-rounded {
+  background-color: #f5f5f5;
+  border: 1px solid transparent;
+  color: #7a7a7a;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  transition: all 0.3s ease;
+  height: auto;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+}
+
+.button.is-light.is-rounded:hover {
+  background-color: #eeeeee;
+  color: #1a1a1a;
+  border-color: #e0e0e0;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* Option au cas où tu utilises .is-ghost */
+.button.is-ghost {
+  color: #b5b5b5;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.button.is-ghost:hover {
+  background-color: transparent;
+  color: #000;
+  text-decoration: none;
+}
+
+
+
+
+
+
+/* --- ABOUT ME: PRO VERSION --- */
+.about-page-wrapper {
+    background-color: #f8f9fa;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+}
+
+/* Layout pour Desktop */
+.custom-layout {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: flex-start; /* Chaque cube garde sa propre hauteur */
+}
+
+.about-card {
+    width: 100%;
+    border-radius: 12px;
+}
+
+.iframe-container {
+    background: #f0f0f0;
+    min-height: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 4px;
+}
+
+
+
+/* On ne limite la largeur qu'en mode mobile */
+@media screen and (max-width: 1023px) {
+    .about-card {
+        max-width: 440px;
+        margin: 0 auto 1.5rem auto;
+    }
+}
+
+/* Sections */
+.live-section {
+    border: 1px solid #81b64c;
+    position: relative;
+    padding: 1.5rem 1rem 1rem 1rem;
+    border-radius: 12px;
+    background: white;
+}
+
+.live-indicator {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #81b64c;
+    color: white;
+    padding: 2px 12px;
+    border-radius: 20px;
+    font-size: 0.65rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+.sport-section {
+    background: white;
+    padding: 1.25rem 1rem;
+    border-radius: 12px;
+}
+
+.event-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 0;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.event-row:last-child { border-bottom: none; }
+
+.event-past { opacity: 0.35; filter: grayscale(1); }
+
+.discipline-tag {
+    font-size: 0.6rem;
+    color: #b5b5b5;
+    text-transform: uppercase;
+    margin-left: 5px;
+}
+
+/* Animation Live Dot */
+@keyframes blink { 0% { opacity: 1; } 50% { opacity: 0.3; } 100% { opacity: 1; } }
+.dot { height: 6px; width: 6px; background: white; border-radius: 50%; display: inline-block; margin-right: 5px; animation: blink 2s infinite; }
+
+/* Météo */
+.cube-item {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 0.5rem 0.25rem;
+    text-align: center;
+    border: 1px solid #eee;
+}
+
+.cube-item p:first-child { margin-bottom: 0.1rem; }

@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <title>Thomas Lamart</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap">
   <link rel="stylesheet" href="./CSS/style.css">
   <link rel="icon" type="image/png" href="./img/favicon.svg">
 
@@ -22,31 +22,152 @@ Specialized in Data Interfaces & Product Experience, Bridging the gap between co
   <meta property="og:url" content="https://thomaslamart.fr">
 </head>
 
-<body>
+<body class="index-page">
 
-  <nav class="custom-navbar">
-    <div class="custom-navbar-brand">
+
+
+  <nav class="custom-navbar" style="position: relative;">
+    <div class="custom-navbar-center"
+      style="position: absolute; left: 0; right: 0; top: 0; height: 100%; display: flex; align-items: center; justify-content: center; z-index: 2; pointer-events: none;">
+      <span style="pointer-events:auto;">
+        <a href="/" class="logo-link" style="text-decoration: none;">
+          <span class="title is-4 has-text-black"
+            style="margin-bottom: 0; font-weight: bold; letter-spacing: 2px;">THOMAS LAMART</span>
+        </a>
+      </span>
+    </div>
+    <div class="custom-navbar-brand" style="display: flex; align-items: center;">
       <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">
         <span class="burger-line" aria-hidden="true"></span>
         <span class="burger-line" aria-hidden="true"></span>
         <span class="burger-line" aria-hidden="true"></span>
       </button>
     </div>
-    <div class="custom-navbar-center">
-      <a href="/">
-        <h6 class="title is-4 has-text-black">THOMAS LAMART</h6>
-      </a>
+    <div class="custom-navbar-end is-hidden-touch" style="
+    display: flex; 
+    align-items: center; 
+    position: absolute; 
+    right: 2em; 
+    top: 0; 
+    height: 100%; 
+    gap: 0.15em;">
+      <a href="aboutme.html" class="navbar-link is-arrowless"
+        style="color: #222; font-weight: 500; font-size: 0.7em; letter-spacing: 0.01em; padding: 0.1em 0.4em;">About
+        me</a>
+      <a href="mywebsite.html" class="navbar-link is-arrowless"
+        style="color: #222; font-weight: 500; font-size: 0.7em; letter-spacing: 0.01em; padding: 0.1em 0.4em;">About my
+        website</a>
     </div>
   </nav>
 
-  <!-- Fullscreen mobile overlay (page blanche) -->
-  <div id="mobile-overlay" class="mobile-overlay" aria-hidden="true">
-    <button id="overlay-close" class="overlay-close" aria-label="Close overlay">×</button>
+  <!-- Mobile overlay additions: -->
+  <div id="mobile-overlay" class="mobile-overlay" aria-hidden="true" style="display: none;">
+    <div
+      style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; width: 100%;">
+      <button id="overlay-close" class="overlay-close" aria-label="Close overlay"
+        style="position: absolute; top: 0.1em; right: 0.5em; z-index: 1050; background: none; border: none; font-size: 2.2em; color: #222; line-height: 1; cursor: pointer; font-weight: bold;">
+        <svg width="32" height="32" viewBox="0 0 32 32" style="display:block;" xmlns="http://www.w3.org/2000/svg"
+          focusable="false" aria-hidden="true">
+          <line x1="8" y1="8" x2="24" y2="24" stroke="#222" stroke-width="2" stroke-linecap="round" />
+          <line x1="24" y1="8" x2="8" y2="24" stroke="#222" stroke-width="2" stroke-linecap="round" />
+        </svg>
+      </button>
+      <div id="custom-navbar-mobile-links"
+        style="display: flex; flex-direction: column; align-items: center; width: 100%;">
+        <a href="aboutme.html" class="navbar-link is-arrowless"
+          style="margin: 0.4em 0 0.1em 0; font-size: 1.15em; color: #222; font-weight: 600;">About me</a>
+        <a href="mywebsite.html" class="navbar-link is-arrowless"
+          style="margin: 0.1em 0 0.2em 0; font-size: 1.15em; color: #222; font-weight: 600;">About my website</a>
+      </div>
+    </div>
   </div>
+  <style>
+    /* Remove Bulma nav arrow for all .navbar-link in this navbar, fallback if is-arrowless missed */
+    .custom-navbar .navbar-link:not(.is-arrowless)::after {
+      display: none !important;
+    }
+
+    .custom-navbar .navbar-link::after {
+      display: none !important;
+    }
+
+    .mobile-overlay {
+      position: fixed !important;
+      inset: 0;
+      background: white;
+      z-index: 1010;
+      display: none;
+      height: 100vh;
+      width: 100vw;
+      overflow: auto;
+      animation: fadeIn .2s cubic-bezier(.39, .575, .565, 1) both;
+    }
+
+    .overlay-close {
+      position: absolute;
+      top: 1em;
+      right: 1.5em;
+      z-index: 1050;
+      background: none;
+      border: none;
+      font-size: 2.2em;
+      color: #222;
+      line-height: 1;
+      cursor: pointer;
+      font-weight: bold;
+      /* removing the × character; svg is used directly inside button */
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      #mobile-overlay {
+        display: none !important;
+      }
+    }
+  </style>
+  <script>
+    // Show About menu in overlay on burger click, hide on close or background click
+    document.addEventListener("DOMContentLoaded", function () {
+      const burger = document.getElementById("burger");
+      const overlay = document.getElementById("mobile-overlay");
+      const overlayClose = document.getElementById("overlay-close");
+
+      burger.addEventListener("click", function () {
+        overlay.style.display = "block";
+        document.body.style.overflow = "hidden";
+      });
+
+      overlayClose.addEventListener("click", function () {
+        overlay.style.display = "none";
+        document.body.style.overflow = "";
+      });
+
+      // Optionally close overlay if user clicks outside the links (background)
+      overlay.addEventListener("click", function (e) {
+        if (e.target === overlay) {
+          overlay.style.display = "none";
+          document.body.style.overflow = "";
+        }
+      });
+    });
+  </script>
+
+
+
+
 
   <main class="main-content">
 
-    <section id="hero" class="hero is-fullheight-with-navbar">
+    <section id="hero" class="hero is-fullheight">
       <div class="hero-body">
         <div class="container is-justify-content-center is-align-items-center">
 
@@ -111,7 +232,7 @@ Specialized in Data Interfaces & Product Experience, Bridging the gap between co
             </div>
           </div>
 
-          <div class="scroll-indicator is-hidden-touch">
+          <div class="scroll-indicator is-hidden-touch has-text-white">
             <p>Scroll to explore</p>
             <div class="arrow"></div>
           </div>
@@ -131,8 +252,8 @@ Specialized in Data Interfaces & Product Experience, Bridging the gap between co
             Specialized in <span class="has-text-link has-text-weight-semibold">Data Interfaces & Product
               Experience</span>
           </p>
-          <p class="is-size-5 has-text-black has-text-grey-darker is-italic">
-            "Bridging the gap between complex backend architectures and seamless digital experiences."
+          <p class="is-size-5 has-text-grey has-text-grey-darker is-italic">
+            Bridging the gap between complex backend architectures and seamless digital experiences.
           </p>
         </div>
 
@@ -146,7 +267,7 @@ Specialized in Data Interfaces & Product Experience, Bridging the gap between co
                     <p>
                       <strong class="is-size-5 has-text-black">Architecture & Data Flow</strong><br>
                       <small class="has-text-link uppercase has-text-weight-bold">ERP • PIM • MIDDLEWARE</small><br>
-                      <span class="has-text-grey-dark">Driving interoperability between E-commerce front-ends and
+                      <span class="has-text-grey">Driving interoperability between E-commerce front-ends and
                         back-office
                         systems <strong class="has-text-black"> (Middleware, PIM, SAP ERP )</strong> while ensuring data
                         integrity.</span>
@@ -166,7 +287,7 @@ Specialized in Data Interfaces & Product Experience, Bridging the gap between co
                       <strong class="is-size-5 has-text-black">User Experience & Design Thinking</strong><br>
                       <small class="has-text-link uppercase has-text-weight-bold">Problem Solving • User Journey •
                         Figma</small><br>
-                      <span class="has-text-grey-dark">Transforming complex business requirements into intuitive
+                      <span class="has-text-grey">Transforming complex business requirements into intuitive
                         interfaces
                         through <strong class="has-text-black">Design Thinking</strong> and high-fidelity
                         wireframing.</span>
@@ -186,7 +307,7 @@ Specialized in Data Interfaces & Product Experience, Bridging the gap between co
                       <strong class="is-size-5 has-text-black">Dual Technical/Agile Expertise</strong><br>
                       <small class="has-text-link uppercase has-text-weight-bold">Technical Specs • User Stories •
                         QA</small><br>
-                      <span class="has-text-grey-dark">Translating business needs into technical specifications for
+                      <span class="has-text-grey">Translating business needs into technical specifications for
                         <strong class="has-text-black">SAP
                           teams</strong> and actionable User Stories for <strong class="has-text-black">international
                           squads</strong>.</span>
@@ -206,7 +327,7 @@ Specialized in Data Interfaces & Product Experience, Bridging the gap between co
                       <strong class="is-size-5 has-text-black">Cross-Functional Leadership</strong><br>
                       <small class="has-text-link uppercase has-text-weight-bold">Stakeholders • Change Mgmt •
                         Communication</small><br>
-                      <span class="has-text-grey-dark">Guiding Supply Chain, Pricing, Sales Admin teams etc through
+                      <span class="has-text-grey">Guiding Supply Chain, Pricing, Sales Admin teams etc through
                         <strong class="has-text-black">digital transformation</strong> to align legacy workflows with
                         product goals.</span>
                     </p>
@@ -233,7 +354,7 @@ Specialized in Data Interfaces & Product Experience, Bridging the gap between co
             <div class="box shadow-smooth p-0 is-flex is-flex-direction-column h-100">
               <div class="has-background-link-light p-5 border-bottom-radius">
                 <h3 class="title is-5 has-text-link mb-2">Discovery</h3>
-                <p class="subtitle is-7 has-text-grey">Understanding problems and identifying opportunities.</p>
+                <p class="subtitle is-7 has-text-grey-dark">Understanding problems and identifying opportunities.</p>
               </div>
 
               <div class="skill-row py-4 px-5 has-background-white">
@@ -258,7 +379,7 @@ Specialized in Data Interfaces & Product Experience, Bridging the gap between co
                 <p class="is-size-7 has-text-grey mb-2">Performance monitoring, user behavior tracking, and KPI
                   analysis.</p>
                 <div class="tags">
-                  <span class="tag is-white border-tag"><img src="./img/logo-contentsquare.svg" alt="Contentsquare"
+                  <span class="tag is-white border-tag"><img src="./img/logo-contentsquare.svg" alt="contentsquare"
                       class="mr-2 icon-small"> Contentsquare</span>
                   <span class="tag is-white border-tag"><img src="./img/logo-newrelic.svg" alt="New Relic"
                       class="mr-2 icon-small"> New Relic</span>
@@ -320,7 +441,7 @@ Specialized in Data Interfaces & Product Experience, Bridging the gap between co
             <div class="box shadow-smooth p-0 is-flex is-flex-direction-column h-100">
               <div class="has-background-primary-light p-5 border-bottom-radius">
                 <h3 class="title is-5 has-text-primary mb-2">Delivery</h3>
-                <p class="subtitle is-7 has-text-grey">Designing, iterating, and measuring success.</p>
+                <p class="subtitle is-7 has-text-grey-dark">Designing, iterating, and measuring success.</p>
               </div>
 
               <div class="skill-row py-4 px-5 has-background-white">
@@ -373,7 +494,7 @@ Specialized in Data Interfaces & Product Experience, Bridging the gap between co
                 <p class="has-text-weight-bold has-text-black mb-2">Measuring Success</p>
                 <p class="is-size-7 has-text-grey mb-2">Post-release KPI tracking, alerting, and solutions.</p>
                 <div class="tags">
-                  <span class="tag is-white border-tag"><img src="./img/logo-contentsquare.svg" alt="Contentsquare"
+                  <span class="tag is-white border-tag"><img src="./img/logo-contentsquare.svg" alt="contentsquare"
                       class="mr-2 icon-small"> Contentsquare</span>
                   <span class="tag is-white border-tag"><img src="./img/logo-newrelic.svg" alt="New Relic"
                       class="mr-2 icon-small"> New Relic</span>
@@ -390,7 +511,7 @@ Specialized in Data Interfaces & Product Experience, Bridging the gap between co
             <div class="box shadow-smooth p-0 is-flex is-flex-direction-column h-100">
               <div class="has-background-info-light p-5 border-bottom-radius">
                 <h3 class="title is-5 has-text-info mb-2">Technical Leadership & Ops</h3>
-                <p class="subtitle is-7 has-text-grey">Systems mastery & technical mediation.</p>
+                <p class="subtitle is-7 has-text-grey-dark">Systems mastery & technical mediation.</p>
               </div>
 
               <div class="skill-row py-4 px-5 has-background-white">
@@ -402,6 +523,8 @@ Specialized in Data Interfaces & Product Experience, Bridging the gap between co
                   <span class="tag is-white border-tag">IDOCs</span>
                   <span class="tag is-white border-tag">Data Mapping</span>
                 </div>
+                <button class="button has-text-info has-background-info-light is-rounded is-small show-modal-btn"
+                  data-modal="modal-sap">Show me</button>
               </div>
 
               <div class="skill-row py-4 px-5 has-background-white border-top">
@@ -446,6 +569,13 @@ Specialized in Data Interfaces & Product Experience, Bridging the gap between co
 
 
     </section>
+
+    <div id="modal-sap" class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-content">
+        <p class="image"><img src="./img/Showme-SAP.png" alt="SAP transactions"></p>
+      </div><button class="modal-close is-large" aria-label="close"></button>
+    </div>
 
     <div id="modal-postman" class="modal">
       <div class="modal-background"></div>
@@ -530,12 +660,12 @@ Specialized in Data Interfaces & Product Experience, Bridging the gap between co
 
                 <div class="mb-3-mobile">
                   <h3 class="title is-4 mb-1 has-text-black">Product Manager</h3>
-                  <p class="subtitle is-5 has-text-link has-text-weight-bold has-text-grey">Heineken</p>
+                  <p class="subtitle is-5 has-text-link has-text-weight-bold has-text-grey-dark">Heineken</p>
                   <span class="tag is-light is-medium is-rounded has-text-grey">Paris | 2023 - 2026</span>
                 </div>
               </div>
 
-              <p class="subtitle is-6 is-italic mb-5 has-text-grey">B2B e-commerce platform transformation & ecosystem
+              <p class="subtitle is-6 is-italic mb-5 has-text-grey-dark">B2B e-commerce platform transformation & ecosystem
                 orchestration
                 on France Boissons Website.</p>
 
@@ -616,12 +746,12 @@ Specialized in Data Interfaces & Product Experience, Bridging the gap between co
 <div class="is-flex is-flex-direction-column-mobile is-justify-content-space-between is-align-items-start-mobile is-align-items-center-tablet mb-5">
     <div class="mb-3-mobile">
       <h3 class="title is-4 mb-1 has-text-black">Product Manager</h3>
-      <p class="subtitle is-5 has-text-link has-text-weight-bold has-text-grey">Heineken</p>
+      <p class="subtitle is-5 has-text-link has-text-weight-bold has-text-grey-dark">Heineken</p>
       <span class="tag is-light is-medium is-rounded has-text-grey">Paris | 2023 - 2026</span>
     </div>
   </div>
 
-  <p class="subtitle is-6 is-italic mb-5 has-text-grey">B2B e-commerce platform transformation & ecosystem orchestration on France Boissons Website.</p>
+  <p class="subtitle is-6 is-italic mb-5 has-text-grey-dark">B2B e-commerce platform transformation & ecosystem orchestration on France Boissons Website.</p>
 
   <div class="columns mb-5">
     <div class="column is-6">
@@ -689,12 +819,12 @@ Specialized in Data Interfaces & Product Experience, Bridging the gap between co
     
     <div class="mb-2-mobile">
       <h3 class="title is-4 mb-1 has-text-black">Product & Content Manager</h3>
-      <p class="subtitle is-5 has-text-link has-text-weight-bold has-text-grey">Artur'in</p>
+      <p class="subtitle is-5 has-text-link has-text-weight-bold has-text-grey-dark">Artur'in</p>
       <span class="tag is-light is-medium is-rounded has-text-grey">Paris | 2018 - 2022</span>
     </div>
   </div>
 
-  <p class="subtitle is-6 is-italic mb-5 has-text-grey">Digital Marketing SaaS for local businesses.</p>
+  <p class="subtitle is-6 is-italic mb-5 has-text-grey-dark">Digital Marketing SaaS for local businesses.</p>
 
   <div class="columns mb-5">
     <div class="column is-6">
@@ -753,12 +883,12 @@ Specialized in Data Interfaces & Product Experience, Bridging the gap between co
     
     <div class="mb-2-mobile">
       <h3 class="title is-4 mb-1 has-text-black">Business Developer</h3>
-      <p class="subtitle is-5 has-text-link has-text-weight-bold has-text-grey">Rent Electric Europe</p>
+      <p class="subtitle is-5 has-text-link has-text-weight-bold has-text-grey-dark">Rent Electric Europe</p>
       <span class="tag is-light is-medium is-rounded has-text-grey">June 2016 - Sept. 2016</span>
     </div>
   </div>
 
-  <p class="subtitle is-6 is-italic mb-5 has-text-grey">Sale and rental of electric vehicles (B2B & B2C).</p>
+  <p class="subtitle is-6 is-italic mb-5 has-text-grey-dark">Sale and rental of electric vehicles (B2B & B2C).</p>
 
   <div class="columns">
     <div class="column is-6">
@@ -796,12 +926,12 @@ Specialized in Data Interfaces & Product Experience, Bridging the gap between co
   <div class="is-flex is-flex-direction-column-mobile is-justify-content-space-between is-align-items-start-mobile is-align-items-center-tablet mb-5">
     <div class="mb-3-mobile">
       <h3 class="title is-4 mb-1 has-text-black">Sales & Marketing Assistant</h3>
-      <p class="subtitle is-5 has-text-link has-text-weight-bold has-text-grey">Airline Company</p>
+      <p class="subtitle is-5 has-text-link has-text-weight-bold has-text-grey-dark">Airline Company</p>
       <span class="tag is-light is-medium is-rounded has-text-grey">April 2015 - June 2015</span>
     </div>
   </div>
 
-  <p class="subtitle is-6 is-italic mb-5 has-text-grey">Strategic support for commercial development and brand awareness.</p>
+  <p class="subtitle is-6 is-italic mb-5 has-text-grey-dark">Strategic support for commercial development and brand awareness.</p>
 
   <div class="columns">
     <div class="column is-6">
@@ -839,12 +969,12 @@ Specialized in Data Interfaces & Product Experience, Bridging the gap between co
   <div class="is-flex is-flex-direction-column-mobile is-justify-content-space-between is-align-items-start-mobile is-align-items-center-tablet mb-5">
     <div class="mb-3-mobile">
       <h3 class="title is-4 mb-1 has-text-black">Manager Sales Assistant</h3>
-      <p class="subtitle is-5 has-text-link has-text-weight-bold has-text-grey">Wine Retail Chain</p>
+      <p class="subtitle is-5 has-text-link has-text-weight-bold has-text-grey-dark">Wine Retail Chain</p>
       <span class="tag is-light is-medium is-rounded has-text-grey">Lille | Dec. 2013 - Jan. 2014</span>
     </div>
   </div>
 
-  <p class="subtitle is-6 is-italic mb-5 has-text-grey">In-store operations and customer advisory in a fast-paced retail environment.</p>
+  <p class="subtitle is-6 is-italic mb-5 has-text-grey-dark">In-store operations and customer advisory in a fast-paced retail environment.</p>
 
   <div class="columns">
     <div class="column is-6">
@@ -894,12 +1024,13 @@ Specialized in Data Interfaces & Product Experience, Bridging the gap between co
         </script>
 
 
-          <div class="buttons is-centered is-medium">
-            <a class="button is-info is-medium has-text-white" href="./img/CV_EN_ThomasLAMART.pdf" target="_blank" rel="noopener noreferrer">
-              <strong>Download my CV</strong>
-            </a>
+        <div class="buttons is-centered is-medium">
+          <a class="button is-info is-medium has-text-white" href="./img/CV_EN_ThomasLAMART.pdf" target="_blank"
+            rel="noopener noreferrer">
+            <strong>Download my CV</strong>
+          </a>
 
-          </div>
+        </div>
 
   </main>
 
@@ -908,7 +1039,7 @@ Specialized in Data Interfaces & Product Experience, Bridging the gap between co
   <footer class="footer">
     <div class="content has-text-centered">
       <p>
-        ©2026 <strong class="has-text-black">Monsieur Thomas Lamart</strong>. Tous droits réservés.
+        ©2026 <strong class="has-text-black">Thomas Lamart</strong>. Tous droits réservés.
       </p>
     </div>
   </footer>

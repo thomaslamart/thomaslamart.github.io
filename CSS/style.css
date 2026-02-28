@@ -183,18 +183,25 @@ body.mobile-overlay-open {
 }
 
 .index-page .hero-body {
-    top: 0;
-    left: 0;
-    width: 100%;
-    /* Utilise la hauteur classique pour la compatibilité maximale. */
-    min-height: calc(100vh - 2.25rem);
-    height: calc(100vh - 2.25rem);
-    background-color: #d3f3ff;
-    background-image: url("data:image/svg+xml,%3Csvg width='40' height='1' viewBox='0 0 40 1' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h20v1H0z' fill='%23ffffff' fill-opacity='1' fill-rule='evenodd'/%3E%3C/svg%3E");
-    background-repeat: repeat;
-    background-position: center center;
-    overflow-x: hidden;
-    z-index: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* On utilise svh pour la hauteur réelle visible */
+  min-height: calc(100svh - 2.25rem);
+  height: calc(100svh - 2.25rem);
+  
+  /* Fallback pour les vieux navigateurs qui ne connaissent pas svh */
+  @supports not (height: 100svh) {
+      min-height: calc(100vh - 2.25rem);
+      height: calc(100vh - 2.25rem);
+  }
+
+  background-color: #d3f3ff;
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='1' viewBox='0 0 40 1' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h20v1H0z' fill='%23ffffff' fill-opacity='1' fill-rule='evenodd'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-position: center center;
+  overflow-x: hidden;
+  z-index: 0;
 }
 
 @media (max-width: 1023px) {

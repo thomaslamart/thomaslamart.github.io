@@ -389,7 +389,7 @@ Specialized in Data Interfaces & Product Experience, Bridging the gap between co
                       class="mr-2 icon-small"> Contentsquare</span>
                   <span class="tag is-white border-tag"><img src="./img/logo-newrelic.svg" alt="New Relic"
                       class="mr-2 icon-small"> New Relic</span>
-                  <span class="tag is-white border-tag"><img src="./img/logo-powerbi.svg" alt="Power BI"
+                  <span class="tag is-white border-tag"><img src="./img/logo-powerbi.png" alt="Power BI"
                       class="mr-2 icon-small"> Power BI</span>
                 </div>
                 <button class="button has-text-white has-background-link-light is-rounded is-small show-modal-btn"
@@ -504,7 +504,7 @@ Specialized in Data Interfaces & Product Experience, Bridging the gap between co
                       class="mr-2 icon-small"> Contentsquare</span>
                   <span class="tag is-white border-tag"><img src="./img/logo-newrelic.svg" alt="New Relic"
                       class="mr-2 icon-small"> New Relic</span>
-                  <span class="tag is-white border-tag"><img src="./img/logo-powerbi.svg" alt="Power BI"
+                  <span class="tag is-white border-tag"><img src="./img/logo-powerbi.png" alt="Power BI"
                       class="mr-2 icon-small"> Power BI</span>
                 </div>
                 <button class="button has-text-primary has-background-primary-light is-rounded is-small show-modal-btn"
@@ -656,7 +656,7 @@ Specialized in Data Interfaces & Product Experience, Bridging the gap between co
               <li><a href="#" data-company="Nicolas">Nicolas</a></li>
             </ul>
           </div>
-          <div class="content" id="company-content">
+          <div class="content" id="company-content" ontouchstart="" style="touch-action: pan-x;">
 
 
             <!-- Default content: Heineken -->
@@ -744,6 +744,15 @@ Specialized in Data Interfaces & Product Experience, Bridging the gap between co
           document.addEventListener("DOMContentLoaded", function () {
             var tabs = document.querySelectorAll("#company-tabs ul li");
             var contentDiv = document.getElementById("company-content");
+
+            // Liste ordonnée des entreprises et mapping nom <-> index
+            var companies = [
+              "Heineken",
+              "Artur'in",
+              "RE Europe",
+              "Aigle Azur",
+              "Nicolas"
+            ];
 
             // Contenus associés à chaque entreprise
             var companyContent = {
@@ -1015,17 +1024,84 @@ Specialized in Data Interfaces & Product Experience, Bridging the gap between co
     `
             };
 
+            // Change the current experience (update tab + content)
+            function setCurrentExperience(companyName) {
+              // Set active tab
+              tabs.forEach(function (t) {
+                t.classList.remove("is-active");
+                var a = t.querySelector("a");
+                if(a && a.getAttribute("data-company") === companyName){
+                  t.classList.add("is-active");
+                }
+              });
+              // Update content
+              contentDiv.innerHTML = companyContent[companyName] || "<p>Aucune information disponible.</p>";
+            }
+
+            // Click tab: change content
             tabs.forEach(function (tab) {
               tab.addEventListener("click", function (e) {
                 e.preventDefault();
-                tabs.forEach(function (t) {
-                  t.classList.remove("is-active");
-                });
-                tab.classList.add("is-active");
                 var company = tab.querySelector("a").getAttribute("data-company");
-                contentDiv.innerHTML = companyContent[company] || "<p>Aucune information disponible.</p>";
+                setCurrentExperience(company);
               });
             });
+
+            // --- SWIPE DETECTION LOGIC ---
+            // Basiquement: detect le swipe gauche/droite avec les events
+            var touchStartX = null;
+            var touchStartY = null;
+            var MIN_DIST = 50; // px
+
+            function getCurrentCompany() {
+              // Find the currently active tab
+              let active = document.querySelector("#company-tabs ul li.is-active a");
+              return active ? active.getAttribute("data-company") : companies[0];
+            }
+
+            function goToRelativeCompany(direction) {
+              // direction: +1 -> next; -1 -> previous
+              var currentCompany = getCurrentCompany();
+              var idx = companies.indexOf(currentCompany);
+              if(idx === -1) idx = 0;
+              var newIdx = idx + direction;
+              if(newIdx < 0) newIdx = companies.length - 1;
+              if(newIdx >= companies.length) newIdx = 0;
+              setCurrentExperience(companies[newIdx]);
+            }
+
+            contentDiv.addEventListener('touchstart', function(e){
+              if(!e.touches || e.touches.length !== 1) return;
+              touchStartX = e.touches[0].clientX;
+              touchStartY = e.touches[0].clientY;
+            });
+
+            contentDiv.addEventListener('touchend', function(e){
+              if(touchStartX === null) return;
+              var touch = e.changedTouches[0];
+              var deltaX = touch.clientX - touchStartX;
+              var deltaY = touch.clientY - touchStartY;
+              // Horizontal swipe only if mostly horizontal
+              if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > MIN_DIST) {
+                if(deltaX < 0) {
+                  // Swipe gauche = suivant
+                  goToRelativeCompany(+1);
+                } else {
+                  // Swipe droite = précédent
+                  goToRelativeCompany(-1);
+                }
+              }
+              touchStartX = null;
+              touchStartY = null;
+            });
+
+            // Focus for keyboard navigation
+            contentDiv.addEventListener('focus', function(){
+              // nothing, just needed for tab index
+            });
+
+            // On load, set correct initial experience
+            setCurrentExperience(getCurrentCompany());
           });
         </script>
 

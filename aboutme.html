@@ -184,48 +184,6 @@
                 </div>
             </div>
 
-
-<div class="column is-4-desktop">
-    <div class="about-card">
-        <div class="live-section shadow-sm">
-            <div class="live-indicator">
-                <span class="dot"></span> LIVE API
-            </div>
-            
-            <div class="has-text-centered mb-3">
-                <a href="https://www.chess.com/member/l-am-art" target="_blank" title="View my Chess.com profile" style="text-decoration: none; color: inherit;">
-                    <p class="is-size-6 has-text-black has-text-centered">My ELO on chess.com</p><br>
-                    
-                    <div class="is-flex is-justify-content-center is-align-items-center">
-                        <img src="img/icon-chesscom_logo_pawn.svg" alt="Chess.com" style="width: 24px; height: auto; margin-right: 8px;">
-                        <p id="chess-rating" class="title is-3 mb-0" style="line-height: 1;">...</p>
-                    </div>
-                </a>
-            </div>
-
-            <p class="is-size-7 has-text-centered">
-                <a href="https://www.chess.com/member/l-am-art" target="_blank" class="has-text-link-dark has-text-weight-semibold">Challenge me?</a>
-            </p>
-
-            <hr style="margin: 1rem 0; background-color: #eee; height: 1px;">
-
-            <p class="is-size-7 has-text-grey-light has-text-centered mb-2">
-                Take a look at one of my recent games:
-            </p>
-            <div class="iframe-container">
-            <iframe id="14650241" loading="lazy" allowtransparency="true" frameborder="0" style="width:100%;border:none;" src="https://www.chess.com/emboard?id=14650241"></iframe>
-            </div>
-
-
-            
-            <script nonce="chesscom-diagram">
-                window.addEventListener("message",e=>{e['data']&&"14650241"===e['data']['id']&&document.getElementById(`${e['data']['id']}`)&&(document.getElementById(`${e['data']['id']}`).style.height=`${e['data']['frameHeight']+37}px`)});
-            </script>
-        </div>
-    </div>
-</div>
-
-
             <div class="column is-4-desktop">
                 <div class="about-card">
                     <div class="sport-section shadow-sm">
@@ -235,6 +193,45 @@
                 </div>
             </div>
 
+        </div>
+        <div class="column is-4-desktop">
+          <div class="about-card">
+              <div class="live-section shadow-sm">
+                  <div class="live-indicator">
+                      <span class="dot"></span> LIVE API
+                  </div>
+                  
+                  <div class="has-text-centered mb-3">
+                      <a href="https://www.chess.com/member/l-am-art" target="_blank" title="View my Chess.com profile" style="text-decoration: none; color: inherit;">
+                          <p class="is-size-6 has-text-black has-text-centered">My ELO on chess.com</p><br>
+                          
+                          <div class="is-flex is-justify-content-center is-align-items-center">
+                              <img src="img/icon-chesscom_logo_pawn.svg" alt="Chess.com" style="width: 24px; height: auto; margin-right: 8px;">
+                              <p id="chess-rating" class="title is-3 mb-0" style="line-height: 1;">...</p>
+                          </div>
+                      </a>
+                  </div>
+        
+                  <p class="is-size-7 has-text-centered">
+                      <a href="https://www.chess.com/member/l-am-art" target="_blank" class="has-text-link-dark has-text-weight-semibold">Challenge me?</a>
+                  </p>
+        
+                  <hr style="margin: 1rem 0; background-color: #eee; height: 1px;">
+        
+                  <p class="is-size-7 has-text-grey-light has-text-centered mb-2">
+                      Take a look at one of my recent games:
+                  </p>
+                  <div class="iframe-container">
+                  <iframe id="14650241" loading="lazy" allowtransparency="true" frameborder="0" style="width:100%;border:none;" src="https://www.chess.com/emboard?id=14650241"></iframe>
+                  </div>
+        
+        
+                  
+                  <script nonce="chesscom-diagram">
+                      window.addEventListener("message",e=>{e['data']&&"14650241"===e['data']['id']&&document.getElementById(`${e['data']['id']}`)&&(document.getElementById(`${e['data']['id']}`).style.height=`${e['data']['frameHeight']+37}px`)});
+                  </script>
+              </div>
+          </div>
         </div>
 
         <div class="has-text-centered">
@@ -296,5 +293,8 @@
             });
         });
     </script>
+
+    
+
 </body>
 </html>

@@ -43,7 +43,106 @@
         website</a>
     </div>
   </nav>
+  <!-- Mobile overlay additions: -->
+  <div id="mobile-overlay" class="mobile-overlay" aria-hidden="true" style="display: none;">
+    <div
+      style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; width: 100%;">
+      <button id="overlay-close" class="overlay-close" aria-label="Close overlay"
+        style="position: absolute; top: 0.1em; right: 0.5em; z-index: 1050; background: none; border: none; font-size: 2.2em; color: #222; line-height: 1; cursor: pointer; font-weight: bold;">
+        <svg width="32" height="32" viewBox="0 0 32 32" style="display:block;" xmlns="http://www.w3.org/2000/svg"
+          focusable="false" aria-hidden="true">
+          <line x1="8" y1="8" x2="24" y2="24" stroke="#222" stroke-width="2" stroke-linecap="round" />
+          <line x1="24" y1="8" x2="8" y2="24" stroke="#222" stroke-width="2" stroke-linecap="round" />
+        </svg>
+      </button>
+      <div id="custom-navbar-mobile-links"
+        style="display: flex; flex-direction: column; align-items: center; width: 100%;">
+        <a href="aboutme.html" class="navbar-link is-arrowless"
+          style="margin: 0.4em 0 0.1em 0; font-size: 1.15em; color: #222; font-weight: 600;">About me</a>
+        <a href="mywebsite.html" class="navbar-link is-arrowless"
+          style="margin: 0.1em 0 0.2em 0; font-size: 1.15em; color: #222; font-weight: 600;">About my website</a>
+      </div>
+    </div>
+  </div>
+  <style>
+    /* Remove Bulma nav arrow for all .navbar-link in this navbar, fallback if is-arrowless missed */
+    .custom-navbar .navbar-link:not(.is-arrowless)::after {
+      display: none !important;
+    }
 
+    .custom-navbar .navbar-link::after {
+      display: none !important;
+    }
+
+    .mobile-overlay {
+      position: fixed !important;
+      inset: 0;
+      background: white;
+      z-index: 1010;
+      display: none;
+      height: 100vh;
+      width: 100vw;
+      overflow: auto;
+      animation: fadeIn .2s cubic-bezier(.39, .575, .565, 1) both;
+    }
+
+    .overlay-close {
+      position: absolute;
+      top: 1em;
+      right: 1.5em;
+      z-index: 1050;
+      background: none;
+      border: none;
+      font-size: 2.2em;
+      color: #222;
+      line-height: 1;
+      cursor: pointer;
+      font-weight: bold;
+      /* removing the × character; svg is used directly inside button */
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      #mobile-overlay {
+        display: none !important;
+      }
+    }
+  </style>
+  <script>
+    // Show About menu in overlay on burger click, hide on close or background click
+    document.addEventListener("DOMContentLoaded", function () {
+      const burger = document.getElementById("burger");
+      const overlay = document.getElementById("mobile-overlay");
+      const overlayClose = document.getElementById("overlay-close");
+
+      burger.addEventListener("click", function () {
+        overlay.style.display = "block";
+        document.body.style.overflow = "hidden";
+      });
+
+      overlayClose.addEventListener("click", function () {
+        overlay.style.display = "none";
+        document.body.style.overflow = "";
+      });
+
+      // Optionally close overlay if user clicks outside the links (background)
+      overlay.addEventListener("click", function (e) {
+        if (e.target === overlay) {
+          overlay.style.display = "none";
+          document.body.style.overflow = "";
+        }
+      });
+    });
+  </script>
 
     <div class="about-page-wrapper">
         <div class="columns is-desktop is-variable is-3 custom-layout">
@@ -54,7 +153,7 @@
                         <div class="live-indicator">
                             <span class="dot"></span> LIVE API
                         </div>
-                        <p class="is-size-7 has-text-grey-light has-text-centered mb-2">Where you'll find me</p>
+                        <p class="is-size-6 has-text-black has-text-centered">Where you'll find me</p><br>
                         <div class="columns is-mobile is-multiline">
                             <div class="column is-one-third">
                                 <div class="cube-item">
@@ -89,7 +188,7 @@
             
             <div class="has-text-centered mb-3">
                 <a href="https://www.chess.com/member/l-am-art" target="_blank" title="View my Chess.com profile" style="text-decoration: none; color: inherit;">
-                    <p class="is-size-7 has-text-grey-light mb-1">My ELO on chess.com</p>
+                    <p class="is-size-6 has-text-black has-text-centered">My ELO on chess.com</p><br>
                     
                     <div class="is-flex is-justify-content-center is-align-items-center">
                         <img src="img/icon-chesscom_logo_pawn.svg" alt="Chess.com" style="width: 24px; height: auto; margin-right: 8px;">
@@ -124,7 +223,7 @@
             <div class="column is-4-desktop">
                 <div class="about-card">
                     <div class="sport-section shadow-sm">
-                        <p class="heading has-text-grey-light has-text-centered mb-3">Sports Events I Follow</p>
+                        <p class="is-size-6 has-text-black has-text-centered">Sports Events I Follow</p><br>
                         <div id="events-list"></div>
                     </div>
                 </div>

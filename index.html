@@ -7,7 +7,6 @@
   <meta charset="utf-8">
   <title>Thomas Lamart</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap">
   <link rel="stylesheet" href="./CSS/style.css">
   <link rel="icon" type="image/png" href="./img/favicon.svg">
 
@@ -60,33 +59,33 @@ Specialized in Data Interfaces & Product Experience, Bridging the gap between co
     </div>
   </nav>
 
-    <!-- Mobile overlay additions: -->
-    <div id="mobile-overlay" class="mobile-overlay" aria-hidden="true" style="display: none;">
-      <div
-        style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; width: 100%;">
-        <button id="overlay-close" class="overlay-close" aria-label="Close overlay"
-          style="position: absolute; top: 0.1em; right: 0.5em; z-index: 1050; background: none; border: none; font-size: 2.2em; color: #222; line-height: 1; cursor: pointer; font-weight: bold;">
-          <svg width="32" height="32" viewBox="0 0 32 32" style="display:block;" xmlns="http://www.w3.org/2000/svg"
-            focusable="false" aria-hidden="true">
-            <line x1="8" y1="8" x2="24" y2="24" stroke="#222" stroke-width="2" stroke-linecap="round" />
-            <line x1="24" y1="8" x2="8" y2="24" stroke="#222" stroke-width="2" stroke-linecap="round" />
-          </svg>
-        </button>
-        <div id="custom-navbar-mobile-links"
-          style="display: flex; flex-direction: column; align-items: center; width: 100%;">
-          <!-- Home button on mobile -->
-          <a href="index.html" class="navbar-link is-arrowless"
-            style="margin: 0.7em 0 0.3em 0; font-size: 1.15em; color: #222; font-weight: 600; display: flex; align-items: center;">
-          
-            Home
-          </a>
-          <a href="aboutme.html" class="navbar-link is-arrowless"
-            style="margin: 0.1em 0 0.1em 0; font-size: 1.15em; color: #222; font-weight: 600;">About me</a>
-          <a href="mywebsite.html" class="navbar-link is-arrowless"
-            style="margin: 0.1em 0 0.2em 0; font-size: 1.15em; color: #222; font-weight: 600;">About my website</a>
-        </div>
+  <!-- Mobile overlay additions: -->
+  <div id="mobile-overlay" class="mobile-overlay" aria-hidden="true" style="display: none;">
+    <div
+      style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; width: 100%;">
+      <button id="overlay-close" class="overlay-close" aria-label="Close overlay"
+        style="position: absolute; top: 0.1em; right: 0.5em; z-index: 1050; background: none; border: none; font-size: 2.2em; color: #222; line-height: 1; cursor: pointer; font-weight: bold;">
+        <svg width="32" height="32" viewBox="0 0 32 32" style="display:block;" xmlns="http://www.w3.org/2000/svg"
+          focusable="false" aria-hidden="true">
+          <line x1="8" y1="8" x2="24" y2="24" stroke="#222" stroke-width="2" stroke-linecap="round" />
+          <line x1="24" y1="8" x2="8" y2="24" stroke="#222" stroke-width="2" stroke-linecap="round" />
+        </svg>
+      </button>
+      <div id="custom-navbar-mobile-links"
+        style="display: flex; flex-direction: column; align-items: center; width: 100%;">
+        <!-- Home button on mobile -->
+        <a href="index.html" class="navbar-link is-arrowless"
+          style="margin: 0.7em 0 0.3em 0; font-size: 1.15em; color: #222; font-weight: 600; display: flex; align-items: center;">
+
+          Home
+        </a>
+        <a href="aboutme.html" class="navbar-link is-arrowless"
+          style="margin: 0.1em 0 0.1em 0; font-size: 1.15em; color: #222; font-weight: 600;">About me</a>
+        <a href="mywebsite.html" class="navbar-link is-arrowless"
+          style="margin: 0.1em 0 0.2em 0; font-size: 1.15em; color: #222; font-weight: 600;">About my website</a>
       </div>
     </div>
+  </div>
   <style>
     /* Remove Bulma nav arrow for all .navbar-link in this navbar, fallback if is-arrowless missed */
     .custom-navbar .navbar-link:not(.is-arrowless)::after {
@@ -250,100 +249,99 @@ Specialized in Data Interfaces & Product Experience, Bridging the gap between co
 
     <section id="about" class="section">
       <div class="container">
-        <div class="block">
-          <h1 class="title is-2 mb-2 custom-gradient-text has-text-black">
-            Technical Product Manager
-          </h1>
-          <p class="subtitle is-4 has-text-weight-light has-text-grey-darker">
-            Specialized in <span class="has-text-link has-text-weight-semibold">Data Interfaces & Product
-              Experience</span>
-          </p>
-          <p class="is-size-5 has-text-grey has-text-grey-darker is-italic">
-            Bridging the gap between complex backend architectures and seamless digital experiences.
-          </p>
+        <h1 class="title is-2 mb-2 custom-gradient-text has-text-centered has-text-black">
+          Technical Product Manager
+        </h1>
+        <p class="subtitle is-4 has-text-centered has-text-weight-light has-text-grey-darker">
+          Specialized in <span class="has-text-link has-text-weight-semibold">Data Interfaces & Product
+            Experience</span>
+        </p>
+        <p class="is-size-5 has-text-grey has-text-grey-darker is-italic">
+          Bridging the gap between complex backend architectures and seamless digital experiences.
+        </p>
+      </div>
+
+      <div class="columns is-multiline mt-1">
+
+        <div class="column is-6">
+          <div class="box custom-box h-100 has-background-white">
+            <article class="media">
+              <div class="media-content">
+                <div class="content">
+                  <p>
+                    <strong class="is-size-5 has-text-black">Architecture & Data Flow</strong><br>
+                    <small class="has-text-link uppercase has-text-weight-bold">ERP • PIM • MIDDLEWARE</small><br>
+                    <span class="has-text-grey">Driving interoperability between E-commerce front-ends and
+                      back-office
+                      systems <strong class="has-text-black"> (Middleware, PIM, SAP ERP )</strong> while ensuring data
+                      integrity.</span>
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
         </div>
 
-        <div class="columns is-multiline mt-6">
-
-          <div class="column is-6">
-            <div class="box custom-box h-100 has-background-white">
-              <article class="media">
-                <div class="media-content">
-                  <div class="content">
-                    <p>
-                      <strong class="is-size-5 has-text-black">Architecture & Data Flow</strong><br>
-                      <small class="has-text-link uppercase has-text-weight-bold">ERP • PIM • MIDDLEWARE</small><br>
-                      <span class="has-text-grey">Driving interoperability between E-commerce front-ends and
-                        back-office
-                        systems <strong class="has-text-black"> (Middleware, PIM, SAP ERP )</strong> while ensuring data
-                        integrity.</span>
-                    </p>
-                  </div>
+        <div class="column is-6">
+          <div class="box custom-box h-100 has-background-white">
+            <article class="media">
+              <div class="media-content">
+                <div class="content">
+                  <p>
+                    <strong class="is-size-5 has-text-black">User Experience & Design Thinking</strong><br>
+                    <small class="has-text-link uppercase has-text-weight-bold">Problem Solving • User Journey •
+                      Figma</small><br>
+                    <span class="has-text-grey">Transforming complex business requirements into intuitive
+                      interfaces
+                      through <strong class="has-text-black">Design Thinking</strong> and high-fidelity
+                      wireframing.</span>
+                  </p>
                 </div>
-              </article>
-            </div>
+              </div>
+            </article>
           </div>
-
-          <div class="column is-6">
-            <div class="box custom-box h-100 has-background-white">
-              <article class="media">
-                <div class="media-content">
-                  <div class="content">
-                    <p>
-                      <strong class="is-size-5 has-text-black">User Experience & Design Thinking</strong><br>
-                      <small class="has-text-link uppercase has-text-weight-bold">Problem Solving • User Journey •
-                        Figma</small><br>
-                      <span class="has-text-grey">Transforming complex business requirements into intuitive
-                        interfaces
-                        through <strong class="has-text-black">Design Thinking</strong> and high-fidelity
-                        wireframing.</span>
-                    </p>
-                  </div>
-                </div>
-              </article>
-            </div>
-          </div>
-
-          <div class="column is-6">
-            <div class="box custom-box h-100 has-background-white">
-              <article class="media">
-                <div class="media-content">
-                  <div class="content">
-                    <p>
-                      <strong class="is-size-5 has-text-black">Dual Technical/Agile Expertise</strong><br>
-                      <small class="has-text-link uppercase has-text-weight-bold">Technical Specs • User Stories •
-                        QA</small><br>
-                      <span class="has-text-grey">Translating business needs into technical specifications for
-                        <strong class="has-text-black">SAP
-                          teams</strong> and actionable User Stories for <strong class="has-text-black">international
-                          squads</strong>.</span>
-                    </p>
-                  </div>
-                </div>
-              </article>
-            </div>
-          </div>
-
-          <div class="column is-6">
-            <div class="box custom-box h-100 has-background-white">
-              <article class="media">
-                <div class="media-content">
-                  <div class="content">
-                    <p>
-                      <strong class="is-size-5 has-text-black">Cross-Functional Leadership</strong><br>
-                      <small class="has-text-link uppercase has-text-weight-bold">Stakeholders • Change Mgmt •
-                        Communication</small><br>
-                      <span class="has-text-grey">Guiding Supply Chain, Pricing, Sales Admin teams etc through
-                        <strong class="has-text-black">digital transformation</strong> to align legacy workflows with
-                        product goals.</span>
-                    </p>
-                  </div>
-                </div>
-              </article>
-            </div>
-          </div>
-
         </div>
+
+        <div class="column is-6">
+          <div class="box custom-box h-100 has-background-white">
+            <article class="media">
+              <div class="media-content">
+                <div class="content">
+                  <p>
+                    <strong class="is-size-5 has-text-black">Dual Technical/Agile Expertise</strong><br>
+                    <small class="has-text-link uppercase has-text-weight-bold">Technical Specs • User Stories •
+                      QA</small><br>
+                    <span class="has-text-grey">Translating business needs into technical specifications for
+                      <strong class="has-text-black">SAP
+                        teams</strong> and actionable User Stories for <strong class="has-text-black">international
+                        squads</strong>.</span>
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="column is-6">
+          <div class="box custom-box h-100 has-background-white">
+            <article class="media">
+              <div class="media-content">
+                <div class="content">
+                  <p>
+                    <strong class="is-size-5 has-text-black">Cross-Functional Leadership</strong><br>
+                    <small class="has-text-link uppercase has-text-weight-bold">Stakeholders • Change Mgmt •
+                      Communication</small><br>
+                    <span class="has-text-grey">Guiding Supply Chain, Pricing, Sales Admin teams etc through
+                      <strong class="has-text-black">digital transformation</strong> to align legacy workflows with
+                      product goals.</span>
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+      </div>
       </div>
     </section>
 
@@ -352,9 +350,12 @@ Specialized in Data Interfaces & Product Experience, Bridging the gap between co
 
     <section id="expertise" class="section expertise-background">
       <div class="container">
-        <h2 class="title is-4 has-text-centered mb-6 has-text-black">Product Expertise & Methods</h2>
+        <h1 class="title is-2 mb-3 custom-gradient-text has-text-centered has-text-black">
+          Product Expertise & Methods
+        </h1>
 
-        <div class="columns is-tablet is-variable is-3 is-multiline">
+
+        <div class="columns mt-5 is-tablet is-variable is-3 is-multiline">
 
           <div class="column is-4-tablet">
             <div class="box shadow-smooth p-0 is-flex is-flex-direction-column h-100">
@@ -515,20 +516,21 @@ Specialized in Data Interfaces & Product Experience, Bridging the gap between co
 
           <div class="column is-4-tablet">
             <div class="box shadow-smooth p-0 is-flex is-flex-direction-column h-100">
-              <div class="has-background-info-light p-5 border-bottom-radius">
-                <h3 class="title is-5 has-text-info mb-2">Technical Leadership & Ops</h3>
+              <div class="has-background-danger-light p-5 border-bottom-radius">
+                <h3 class="title is-5 has-text-danger mb-2">Technical Leadership & Ops</h3>
                 <p class="subtitle is-7 has-text-grey-dark">Systems mastery & technical mediation.</p>
               </div>
 
               <div class="skill-row py-4 px-5 has-background-white">
                 <p class="has-text-weight-bold has-text-black mb-2">SAP Power User & Data Ops</p>
-                <p class="is-size-7 has-text-grey mb-2">Deep mastery of standard/custom transactions across modules. Expert in complex table joins and XML flow monitoring.</p>
+                <p class="is-size-7 has-text-grey mb-2">Deep mastery of standard/custom transactions across modules.
+                  Expert in complex table joins and XML flow monitoring.</p>
                 <div class="tags">
                   <span class="tag is-white border-tag">Advanced Transactions</span>
                   <span class="tag is-white border-tag">Table Joins</span>
                   <span class="tag is-white border-tag">Data Architecture</span>
                 </div>
-                <button class="button has-text-info has-background-info-light is-rounded is-small show-modal-btn"
+                <button class="button has-text-danger has-background-danger-light is-rounded is-small show-modal-btn"
                   data-modal="modal-sap">Show me</button>
               </div>
 
@@ -540,7 +542,7 @@ Specialized in Data Interfaces & Product Experience, Bridging the gap between co
                   <span class="tag is-white border-tag">SQL Queries</span>
                   <span class="tag is-white border-tag">Hybris DB</span>
                 </div>
-                <button class="button has-text-info has-background-info-light is-rounded is-small show-modal-btn"
+                <button class="button has-text-danger has-background-danger-light is-rounded is-small show-modal-btn"
                   data-modal="modal-sql">Show me</button>
               </div>
 
@@ -643,8 +645,10 @@ Specialized in Data Interfaces & Product Experience, Bridging the gap between co
 
     <section id="experience" class="section">
       <div class="container">
-        <h2 class="title is-4 has-text-centered mb-6 has-text-black">My Professional Experiences</h2>
-        <div class="experience">
+        <h1 class="title is-2 mb-5 custom-gradient-text has-text-centered has-text-black">
+          My Professional Experiences
+        </h1>
+        <div class="experience mt-5">
           <div class="tabs is-centered" id="company-tabs">
             <ul class="has-text-grey-darker" id="company-tabs-list">
               <!-- Les tabs seront injectées dynamiquement avec JS pour garantir le même ordre et synchronisation avec le swipe -->

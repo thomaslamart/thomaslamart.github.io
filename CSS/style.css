@@ -21,6 +21,37 @@ main {
   padding: 0;
 }
 
+/* montserrat-300 - latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('../fonts/montserrat-v31-latin-300.woff2') format('woff2'); 
+}
+
+/* montserrat-500 - latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('../fonts/montserrat-v31-latin-500.woff2') format('woff2');
+}
+
+/* montserrat-700 - latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../fonts/montserrat-v31-latin-700.woff2') format('woff2');
+}
+
+.title.is-4 {
+  font-family: Montserrat, sans-serif;
+}
+
 /* ===================================================================
    Navbar & Navigation
    =================================================================== */
@@ -192,8 +223,8 @@ body.mobile-overlay-open {
   align-items: center;
   justify-content: center;
   
-  background-color: #d3f3ff;
-  background-image: url("data:image/svg+xml,%3Csvg width='40' height='1' viewBox='0 0 40 1' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h20v1H0z' fill='%23ffffff' fill-opacity='1' fill-rule='evenodd'/%3E%3C/svg%3E");
+  background-color: #e0f2ff;
+background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='1' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
   background-repeat: repeat;
   background-position: center center;
   overflow: hidden; /* Changé de overflow-x à overflow pour éviter tout scroll interne */
@@ -616,11 +647,13 @@ body.mobile-overlay-open {
 
 /* Expertise section background */
 .expertise-background {
-    background-color: hsl(205, 100%, 97%);
+background-color: #e0f2ff;
+background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='1' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
 }
 
 .footer {
-    background-color:hsl(205, 100%, 93%);
+background-color: #e0f2ff;
+background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='1' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
 }
 
 

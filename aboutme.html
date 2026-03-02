@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>About Me | Thomas Lamart</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap">
-    <link rel="stylesheet" href="./CSS/style.css">
-    <link rel="icon" type="image/png" href="./img/favicon-aboutme.ico">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About Me | Thomas Lamart</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+  <link rel="stylesheet" href="./CSS/style.css">
+  <link rel="icon" type="image/png" href="./img/favicon-aboutme.ico">
 </head>
 
 <body>
@@ -62,7 +62,7 @@
         <!-- Home button on mobile -->
         <a href="index.html" class="navbar-link is-arrowless"
           style="margin: 0.7em 0 0.3em 0; font-size: 1.15em; color: #222; font-weight: 600; display: flex; align-items: center;">
-        
+
           Home
         </a>
         <a href="aboutme.html" class="navbar-link is-arrowless"
@@ -152,134 +152,141 @@
     });
   </script>
 
-    <div class="about-page-wrapper">
-        <div class="columns is-desktop is-variable is-3 custom-layout">
-            
-            <div class="column is-4-desktop">
-                <div class="about-card">
-                    <div class="live-section shadow-sm">
-                        <div class="live-indicator">
-                            <span class="dot"></span> LIVE API
-                        </div>
-                        <p class="is-size-6 has-text-black has-text-centered">Where you'll find me</p><br>
-                        <div class="columns is-mobile is-multiline">
-                            <div class="column is-one-third">
-                                <div class="cube-item">
-                                    <p class="is-size-7 has-text-grey">PARIS</p>
-                                    <p id="temp-paris" class="has-text-weight-bold">--°</p>
-                                </div>
-                            </div>
-                            <div class="column is-one-third">
-                                <div class="cube-item">
-                                    <p class="is-size-7 has-text-grey">BIARRITZ</p>
-                                    <p id="temp-biarritz" class="has-text-weight-bold">--°</p>
-                                </div>
-                            </div>
-                            <div class="column is-one-third">
-                                <div class="cube-item">
-                                    <p class="is-size-7 has-text-grey">ANNECY</p>
-                                    <p id="temp-annecy" class="has-text-weight-bold">--°</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <div class="about-page-wrapper">
+    <div class="columns is-desktop is-variable is-3 custom-layout">
 
-            <div class="column is-4-desktop">
-                <div class="about-card">
-                    <div class="sport-section shadow-sm">
-                        <p class="is-size-6 has-text-black has-text-centered">Sports Events I Follow</p><br>
-                        <div id="events-list"></div>
-                    </div>
-                </div>
+      <div class="column is-4-desktop">
+        <div class="about-card">
+          <div class="live-section shadow-sm">
+            <div class="live-indicator">
+              <span class="dot"></span> LIVE API
             </div>
-        <div class="column is-4-desktop">
-          <div class="about-card">
-              <div class="live-section shadow-sm">
-                  <div class="live-indicator">
-                      <span class="dot"></span> LIVE API
-                  </div>
-                  
-                  <div class="has-text-centered mb-3">
-                      <a href="https://www.chess.com/member/l-am-art" target="_blank" title="View my Chess.com profile" style="text-decoration: none; color: inherit;">
-                          <p class="is-size-6 has-text-black has-text-centered">My ELO on chess.com</p><br>
-                          
-                          <div class="is-flex is-justify-content-center is-align-items-center">
-                              <img src="img/icon-chesscom_logo_pawn.svg" alt="Chess.com" style="width: 24px; height: auto; margin-right: 8px;">
-                              <p id="chess-rating" class="title is-3 mb-0" style="line-height: 1;">...</p>
-                          </div>
-                      </a>
-                  </div>
-        
-                  <p class="is-size-7 has-text-centered">
-                      <a href="https://www.chess.com/member/l-am-art" target="_blank" class="has-text-link-dark has-text-weight-semibold">Challenge me?</a>
-                  </p>
-        
-                  <hr style="margin: 1rem 0; background-color: #eee; height: 1px;">
-        
-                  <p class="is-size-7 has-text-grey-light has-text-centered mb-2">
-                      Take a look at one of my recent games:
-                  </p>
-                  <div class="iframe-container">
-                  <iframe id="14650241" loading="lazy" allowtransparency="true" frameborder="0" style="width:100%;border:none;" src="https://www.chess.com/emboard?id=14650241"></iframe>
-                  </div>
-        
-        
-                  
-                  <script nonce="chesscom-diagram">
-                      window.addEventListener("message",e=>{e['data']&&"14650241"===e['data']['id']&&document.getElementById(`${e['data']['id']}`)&&(document.getElementById(`${e['data']['id']}`).style.height=`${e['data']['frameHeight']+37}px`)});
-                  </script>
+            <p class="is-size-6 has-text-black has-text-centered">Where you'll find me</p><br>
+            <div class="columns is-mobile is-multiline">
+              <div class="column is-one-third">
+                <div class="cube-item">
+                  <p class="is-size-7 has-text-grey">PARIS</p>
+                  <p id="temp-paris" class="has-text-weight-bold">--°</p>
+                </div>
               </div>
+              <div class="column is-one-third">
+                <div class="cube-item">
+                  <p class="is-size-7 has-text-grey">BIARRITZ</p>
+                  <p id="temp-biarritz" class="has-text-weight-bold">--°</p>
+                </div>
+              </div>
+              <div class="column is-one-third">
+                <div class="cube-item">
+                  <p class="is-size-7 has-text-grey">ANNECY</p>
+                  <p id="temp-annecy" class="has-text-weight-bold">--°</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+      </div>
 
-<div class="mt-4 has-text-centered">
-    <a href="/" class="back-button has-text-black">← back</a>
-</div>
+      <div class="column is-4-desktop">
+        <div class="about-card">
+          <div class="sport-section shadow-sm">
+            <p class="is-size-6 has-text-black has-text-centered">Sports Events I Follow</p><br>
+            <div id="events-list"></div>
+          </div>
+        </div>
+      </div>
+      <div class="column is-4-desktop">
+        <div class="about-card">
+          <div class="live-section shadow-sm">
+            <div class="live-indicator">
+              <span class="dot"></span> LIVE API
+            </div>
+
+            <div class="has-text-centered mb-3">
+              <a href="https://www.chess.com/member/l-am-art" target="_blank" title="View my Chess.com profile"
+                style="text-decoration: none; color: inherit;">
+                <p class="is-size-6 has-text-black has-text-centered">My ELO on chess.com</p><br>
+
+                <div class="is-flex is-justify-content-center is-align-items-center">
+                  <img src="img/icon-chesscom_logo_pawn.svg" alt="Chess.com"
+                    style="width: 24px; height: auto; margin-right: 8px;">
+                  <p id="chess-rating" class="title is-3 mb-0" style="line-height: 1;">...</p>
+                </div>
+              </a>
+            </div>
+
+            <p class="is-size-7 has-text-centered">
+              <a href="https://www.chess.com/member/l-am-art" target="_blank"
+                class="has-text-link-dark has-text-weight-semibold">Challenge me?</a>
+            </p>
+
+            <hr style="margin: 1rem 0; background-color: #eee; height: 1px;">
+
+            <p class="is-size-7 has-text-grey-light has-text-centered mb-2">
+              Take a look at one of my recent games:
+            </p>
+            <div class="iframe-container">
+              <iframe id="14650241" loading="lazy" allowtransparency="true" frameborder="0"
+                style="width:100%;border:none;" src="https://www.chess.com/emboard?id=14650241"></iframe>
+            </div>
+
+
+
+            <script nonce="chesscom-diagram">
+              window.addEventListener("message", e => { e['data'] && "14650241" === e['data']['id'] && document.getElementById(`${e['data']['id']}`) && (document.getElementById(`${e['data']['id']}`).style.height = `${e['data']['frameHeight'] + 37}px`) });
+            </script>
+          </div>
+        </div>
+      </div>
+
+    </div> <!-- fermeture du .columns ou container parent, AVANT le bouton -->
+    <div class="back-button-container"
+      style="width:100%; display: flex; justify-content: center; align-items: center; z-index: 99; padding: 0.75rem 0;">
+      <a href="/" class="back-button has-text-black" style="text-decoration:none;">← back</a>
+    </div>
+
     <script>
-        const events = [
-            { n: "X Games Aspen", d: "Jan 24", s: "SKI | Big Air, Slopestyle, Halfpipe, Knuckle Huck", i: "⛷️", date: "2026-01-24" },
-            { n: "SLS Australia", d: "Feb 10", s: "Skate: Street", i: "🛹", date: "2026-02-10" },
-            { n: "JO Milan-Cortina", d: "Feb 22", s: "Ski: Big Air, Slopestyle, Halfpipe", i: "🏅", date: "2026-02-22" },
-            { n: "World Cup Finals", d: "Mar 20", s: "Ski: Slopestyle", i: "⛷️", date: "2026-03-20" },
-            { n: "SLS West Coast", d: "Apr 15", s: "Skate: Street", i: "🛹", date: "2026-04-15" },
-            { n: "SLS East Coast", d: "May 15", s: "Skate: Street", i: "🛹", date: "2026-05-15" },
-            { n: "X Games Sacramento", d: "Jun 26", s: "Skate: Street", i: "🛹", date: "2026-06-26" },
-            { n: "X Games Japan", d: "Jul 04", s: "Skate: Street", i: "🛹", date: "2026-07-04" },
-            { n: "SLS Brazil", d: "Aug 15", s: "Skate: Street", i: "🛹", date: "2026-08-15" },
-            { n: "High Five Fest", d: "Oct 02", s: "Ski Movies", i: "🎬", date: "2026-10-02" },
-            { n: "SLS France", d: "Oct 20", s: "Skate: Street", i: "🛹", date: "2026-10-20" },
-            { n: "SLS Japan", d: "Nov 15", s: "Skate: Street", i: "🛹", date: "2026-11-15" },
-            { n: "SLS Brazil Final", d: "Dec 15", s: "Skate: Final", i: "🛹", date: "2026-12-15" },
-            { n: "X Games Aspen '27", d: "Jan 20", s: "Ski: Big Air, Slopestyle, Halfpipe, Knuckle Huck", i: "⛷️", date: "2027-01-20" }
-        ];
+      const events = [
+        { n: "X Games Aspen", d: "Jan 24", s: "SKI | Big Air, Slopestyle, Halfpipe, Knuckle Huck", i: "⛷️", date: "2026-01-24" },
+        { n: "SLS Australia", d: "Feb 10", s: "Skate: Street", i: "🛹", date: "2026-02-10" },
+        { n: "JO Milan-Cortina", d: "Feb 22", s: "Ski: Big Air, Slopestyle, Halfpipe", i: "🏅", date: "2026-02-22" },
+        { n: "World Cup Finals", d: "Mar 20", s: "Ski: Slopestyle", i: "⛷️", date: "2026-03-20" },
+        { n: "SLS West Coast", d: "Apr 15", s: "Skate: Street", i: "🛹", date: "2026-04-15" },
+        { n: "SLS East Coast", d: "May 15", s: "Skate: Street", i: "🛹", date: "2026-05-15" },
+        { n: "X Games Sacramento", d: "Jun 26", s: "Skate: Street", i: "🛹", date: "2026-06-26" },
+        { n: "X Games Japan", d: "Jul 04", s: "Skate: Street", i: "🛹", date: "2026-07-04" },
+        { n: "SLS Brazil", d: "Aug 15", s: "Skate: Street", i: "🛹", date: "2026-08-15" },
+        { n: "High Five Fest", d: "Oct 02", s: "Ski Movies", i: "🎬", date: "2026-10-02" },
+        { n: "SLS France", d: "Oct 20", s: "Skate: Street", i: "🛹", date: "2026-10-20" },
+        { n: "SLS Japan", d: "Nov 15", s: "Skate: Street", i: "🛹", date: "2026-11-15" },
+        { n: "SLS Brazil Final", d: "Dec 15", s: "Skate: Final", i: "🛹", date: "2026-12-15" },
+        { n: "X Games Aspen '27", d: "Jan 20", s: "Ski: Big Air, Slopestyle, Halfpipe, Knuckle Huck", i: "⛷️", date: "2027-01-20" }
+      ];
 
-        document.addEventListener("DOMContentLoaded", () => {
-            const now = new Date();
+      document.addEventListener("DOMContentLoaded", () => {
+        const now = new Date();
 
-            // Chess API
-            fetch('https://api.chess.com/pub/player/l-am-art/stats')
-                .then(r => r.json()).then(data => {
-                    document.getElementById('chess-rating').innerText = data.chess_blitz?.last?.rating || "1610";
-                });
+        // Chess API
+        fetch('https://api.chess.com/pub/player/l-am-art/stats')
+          .then(r => r.json()).then(data => {
+            document.getElementById('chess-rating').innerText = data.chess_blitz?.last?.rating || "1610";
+          });
 
-            // Weather API
-            fetch('https://api.open-meteo.com/v1/forecast?latitude=48.85,43.48,45.89&longitude=2.35,-1.55,6.12&current=temperature_2m')
-                .then(r => r.json()).then(data => {
-                    const ids = ['temp-paris', 'temp-biarritz', 'temp-annecy'];
-                    ids.forEach((id, i) => {
-                        if(data[i]) document.getElementById(id).innerText = Math.round(data[i].current.temperature_2m) + "°";
-                    });
-                });
+        // Weather API
+        fetch('https://api.open-meteo.com/v1/forecast?latitude=48.85,43.48,45.89&longitude=2.35,-1.55,6.12&current=temperature_2m')
+          .then(r => r.json()).then(data => {
+            const ids = ['temp-paris', 'temp-biarritz', 'temp-annecy'];
+            ids.forEach((id, i) => {
+              if (data[i]) document.getElementById(id).innerText = Math.round(data[i].current.temperature_2m) + "°";
+            });
+          });
 
-            // Sports List
-            const container = document.getElementById('events-list');
-            events.forEach(e => {
-                const isPast = new Date(e.date) < now;
-                const div = document.createElement('div');
-                div.className = `event-row ${isPast ? 'event-past' : ''}`;
-                div.innerHTML = `
+        // Sports List
+        const container = document.getElementById('events-list');
+        events.forEach(e => {
+          const isPast = new Date(e.date) < now;
+          const div = document.createElement('div');
+          div.className = `event-row ${isPast ? 'event-past' : ''}`;
+          div.innerHTML = `
                     <div class="is-flex is-align-items-center">
                         <span style="font-size:0.8rem; width:20px;">${e.i}</span>
                         <span class="is-size-7 has-text-weight-semibold ml-2">${e.n}</span>
@@ -287,12 +294,13 @@
                     </div>
                     <span class="is-size-7 has-text-grey-light">${e.d}</span>
                 `;
-                container.appendChild(div);
-            });
+          container.appendChild(div);
         });
+      });
     </script>
 
-    
+
 
 </body>
+
 </html>

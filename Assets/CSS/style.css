@@ -205,9 +205,6 @@ body.mobile-overlay-open {
    ========================================================= */
 
 
-.main-content {
-  gap: 13rem;
-}
 
 /* 1. On modifie le comportement global du Fullheight pour Bulma */
 .hero.is-fullheight {
@@ -290,25 +287,15 @@ background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0
   padding-bottom: 2rem;
 }
 
-.boxcontainer {
-  padding: 1em;
-}
-
 .box {
   max-width: 800px;
   margin: 0 auto 1rem;
+  padding: 3em;
 }
 
 /* =========================================================
    Profile card
    ========================================================= */
-
-.profile-card-wrapper {
-  max-width: 400px;
-  margin: 0 auto 2rem;
-  padding: 1em;
-  box-sizing: border-box;
-}
 
 .profile-picture {
   object-fit: cover;
@@ -324,10 +311,6 @@ background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0
   align-items: center;
 }
 
-.social-link {
-  margin-right: 0.5rem;
-}
-
 .social-icon {
   width: 24px;
   height: 24px;
@@ -336,12 +319,6 @@ background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0
 /* =========================================================
    Skills section
    ========================================================= */
-
-
-.skills-container {
-    padding: 0; /* On enlève le padding de la box pour que les lignes touchent les bords */
-    overflow: hidden;
-}
 
 .icon-small {
     width: 16px;
@@ -356,11 +333,6 @@ background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0
     height: 2.2em;
 }
 
-.uppercase {
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-
 /* Modal styling */
 .modal.is-active {
   z-index: 1050;
@@ -372,11 +344,6 @@ background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0
 }
 
 /* Fin En test */
-
-
-.content {
-  padding: 2em;
-}
 
 .table td {
   vertical-align: middle;
@@ -407,16 +374,6 @@ background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0
   width: 18px;
 }
 
-.show-modal-btn {
-  background-color: hsl(205, 100%, 92%);
-  color: #222;
-  border: 1px solid #b7e0fa;
-}
-
-.show-modal-btn:hover {
-  background-color: hsl(205, 100%, 97%);
-}
-
 .custom-modal .modal-content {
   display: flex;
   justify-content: center;
@@ -431,35 +388,25 @@ background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0
 }
 
 /* Style des cartes pour un effet "Bento" moderne */
-.custom-box {
-    display: flex;
-    flex-direction: column;
-    height: 100%; /* Force la boîte à prendre toute la hauteur de la colonne */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid #f0f0f0;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
-    max-width: 1344px;
+#about .column .box, #expertise .column .box, #experience .experience-box {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
-/* On s'assure que le contenu à l'intérieur s'étire aussi */
-.custom-box .media, 
-.custom-box .media-content {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
+#about .column .box, #experience .experience-box { 
+  border: 1px solid transparent; 
 }
 
-.custom-box .content {
-    flex-grow: 1; /* Pousse le contenu pour remplir l'espace vide */
-}
 
 @media (min-width: 1024px) {
-  .custom-box:hover {
+  #about .column:hover .box, #expertise .column:hover .box, #experience .experience-box:hover {
       transform: translateY(-5px);
       box-shadow: 0 10px 20px rgba(0,0,0,0.08);
-      border-color: #3273dc;
+  }
+  #about .column:hover .box, #experience .experience-box:hover {
+    border-color: #3273dc;
   }
 }
+
 
 /* =========================================================
    Experience section
@@ -484,10 +431,6 @@ background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0
     border: 1px dashed rgba(0,0,0,0.1);
 }
 
-/* Séparateur discret */
-.border-top-light {
-    border-top: 1px solid #f0f0f0;
-}
 
 /* Icônes (si tu utilises FontAwesome) */
 .title.is-6 i {
@@ -539,9 +482,6 @@ background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0
    ========================================================= */
 
 @media (max-width: 1023px) {
-  .main-content {
-    gap: 2rem;
-  }
 
   .profile-card-wrapper {
     max-width: 400px;
@@ -636,20 +576,7 @@ background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0
    Utility classes
    =================================================================== */
 
-.h-100 { height: 100%; }
-.border-top { border-top: 1px solid #f0f0f0; }
 .border-bottom-radius { border-bottom: 1px solid #eee; border-radius: 6px 6px 0 0; }
-.border-tag { border: 1px solid #eee !important; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
-.shadow-smooth { 
-  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 1px solid #f0f0f0; }
-
-  @media (min-width: 1024px) {
-.shadow-smooth:hover { 
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
-  }}
 
 .icon-small { width: 16px; height: 16px; vertical-align: middle; object-fit: contain; }
 .skill-row { transition: background 0.3s; }
@@ -665,8 +592,6 @@ background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0
 background-color: #f2f8fc;
 background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='1' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
 }
-
-
 
 
 

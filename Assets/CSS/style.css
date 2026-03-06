@@ -214,14 +214,9 @@ body.mobile-overlay-open {
 }
 
 .index-page .hero-body {
-  /* Supprime top: 0 et left: 0, ils ne servent à rien ici sauf si tu es en position: absolute */
-  width: 100%;
-  display: flex;
-  align-items: center;
   justify-content: center;
-  
   background-color: #f2f8fc;
-background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='1' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='1' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
   background-repeat: repeat;
   background-position: center center;
   overflow: hidden; /* Changé de overflow-x à overflow pour éviter tout scroll interne */
@@ -246,10 +241,7 @@ background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0
 /* Fixer la largeur de la carte sur desktop */
 @media (min-width: 1024px) {
     .custom-profile-card {
-        width: 400px;
-        margin: 0 auto;
         border-radius: 15px;
-        overflow: hidden;
         box-shadow: 0 15px 35px rgba(0,0,0,0.1);
     }
 }
@@ -280,13 +272,6 @@ background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0
     50% { opacity: 1; transform: translate(-50%, 10px); }
 }
 
-.intro-page {
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-top: 1rem;
-  padding-bottom: 2rem;
-}
-
 .box {
   max-width: 800px;
   margin: 0 auto 1rem;
@@ -303,12 +288,6 @@ background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0
   width: 100%;
   height: 100%;
   display: block;
-}
-
-.card-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .social-icon {
@@ -402,7 +381,7 @@ background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0
       transform: translateY(-5px);
       box-shadow: 0 10px 20px rgba(0,0,0,0.08);
   }
-  #about .column:hover .box, #experience .experience-box:hover {
+  #about .column:hover .box {
     border-color: #3273dc;
   }
 }
@@ -457,16 +436,35 @@ background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0
 /* =========================================================
    Email popup
    ========================================================= */
+#copy-email-btn {
+  position: relative;
+}
 
 #email-copied-popup {
   display: none;
   position: absolute;
-  background: #4a4a4a;
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 0.75rem;
+  background: #000;
   color: #fff;
+  padding: 5px 10px;
   border-radius: 4px;
-  padding: 4px 8px;
-  font-size: 0.8rem;
-  margin-left: 8px;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  z-index: 10;
+}
+
+/* Petite flèche pour la popup */
+#email-copied-popup::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  transform: translateY(-50%);
+  border: 5px solid transparent;
+  border-right-color: #000;
 }
 
 /* separator between social icons */
